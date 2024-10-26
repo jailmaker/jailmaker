@@ -32,6 +32,8 @@
 </template>
 
 <script>
+import api from '../api'
+
 export default {
   name: 'ClassSchedule',
   data() {
@@ -41,8 +43,8 @@ export default {
   },
   async created() {
     try {
-      const response = await fetch('https://jailmaker.onrender.com/api/get_available_classes')
-      this.classes = await response.json()
+      const response = await api.get('/api/get_available_classes')
+      this.classes = response.data
     } catch (error) {
       console.error('Error fetching classes:', error)
     }
