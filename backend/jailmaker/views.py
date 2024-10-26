@@ -1,14 +1,16 @@
-from django.http import HttpRequest, JsonResponse
-from ninja import NinjaAPI
+import json
+from pathlib import Path
 
-from jailmaker.service.matrix_svc import MatrixReader
+from django.http import JsonResponse
+from ninja import NinjaAPI
 
 api = NinjaAPI()
 
 
-@api.get("/get_available_classes")
-def get_available_classes(request: HttpRequest) -> list[dict[str, str | None]]:
-    matrix_reader = MatrixReader("./jailmaker/files/matriz_2024_2.xlsx")
-    df = matrix_reader.read_matrix()
+with Path.open("./jailmaker/files/matriz_2024_2.json", encoding="utf-8") as f:
+    available_classes = json.load(f)
 
-    return JsonResponse(df.to_dict(orient="records"), safe=False)
+
+@api.get("/get_available_classes")
+def get_available_classes(request) -> list[dict[str, str | None]]:
+    return JsonResponse(available_classes, safe=False)
