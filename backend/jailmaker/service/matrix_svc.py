@@ -60,12 +60,12 @@ class MatrixReader:
     def _rename_columns(self, df: pd.DataFrame) -> pd.DataFrame:
         df["ID"] = df.index
         df = df[["ID", "Nome da UC", "Professor", "Turma", "Horário", "Dia da Semana", "Curso", "Termo"]]
-        df.columns = ["id", "subject", "teachers", "class", "schedule", "day", "course", "period"]
+        df.columns = ["id", "subject", "teacher", "class", "schedule", "day", "course", "period"]
         return df
 
     def _combine_schedules(self, df: pd.DataFrame) -> pd.DataFrame:
         return (
-            df.groupby(["subject", "teachers", "class"])
+            df.groupby(["subject", "teacher", "class"])
             .agg(
                 {
                     "schedule": list,
