@@ -41,7 +41,7 @@ export default {
   },
   async created() {
     try {
-      const response = await fetch('http://localhost:8000/api/get_available_classes')
+      const response = await fetch('https://jailmaker.onrender.com/api/get_available_classes')
       this.classes = await response.json()
     } catch (error) {
       console.error('Error fetching classes:', error)
