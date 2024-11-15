@@ -1,8 +1,8 @@
 <template>
   <div class="academic-history">
-    <h1 class="title">Academic History Viewer</h1>
+    <h1 class="title">Leitor de Histórico Acadêmico</h1>
     
-    <div class="upload-section" v-if="!studentInfo">
+    <div class="upload-section" v-if="!alunoInfo">
       <div 
         class="upload-area"
         @drag.prevent
@@ -13,37 +13,37 @@
         @dragleave.prevent
         @drop.prevent="handleDrop"
         :class="{ 'dragging': isDragging }"
-        @click="$refs.fileInput.click()"
+        @click="$refs.arquivo.click()"
       >
         <input
           type="file"
-          ref="fileInput"
+          ref="arquivo"
           @change="handleFileSelect"
           accept=".pdf"
           class="hidden"
         >
         <div class="upload-content">
           <i class="upload-icon">📄</i>
-          <p class="upload-text">Drop your academic history PDF here or click to browse</p>
+          <p class="upload-text">Arraste o seu histórico acadêmico em PDF ou clique aqui para selecioná-lo</p>
         </div>
       </div>
     </div>
 
     <div v-if="isLoading" class="loading">
       <div class="spinner"></div>
-      <p>Processing academic history...</p>
+      <p>Processando histórico acadêmico...</p>
     </div>
 
-    <div v-if="studentInfo" class="content-container">
-      <button class="upload-new" @click="resetUpload">Upload New Document</button>
+    <div v-if="alunoInfo" class="content-container">
+      <button class="upload-new" @click="resetUpload">Fazer upload de outro histórico</button>
       
       <div class="student-info-card">
-        <h2 class="student-name">{{ studentInfo.nome }}</h2>
-        <p class="student-course">{{ studentInfo.curso }}</p>
+        <h2 class="student-name">{{ alunoInfo.nome }}</h2>
+        <p class="student-course">{{ alunoInfo.curso }}</p>
       </div>
 
       <div 
-        v-for="(group, index) in groupedDisciplines" 
+        v-for="(group, index) in disciplinasAgrupadas" 
         :key="index" 
         class="semester-group"
       >
@@ -53,7 +53,7 @@
         
         <div class="records-grid">
           <div 
-            v-for="discipline in group.disciplines" 
+            v-for="discipline in group.disciplinas" 
             :key="`${discipline.codigo}-${discipline.ano_letivo}-${discipline.semestre}`" 
             class="record-card"
           >
@@ -64,16 +64,16 @@
             
             <div class="record-details">
               <div class="details-column">
-                <p><strong>Group:</strong> {{ discipline.grupo }}</p>
-                <p><strong>Category:</strong> {{ discipline.categoria }}</p>
-                <p><strong>Credits:</strong> {{ discipline.creditos }}</p>
-                <p><strong>Hours:</strong> {{ discipline.carga_horaria }}</p>
+                <p><strong>Grupo:</strong> {{ discipline.grupo }}</p>
+                <p><strong>Categoria:</strong> {{ discipline.categoria }}</p>
+                <p><strong>Créditos:</strong> {{ discipline.creditos }}</p>
+                <p><strong>Horas:</strong> {{ discipline.carga_horaria }}</p>
               </div>
               
               <div class="details-column">
-                <p><strong>Absences:</strong> {{ discipline.faltas }}</p>
-                <p><strong>Attendance:</strong> {{ discipline.frequencia }}%</p>
-                <p><strong>Grade:</strong> {{ discipline.conceito }}</p>
+                <p><strong>Faltas:</strong> {{ discipline.faltas }}</p>
+                <p><strong>Frequência:</strong> {{ discipline.frequencia }}%</p>
+                <p><strong>Conceito:</strong> {{ discipline.conceito }}</p>
                 <p class="status" :class="discipline.situacao.toLowerCase()">
                   {{ discipline.situacao }}
                 </p>
@@ -93,28 +93,28 @@ export default {
   name: 'AcademicHistory',
   data() {
     return {
-      studentInfo: null,
-      disciplines: [],
+      alunoInfo: null,
+      disciplinas: [],
       isLoading: false,
       isDragging: false
     }
   },
   computed: {
-    groupedDisciplines() {
-      const grouped = this.disciplines.reduce((acc, discipline) => {
+    disciplinasAgrupadas() {
+      const agrupado = this.disciplinas.reduce((acc, discipline) => {
         const key = `${discipline.ano_letivo}-${discipline.semestre}`
         if (!acc[key]) {
           acc[key] = {
             ano_letivo: discipline.ano_letivo,
             semestre: discipline.semestre,
-            disciplines: []
+            disciplinas: []
           }
         }
-        acc[key].disciplines.push(discipline)
+        acc[key].disciplinas.push(discipline)
         return acc
       }, {})
 
-      return Object.values(grouped).sort((a, b) => {
+      return Object.values(agrupado).sort((a, b) => {
         if (a.ano_letivo !== b.ano_letivo) {
           return b.ano_letivo - a.ano_letivo
         }
@@ -135,10 +135,10 @@ export default {
           }
         })
         
-        this.studentInfo = response.data.informacoes_aluno
-        this.disciplines = response.data.disciplinas
+        this.alunoInfo = response.data.informacoes_aluno
+        this.disciplinas = response.data.disciplinas
       } catch (error) {
-        console.error('Error uploading academic history:', error)
+        console.error('Erro ao fazer upload do histórico acadêmico:', error)
       } finally {
         this.isLoading = false
       }
@@ -157,10 +157,10 @@ export default {
       }
     },
     resetUpload() {
-      this.studentInfo = null
-      this.disciplines = []
-      if (this.$refs.fileInput) {
-        this.$refs.fileInput.value = ''
+      this.alunoInfo = null
+      this.disciplinas = []
+      if (this.$refs.arquivo) {
+        this.$refs.arquivo.value = ''
       }
     }
   }

@@ -1,17 +1,17 @@
 <template>
   <div class="home">
     <div class="content">
-      <h1 class="title">Work in Progress</h1>
+      <h1 class="title">Em progresso...</h1>
       <div class="construction-icon">🚧</div>
       <p class="description">
-        We're currently building something awesome! Check back soon for updates.
+        Estamos trabalhando em algo incrível! Volte em breve para mais atualizações.
       </p>
       <div class="navigation-hints">
         <router-link to="/matrix" class="hint-link">
-          Try out the Matrix Schedule
+          Veja a matriz curricular do semestre atual
         </router-link>
         <router-link to="/history" class="hint-link">
-          View Academic History
+          Teste o nosso leitor de histórico acadêmico
         </router-link>
       </div>
     </div>

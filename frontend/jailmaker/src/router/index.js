@@ -1,8 +1,8 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
-import ClassSchedule from '../components/ClassSchedule.vue'
-import AcademicHistory from '../components/AcademicHistory.vue'
+import MatrizSemestre from '../components/MatrizSemestre.vue'
 import Home from '../views/Home.vue'
+import LeitorHistoricoAcademico from '../components/LeitorHistoricoAcademico.vue'
 
 const routes = [
   {
@@ -11,14 +11,14 @@ const routes = [
     component: Home
   },
   {
-    path: '/matrix',
-    name: 'Matrix',
-    component: ClassSchedule
+    path: '/matriz',
+    name: 'Matriz',
+    component: MatrizSemestre
   },
   {
-    path: '/history',
+    path: '/historico',
     name: 'History',
-    component: AcademicHistory
+    component: LeitorHistoricoAcademico
   }
 ]
 

@@ -1,9 +1,9 @@
 <template>
   <div class="app">
     <nav class="navigation">
-      <router-link to="/" class="nav-link">Home</router-link>
-      <router-link to="/matrix" class="nav-link">Matrix</router-link>
-      <router-link to="/history" class="nav-link">Academic History</router-link>
+      <router-link to="/" class="nav-link">Início</router-link>
+      <router-link to="/matriz" class="nav-link">Matriz do Semestre</router-link>
+      <router-link to="/historico" class="nav-link">Leitor de Histórico</router-link>
     </nav>
     
     <router-view v-slot="{ Component }">

@@ -1,28 +1,27 @@
-<!-- ClassSchedule.vue -->
 <template>
   <div class="class-schedule">
-    <h1 class="title">Available Classes</h1>
+    <h1 class="title">Matriz do Semestre Atual</h1>
     <div class="classes-container">
-      <div v-for="classItem in classes" :key="classItem.id" class="class-card">
-        <h2 class="subject-title">{{ classItem.subject }}</h2>
-        <p class="teacher">Teacher: {{ classItem.teacher }}</p>
-        <p class="class-badge">Class: {{ classItem.class }}</p>
+      <div v-for="disciplina in disciplinas" :key="disciplina.id" class="class-card">
+        <h2 class="subject-title">{{ disciplina.subject }}</h2>
+        <p class="teacher">Professor: {{ disciplina.teacher }}</p>
+        <p class="class-badge">Turma: {{ disciplina.class }}</p>
 
         <div class="info-section">
           <div class="schedule-section">
-            <h3 class="section-title">Schedule</h3>
+            <h3 class="section-title">Horário</h3>
             <ul class="schedule-list">
-              <li v-for="(schedule, index) in classItem.schedule" :key="index">
-                {{ classItem.day[index] }}: {{ schedule }}
+              <li v-for="(schedule, index) in disciplina.schedule" :key="index">
+                {{ disciplina.day[index] }}: {{ schedule }}
               </li>
             </ul>
           </div>
 
           <div class="details-section">
-            <h3 class="section-title">Details</h3>
+            <h3 class="section-title">Detalhes</h3>
             <ul class="details-list">
-              <li>Course: {{ classItem.course }}</li>
-              <li>Period: {{ classItem.period }}</li>
+              <li>Curso: {{ disciplina.course }}</li>
+              <li>Termo: {{ disciplina.period }}</li>
             </ul>
           </div>
         </div>
@@ -38,15 +37,15 @@ export default {
   name: 'ClassSchedule',
   data() {
     return {
-      classes: []
+      disciplinas: []
     }
   },
   async created() {
     try {
       const response = await api.get('/api/get_available_classes')
-      this.classes = response.data
-    } catch (error) {
-      console.error('Error fetching classes:', error)
+      this.disciplinas = response.data
+    } catch (erro) {
+      console.error('Erro ao carregar as disciplinas do semestre atual:', erro)
     }
   }
 }
