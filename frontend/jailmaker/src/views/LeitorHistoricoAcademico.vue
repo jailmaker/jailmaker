@@ -331,7 +331,8 @@ export default {
   text-align: center;
 }
 
-.status.aprovado {
+.status.aprovado,
+.status.cumprido {
   background-color: rgba(46, 204, 113, 0.2);
   color: #2ecc71;
 }
