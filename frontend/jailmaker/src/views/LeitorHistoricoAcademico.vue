@@ -48,7 +48,7 @@
         class="semester-group"
       >
         <h2 class="semester-title">
-          {{ group.ano_letivo }} - Semester {{ group.semestre }}
+          {{ group.ano_letivo }} - Semestre {{ group.semestre }}
         </h2>
         
         <div class="records-grid">
