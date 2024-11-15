@@ -7,10 +7,10 @@
         Estamos trabalhando em algo incrível! Volte em breve para mais atualizações.
       </p>
       <div class="navigation-hints">
-        <router-link to="/matrix" class="hint-link">
+        <router-link to="/matriz" class="hint-link">
           Veja a matriz curricular do semestre atual
         </router-link>
-        <router-link to="/history" class="hint-link">
+        <router-link to="/historico" class="hint-link">
           Teste o nosso leitor de histórico acadêmico
         </router-link>
       </div>
