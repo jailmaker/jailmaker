@@ -1,22 +1,103 @@
-<script setup>
-import ClassSchedule from './components/ClassSchedule.vue'
-</script>
-
 <template>
-  <ClassSchedule />
+  <div class="app">
+    <nav class="navigation">
+      <router-link to="/" class="nav-link">Home</router-link>
+      <router-link to="/matrix" class="nav-link">Matrix</router-link>
+      <router-link to="/history" class="nav-link">Academic History</router-link>
+    </nav>
+    
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+  </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<style>
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'JetBrains Mono', monospace;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  min-height: 100vh;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.app {
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.navigation {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.router-link-active {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 </style>

@@ -3,7 +3,8 @@ from pathlib import Path
 
 from django.http import JsonResponse
 from ninja import NinjaAPI
-from jailmaker.service.history_svc import 
+
+from jailmaker.service.history_svc import pdf_to_json
 
 api = NinjaAPI()
 
@@ -17,7 +18,8 @@ def get_available_classes(request) -> list[dict[str, str | None]]:
     return JsonResponse(available_classes, safe=False)
 
 
-@api.get("/get_academic_history")
+@api.post("/get_academic_history")
 def get_academic_history(request):
-    academic_history = history_reader(request)
+    pdf = request.FILES["file"]
+    academic_history = pdf_to_json(pdf)
     return JsonResponse(academic_history, safe=False)

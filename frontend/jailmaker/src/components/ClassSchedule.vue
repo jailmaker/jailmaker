@@ -1,7 +1,7 @@
 <!-- ClassSchedule.vue -->
 <template>
   <div class="class-schedule">
-    <h1 class="title">jailmaker</h1>
+    <h1 class="title">Available Classes</h1>
     <div class="classes-container">
       <div v-for="classItem in classes" :key="classItem.id" class="class-card">
         <h2 class="subject-title">{{ classItem.subject }}</h2>

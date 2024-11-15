@@ -1,4 +1,3 @@
-import json
 import re
 
 from pypdf import PdfReader
@@ -70,7 +69,6 @@ def parse_disciplina(line):
     resto_linha = line[inicio_match.end() :].strip()
 
     # Procura pela string "UNIDADE CURRICULAR" em toda a linha
-    pos_unidade = -1
     partes = resto_linha.split("UNIDADE CURRICULAR")
 
     if len(partes) < 2:
@@ -120,8 +118,8 @@ def parse_disciplina(line):
         return None
 
 
-def pdf_to_json(pdf_path, json_path):
-    reader = PdfReader(pdf_path)
+def pdf_to_json(pdf):
+    reader = PdfReader(pdf)
 
     # Extrai todo o texto do PDF
     full_text = ""
@@ -149,12 +147,4 @@ def pdf_to_json(pdf_path, json_path):
     # Cria o objeto JSON final
     output_data = {"informacoes_aluno": student_info, "disciplinas": disciplinas}
 
-    # Salva o JSON
-    with open(json_path, "w", encoding="utf-8") as json_file:
-        json.dump(output_data, json_file, ensure_ascii=False, indent=4)
-
-    print(f"Dados do histórico acadêmico salvos em {json_path}")
-
-
-# Chamada da função
-pdf_to_json("backend/jailmaker/service/history.pdf", "historico8.json")
+    return output_data
