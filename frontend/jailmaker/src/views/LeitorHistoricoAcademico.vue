@@ -74,7 +74,7 @@
                 <p><strong>Faltas:</strong> {{ discipline.faltas }}</p>
                 <p><strong>Frequência:</strong> {{ discipline.frequencia }}%</p>
                 <p><strong>Conceito:</strong> {{ discipline.conceito }}</p>
-                <p class="status" :class="discipline.situacao.toLowerCase()">
+                <p class="status" :class="discipline.situacao.toLowerCase().replace(/\s+/g, '-')">
                   {{ discipline.situacao }}
                 </p>
               </div>
@@ -128,13 +128,13 @@ export default {
       try {
         const formData = new FormData()
         formData.append('file', file)
-        
+
         const response = await api.post('/api/get_academic_history', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }
         })
-        
+
         this.alunoInfo = response.data.informacoes_aluno
         this.disciplinas = response.data.disciplinas
       } catch (error) {
@@ -335,6 +335,11 @@ export default {
 .status.cumprido {
   background-color: rgba(46, 204, 113, 0.2);
   color: #2ecc71;
+}
+
+.status.em-curso {
+  background-color: rgba(241, 196, 15, 0.2);
+  color: #f1c40f;
 }
 
 .status.reprovado {

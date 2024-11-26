@@ -80,8 +80,17 @@ def parse_disciplina(line):
     # Divide os campos restantes
     campos = info_restante.split()
 
-    if campos[-1] == "CURSO":
-        return None
+    # Checa se a situação é "EM CURSO"
+    ultimos_dois = campos[-2:]
+    if len(ultimos_dois) >= 2 and " ".join(ultimos_dois) == "EM CURSO":
+        # Mantém como uma única string
+        campos = campos[:-2] + ["EM CURSO"]
+        if len(campos) == 7:
+            campos.insert(4, "-")
+            campos.insert(7, "-")
+        else:
+            campos.insert(5, "-")
+            campos.insert(8, "-")
 
     # Ajusta campos faltantes
     if len(campos) == 8:
