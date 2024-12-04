@@ -99,6 +99,15 @@ export default {
       isDragging: false
     }
   },
+  created() {
+    const savedAlunoInfo = localStorage.getItem('alunoInfo')
+    const savedDisciplinas = localStorage.getItem('disciplinas')
+    
+    if (savedAlunoInfo && savedDisciplinas) {
+      this.alunoInfo = JSON.parse(savedAlunoInfo)
+      this.disciplinas = JSON.parse(savedDisciplinas)
+    }
+  },
   computed: {
     disciplinasAgrupadas() {
       const agrupado = this.disciplinas.reduce((acc, discipline) => {
@@ -137,6 +146,9 @@ export default {
 
         this.alunoInfo = response.data.informacoes_aluno
         this.disciplinas = response.data.disciplinas
+
+        localStorage.setItem('alunoInfo', JSON.stringify(this.alunoInfo))
+        localStorage.setItem('disciplinas', JSON.stringify(this.disciplinas))
       } catch (error) {
         console.error('Erro ao fazer upload do histórico acadêmico:', error)
       } finally {
@@ -159,6 +171,10 @@ export default {
     resetUpload() {
       this.alunoInfo = null
       this.disciplinas = []
+
+      localStorage.removeItem('alunoInfo')
+      localStorage.removeItem('disciplinas')
+      
       if (this.$refs.arquivo) {
         this.$refs.arquivo.value = ''
       }
