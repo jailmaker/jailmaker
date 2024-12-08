@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="content">
-      <h1 class="title">Em progresso...</h1>
+      <h1 class="title">Eikão...</h1>
       <div class="construction-icon">🚧</div>
       <p class="description">
         Estamos trabalhando em algo incrível! Volte em breve para mais atualizações.
