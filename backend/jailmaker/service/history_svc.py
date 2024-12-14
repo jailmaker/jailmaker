@@ -55,6 +55,7 @@ def merge_broken_lines(lines):
 
 def parse_disciplina(line):
     """Converte uma linha de disciplina em um dicionário estruturado"""
+    info = {}
     # Padrão para extrair os campos iniciais que sempre seguem o mesmo formato
     inicio_pattern = r"(\d{4})\s+(\d+)\s+(\d+)\s+([A-Z])\s+([A-Z][A-Z]?)\s+(\d+)\s+"
 
@@ -64,6 +65,12 @@ def parse_disciplina(line):
 
     # Extrai os campos iniciais
     ano, semestre, serie, turno, turma, codigo = inicio_match.groups()
+    info["ano"] = ano
+    info["semestre"] = semestre
+    info["serie"] = serie
+    info["turno"] = turno
+    info["turma"] = turma
+    info["codigo"] = codigo
 
     # Remove a parte inicial da linha que já foi processada
     resto_linha = line[inicio_match.end() :].strip()
@@ -75,56 +82,81 @@ def parse_disciplina(line):
         return None
 
     nome = partes[0].strip()
-    info_restante = "UNIDADE CURRICULAR" + partes[1].strip()
+    info["nome"] = nome
+    info_restante = "UNIDADE CURRICULAR " + partes[1].strip()
 
     # Divide os campos restantes
     campos = info_restante.split()
 
-    # Checa se a situação é "EM CURSO"
-    ultimos_dois = campos[-2:]
-    if len(ultimos_dois) >= 2 and " ".join(ultimos_dois) == "EM CURSO":
-        # Mantém como uma única string
-        campos = campos[:-2] + ["EM CURSO"]
-        if len(campos) == 7:
-            campos.insert(4, "-")
-            campos.insert(7, "-")
-        else:
-            campos.insert(5, "-")
-            campos.insert(8, "-")
-
-    # Ajusta campos faltantes
-    if len(campos) == 8:
-        campos.insert(4, "-")
-
-    # Identifica o grupo
-    grupo = "UNIDADE CURRICULAR"
-    i = 2  # Começa após "UNIDADE CURRICULAR"
-    while i < len(campos) and campos[i] not in ["FIXAS", "ELETIVAS"]:
-        grupo += " " + campos[i]
-        i += 1
+    final = 0
 
     try:
-        disciplina = {
-            "ano_letivo": ano,
-            "semestre": semestre,
-            "serie_termo": serie,
-            "turno": turno,
-            "turma": turma,
-            "codigo": codigo,
-            "nome": nome,
-            "grupo": grupo,
-            "categoria": campos[i] if i < len(campos) else "",
-            "faltas": campos[i + 1] if i + 1 < len(campos) else "0",
-            "frequencia": "" if i + 2 >= len(campos) or campos[i + 2] == "-" else campos[i + 2].replace("%", ""),
-            "creditos": campos[i + 3] if i + 3 < len(campos) else "",
-            "carga_horaria": campos[i + 4] if i + 4 < len(campos) else "",
-            "conceito": "-" if i + 5 >= len(campos) or campos[i + 5] == "-" else campos[i + 5],
-            "situacao": campos[i + 6] if i + 6 < len(campos) else "",
-        }
+        final = campos.index("CURSO")
+    except ValueError:
+        pass
 
-        return disciplina
-    except IndexError:
-        return None
+    try:
+        final = campos.index("APROVADO")
+    except ValueError:
+        pass
+
+    try:
+        final = campos.index("REPROV./FREQ")
+    except ValueError:
+        pass
+
+    try:
+        final = campos.index("CUMPRIDO")
+    except ValueError:
+        pass
+
+    try:
+        final = campos.index("REPROVADO")
+    except ValueError:
+        pass
+
+    campos = campos[: final + 1]
+
+    if campos[3] == "INTERDISCIPLINAR":
+        grupo = " ".join(campos[0:4])
+        del campos[0:4]
+    else:
+        grupo = " ".join(campos[0:3])
+        del campos[0:3]
+
+    if campos[-2:] == ["NÃO", "CUMPRIDO"]:
+        campos[-2] = "NÃO CUMPRIDO"
+        del campos[-1]
+
+    if campos[-2:] == ["EM", "CURSO"]:
+        campos[-2] = "EM CURSO"
+        del campos[-1]
+
+    # se o penúltimo campo for a carga horária e não o conceito
+    if campos[-2] in ("36", "72", "108"):
+        campos.insert(-1, "-")
+
+    # se ainda sim faltar um campo, que é a frequência
+    if len(campos) == 6:
+        campos.insert(2, "-")
+
+    if campos[6] == "REPROV./FREQ":
+        campos[6] = "REPROVADO"
+    if campos[6] == "CUMPRIDO":
+        campos[6] = "APROVADO"
+    if campos[6] == "NÃO CUMPRIDO":
+        campos[6] = "REPROVADO"
+
+    info["grupo"] = grupo
+    info["categoria"] = campos[0]
+    info["faltas"] = campos[1]
+    info["frequencia"] = campos[2]
+    info["creditos"] = campos[3]
+    info["carga_horaria"] = campos[4]
+    info["conceito"] = campos[5]
+    info["situacao"] = campos[6]
+
+    return info
 
 
 def pdf_to_json(pdf):

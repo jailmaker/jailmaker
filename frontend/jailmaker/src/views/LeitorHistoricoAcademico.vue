@@ -48,13 +48,13 @@
         class="semester-group"
       >
         <h2 class="semester-title">
-          {{ group.ano_letivo }} - Semestre {{ group.semestre }}
+          {{ group.ano }} - Semestre {{ group.semestre }}
         </h2>
         
         <div class="records-grid">
           <div 
             v-for="discipline in group.disciplinas" 
-            :key="`${discipline.codigo}-${discipline.ano_letivo}-${discipline.semestre}`" 
+            :key="`${discipline.codigo}-${discipline.ano}-${discipline.semestre}`" 
             class="record-card"
           >
             <div class="record-header">
@@ -74,7 +74,7 @@
                 <p><strong>Faltas:</strong> {{ discipline.faltas }}</p>
                 <p><strong>Frequência:</strong> {{ discipline.frequencia }}%</p>
                 <p><strong>Conceito:</strong> {{ discipline.conceito }}</p>
-                <p class="status" :class="discipline.situacao.toLowerCase().replace(/\s+/g, '-')">
+                <p class="status" :class="discipline.situacao ? discipline.situacao.toLowerCase().replace(/\s+/g, '-') : ''">
                   {{ discipline.situacao }}
                 </p>
               </div>
@@ -111,10 +111,10 @@ export default {
   computed: {
     disciplinasAgrupadas() {
       const agrupado = this.disciplinas.reduce((acc, discipline) => {
-        const key = `${discipline.ano_letivo}-${discipline.semestre}`
+        const key = `${discipline.ano}-${discipline.semestre}`
         if (!acc[key]) {
           acc[key] = {
-            ano_letivo: discipline.ano_letivo,
+            ano: discipline.ano,
             semestre: discipline.semestre,
             disciplinas: []
           }
@@ -124,8 +124,8 @@ export default {
       }, {})
 
       return Object.values(agrupado).sort((a, b) => {
-        if (a.ano_letivo !== b.ano_letivo) {
-          return b.ano_letivo - a.ano_letivo
+        if (a.ano !== b.ano) {
+          return b.ano - a.ano
         }
         return b.semestre - a.semestre
       })
@@ -347,8 +347,7 @@ export default {
   text-align: center;
 }
 
-.status.aprovado,
-.status.cumprido {
+.status.aprovado {
   background-color: rgba(46, 204, 113, 0.2);
   color: #2ecc71;
 }
