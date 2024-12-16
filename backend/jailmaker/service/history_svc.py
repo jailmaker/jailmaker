@@ -60,7 +60,7 @@ class LeitorHistoricoAcademico:
             return None
 
         # Extrai campos iniciais
-        fields = ["ano", "semestre", "serie", "turno", "turma", "codigo"]
+        fields = ["ano", "semestre", "termo", "turno", "turma", "codigo"]
         initial_info = dict(zip(fields, inicio_match.groups(), strict=False))
 
         resto_linha = line[inicio_match.end() :].strip()
