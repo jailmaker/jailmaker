@@ -5,21 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JailMaker</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #121212;
-      color: #e0e0e0;
+    }
+
+    .home {
+      min-height: calc(100vh - 61px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      background-color: #1a1a1a;
     }
 
     .container {
-      display: flex;
-      flex-direction: row;
       width: 90%;
       max-width: 1200px;
       background: #1e1e1e;
@@ -37,132 +48,124 @@
       margin-bottom: 20px;
     }
 
-    .grade-section {
-      flex: 3;
-      padding-right: 20px;
-    }
-
     .schedule-grid {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(7, 60px);
-      gap: 5px;
+      grid-template-columns: auto repeat(5, 1fr);
+      grid-template-rows: auto repeat(6, 1fr);
+      gap: 8px;
+      width: 100%;
     }
 
-    .schedule-grid div {
+    .header-cell {
+      background: #2c2c2c;
       border: 1px solid #333;
       border-radius: 5px;
-      background: #2c2c2c;
       display: flex;
       justify-content: center;
       align-items: center;
+      color: #b0b0b0;
       font-size: 14px;
-      color: #b0b0b0;
+      text-align: center;
+      padding: 10px;
     }
 
-    .upload-section {
-      flex: 1;
+    .day-header {
+      background-color: #0d8044;
+      color: white;
+      font-weight: bold;
+    }
+
+    .time-header {
+      background-color: #333;
+      color: #b0b0b0;
+      white-space: nowrap;
+    }
+
+    .schedule-cell {
+      background: #2c2c2c;
+      border: 1px solid #333;
+      border-radius: 5px;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      justify-content: flex-start;
-      text-align: center;
-      border-left: 2px solid #333;
-      padding-left: 20px;
-    }
-
-    .upload-section p {
       color: #b0b0b0;
-      margin-top: 10px;
-      margin-bottom: 20px;
-    }
-
-    .upload-box {
-      border: 2px dashed #0d8044;
-      border-radius: 5px;
-      padding: 20px;
-      margin-top: 20px;
-      cursor: pointer;
-      width: 100%;
+      font-size: 14px;
       text-align: center;
-      color: #e0e0e0;
+      transition: background-color 0.3s ease;
+      cursor: text;
     }
 
-    .upload-box:hover {
-      background: #333;
+    .schedule-cell:hover {
+      background-color: #3c3c3c;
     }
 
-    .upload-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #0d8044;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      margin-top: 10px;
-    }
-
-    .upload-button:hover {
-      background: #095f32;
-    }
-
-    .hidden {
-      display: none;
+    .schedule-cell:focus {
+      outline: 2px solid #0d8044;
+      background-color: #3a3a3a;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="grade-section">
-      <h1 class="title">JailMaker</h1>
-      <div class="schedule-grid">
-      </div>
-    </div>
-
-    <div class="upload-section">
-      <h2>Inserir Histórico</h2>
-      <p>Faça o upload do seu histórico escolar para preencher a grade.</p>
-      <div class="upload-box">
-        <input type="file" id="file-input" accept=".pdf" hidden>
-        <label for="file-input" class="upload-button">Selecionar Arquivo</label>
-        <p>ou arraste o arquivo PDF aqui</p>
+  <div class="home">
+    <div class="content">
+      <div class="container">
+        <div class="grade-section">
+          <h1 class="title">JailMaker</h1>
+          <div class="schedule-grid">
+            <!-- A grade será gerada dinamicamente pelo método gerarGradeVazia() -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
   <script>
-    const fileInput = document.getElementById("file-input");
-    const scheduleGrid = document.querySelector(".schedule-grid");
-
-    const horarios = [
-      "08:00 - 10:00", 
-      "10:00 - 12:00", 
-      "13:30 - 15:30", 
-      "15:30 - 17:30", 
-      "19:00 - 21:00", 
-      "21:00 - 23:00"
-    ];
-    const dias = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"];
-
     function gerarGradeVazia() {
+      const scheduleGrid = document.querySelector(".schedule-grid");
       scheduleGrid.innerHTML = ""; 
 
-      scheduleGrid.insertAdjacentHTML("beforeend", `<div></div>`);
-      dias.forEach(dia => scheduleGrid.insertAdjacentHTML("beforeend", `<div><strong>${dia}</strong></div>`));
+      const horarios = [
+        "08:00 - 10:00", 
+        "10:00 - 12:00", 
+        "13:30 - 15:30", 
+        "15:30 - 17:30", 
+        "19:00 - 21:00", 
+        "21:00 - 23:00"
+      ];
+      const dias = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"];
 
+      // Célula vazia no canto superior esquerdo
+      scheduleGrid.insertAdjacentHTML("beforeend", `<div class="header-cell"></div>`);
+      
+      // Cabeçalho dos dias
+      dias.forEach(dia => {
+        scheduleGrid.insertAdjacentHTML("beforeend", `
+          <div class="header-cell day-header">
+            <strong>${dia}</strong>
+          </div>
+        `);
+      });
+
+      // Grade de horários
       horarios.forEach(horario => {
-        scheduleGrid.insertAdjacentHTML("beforeend", `<div><strong>${horario}</strong></div>`);
-        dias.forEach(() => scheduleGrid.insertAdjacentHTML("beforeend", `<div contenteditable="false"></div>`));
+        // Célula de horário
+        scheduleGrid.insertAdjacentHTML("beforeend", `
+          <div class="header-cell time-header">
+            <strong>${horario}</strong>
+          </div>
+        `);
+        
+        // Células editáveis para cada dia
+        dias.forEach(() => {
+          scheduleGrid.insertAdjacentHTML("beforeend", `
+            <div class="schedule-cell" contenteditable="true"></div>
+          `);
+        });
       });
     }
 
-    gerarGradeVazia();
-
-    fileInput.addEventListener("change", () => {
-      const cells = document.querySelectorAll(".schedule-grid div[contenteditable]");
-      cells.forEach(cell => (cell.textContent = "Aula Exemplo"));
-    });
+    // Gera a grade assim que a página carrega
+    window.onload = gerarGradeVazia;
   </script>
 </body>
 </html>
