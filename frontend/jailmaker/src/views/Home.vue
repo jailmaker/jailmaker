@@ -27,8 +27,6 @@
     </div>
 
     <div class="controls">
-      <label for="courseCount">Número de matérias:</label>
-      <input type="number" id="courseCount" v-model="courseCount" min="1" max="20" />
       <button @click="generateSchedule">Gerar grade</button>
     </div>
   </div>
@@ -49,7 +47,6 @@ export default {
         '21h00 - 23h00'
       ],
       generatedSchedule: [],
-      courseCount: 5,
       matriz: JSON.parse(localStorage.getItem('matriz') || '[]'),
       completedCourses: JSON.parse(localStorage.getItem('disciplinas') || '[]')
     }
@@ -68,7 +65,9 @@ export default {
       const schedule = []
       const occupiedSlots = new Set()
 
-      for (let i = 0; i < this.courseCount; i++) {
+      const courseCount =  Math.floor(Math.random() * (10 - 6 + 1) + 6)
+
+      while (occupiedSlots.size < courseCount) {
         const randomIndex = Math.floor(Math.random() * availableCourses.length)
         const course = availableCourses[randomIndex]
         course.schedule.forEach((timeSlot, index) => {
@@ -90,7 +89,6 @@ export default {
       this.generatedSchedule = schedule
     },
     getClassesForSlot(day, timeSlot) {
-      debugger
       const classesInSlot = this.generatedSchedule.filter(
         c => c.day === day && c.timeSlot === timeSlot
       )
