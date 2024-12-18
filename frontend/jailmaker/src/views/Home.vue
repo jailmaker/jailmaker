@@ -1,22 +1,64 @@
-<template>
+<template> 
   <div class="home">
     <div class="content">
-      <h1 class="title">Em progresso...</h1>
-      <div class="construction-icon">🚧</div>
-      <p class="description">
-        Estamos trabalhando em algo incrível! Volte em breve para mais atualizações.
-      </p>
-      <div class="navigation-hints">
-        <router-link to="/matriz" class="hint-link">
-          Veja a matriz curricular do semestre atual
-        </router-link>
-        <router-link to="/historico" class="hint-link">
-          Teste o nosso leitor de histórico acadêmico
-        </router-link>
+      <div class="container">
+        <div class="grade-section">
+          <h1 class="title">JailMaker</h1>
+          <div class="schedule-grid">
+          </div>
+        </div>
+
+        <div class="upload-section">
+          <h2>Inserir Histórico</h2>
+          <p>Faça o upload do seu histórico escolar para preencher a grade.</p>
+          <div class="upload-box">
+            <input type="file" id="file-input" accept=".pdf" hidden>
+            <label for="file-input" class="upload-button">Selecionar Arquivo</label>
+            <p>ou arraste o arquivo PDF aqui</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'Home',
+  mounted() {
+    this.gerarGradeVazia();
+    const fileInput = document.getElementById("file-input");
+    fileInput.addEventListener("change", () => {
+      const cells = document.querySelectorAll(".schedule-grid div[contenteditable]");
+      cells.forEach(cell => (cell.textContent = "Aula Exemplo"));
+    });
+  },
+  methods: {
+    gerarGradeVazia() {
+      const scheduleGrid = this.$el.querySelector(".schedule-grid");
+      scheduleGrid.innerHTML = ""; 
+
+      const horarios = [
+        "08:00 - 10:00", 
+        "10:00 - 12:00", 
+        "13:30 - 15:30", 
+        "15:30 - 17:30", 
+        "19:00 - 21:00", 
+        "21:00 - 23:00"
+      ];
+      const dias = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"];
+
+      scheduleGrid.insertAdjacentHTML("beforeend", `<div></div>`);
+      dias.forEach(dia => scheduleGrid.insertAdjacentHTML("beforeend", `<div><strong>${dia}</strong></div>`));
+
+      horarios.forEach(horario => {
+        scheduleGrid.insertAdjacentHTML("beforeend", `<div><strong>${horario}</strong></div>`);
+        dias.forEach(() => scheduleGrid.insertAdjacentHTML("beforeend", `<div contenteditable="false"></div>`));
+      });
+    }
+  }
+};
+</script>
 
 <style scoped>
 .home {
@@ -28,83 +70,98 @@
   background-color: #1a1a1a;
 }
 
-.content {
-  text-align: center;
-  max-width: 600px;
-  animation: fadeIn 0.5s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 1200px;
+  background: #1e1e1e;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(45deg, #646cff, #42b883);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  letter-spacing: -1px;
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  color: #0d8044;
+  margin-bottom: 20px;
 }
 
-.construction-icon {
-  font-size: 4rem;
-  margin: 2rem 0;
-  animation: bounce 2s infinite;
+.grade-section {
+  flex: 3;
+  padding-right: 20px;
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 60px);
+  gap: 5px;
 }
 
-.description {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  letter-spacing: -0.5px;
+.schedule-grid div {
+  border: 1px solid #333;
+  border-radius: 5px;
+  background: #2c2c2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #b0b0b0;
 }
 
-.navigation-hints {
+.upload-section {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  border-left: 2px solid #333;
+  padding-left: 20px;
 }
 
-.hint-link {
-  color: #646cff;
+.upload-section p {
+  color: #b0b0b0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.upload-box {
+  border: 2px dashed #0d8044;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.upload-box:hover {
+  background: #333;
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0d8044;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(100, 108, 255, 0.3);
-  font-weight: 500;
-  letter-spacing: -0.5px;
-  background-color: rgba(100, 108, 255, 0.1);
+  margin-top: 10px;
 }
 
-.hint-link:hover {
-  background-color: rgba(100, 108, 255, 0.2);
-  border-color: rgba(100, 108, 255, 0.5);
-  transform: translateY(-2px);
+.upload-button:hover {
+  background: #095f32;
 }
 
-@media (max-width: 600px) {
-  .title {
-    font-size: 2rem;
-  }
-  
-  .description {
-    font-size: 1rem;
-  }
-  
-  .hint-link {
-    padding: 0.5rem 1rem;
-  }
+.hidden {
+  display: none;
 }
 </style>
