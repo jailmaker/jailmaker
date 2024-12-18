@@ -44,6 +44,9 @@ export default {
     try {
       const response = await api.get('/api/get_available_classes')
       this.disciplinas = response.data
+      if (!localStorage.getItem('matriz')) {
+        localStorage.setItem('matriz', JSON.stringify(this.disciplinas))
+      }
     } catch (erro) {
       console.error('Erro ao carregar as disciplinas do semestre atual:', erro)
     }
