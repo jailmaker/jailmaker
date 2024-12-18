@@ -1,24 +1,79 @@
 <template>
   <div class="home">
     <div class="content">
-      <h1 class="title">Em progresso...</h1>
-      <div class="construction-icon">🚧</div>
-      <p class="description">
-        Estamos trabalhando em algo incrível! Volte em breve para mais atualizações.
-      </p>
-      <div class="navigation-hints">
-        <router-link to="/matriz" class="hint-link">
-          Veja a matriz curricular do semestre atual
-        </router-link>
-        <router-link to="/historico" class="hint-link">
-          Teste o nosso leitor de histórico acadêmico
-        </router-link>
+      <div class="container">
+        <div class="grade-section">
+          <h1 class="title">JailMaker</h1>
+          <div class="schedule-grid">
+            <!-- A grade será gerada dinamicamente pelo método gerarGradeVazia() -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'Home',
+  mounted() {
+    this.gerarGradeVazia();
+  },
+  methods: {
+    gerarGradeVazia() {
+      const scheduleGrid = this.$el.querySelector(".schedule-grid");
+      scheduleGrid.innerHTML = ""; 
+
+      const horarios = [
+        "08:00 - 10:00", 
+        "10:00 - 12:00", 
+        "13:30 - 15:30", 
+        "15:30 - 17:30", 
+        "19:00 - 21:00", 
+        "21:00 - 23:00"
+      ];
+      const dias = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta"];
+
+      // Célula vazia no canto superior esquerdo
+      scheduleGrid.insertAdjacentHTML("beforeend", `<div class="header-cell"></div>`);
+      
+      // Cabeçalho dos dias
+      dias.forEach(dia => {
+        scheduleGrid.insertAdjacentHTML("beforeend", `
+          <div class="header-cell day-header">
+            <strong>${dia}</strong>
+          </div>
+        `);
+      });
+
+      // Grade de horários
+      horarios.forEach(horario => {
+        // Célula de horário
+        scheduleGrid.insertAdjacentHTML("beforeend", `
+          <div class="header-cell time-header">
+            <strong>${horario}</strong>
+          </div>
+        `);
+        
+        // Células editáveis para cada dia
+        dias.forEach(() => {
+          scheduleGrid.insertAdjacentHTML("beforeend", `
+            <div class="schedule-cell" contenteditable="true"></div>
+          `);
+        });
+      });
+    }
+  }
+};
+</script>
+
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .home {
   min-height: calc(100vh - 61px);
   display: flex;
@@ -28,83 +83,77 @@
   background-color: #1a1a1a;
 }
 
-.content {
-  text-align: center;
-  max-width: 600px;
-  animation: fadeIn 0.5s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.container {
+  width: 90%;
+  max-width: 1200px;
+  background: #1e1e1e;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(45deg, #646cff, #42b883);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  letter-spacing: -1px;
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  color: #0d8044;
+  margin-bottom: 20px;
 }
 
-.construction-icon {
-  font-size: 4rem;
-  margin: 2rem 0;
-  animation: bounce 2s infinite;
+.schedule-grid {
+  display: grid;
+  grid-template-columns: auto repeat(5, 1fr);
+  grid-template-rows: auto repeat(6, 1fr);
+  gap: 8px;
+  width: 100%;
 }
 
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-.description {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  letter-spacing: -0.5px;
-}
-
-.navigation-hints {
+.header-cell {
+  background: #2c2c2c;
+  border: 1px solid #333;
+  border-radius: 5px;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  justify-content: center;
   align-items: center;
+  color: #b0b0b0;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
 }
 
-.hint-link {
-  color: #646cff;
-  text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(100, 108, 255, 0.3);
-  font-weight: 500;
-  letter-spacing: -0.5px;
-  background-color: rgba(100, 108, 255, 0.1);
+.day-header {
+  background-color: #0d8044;
+  color: white;
+  font-weight: bold;
 }
 
-.hint-link:hover {
-  background-color: rgba(100, 108, 255, 0.2);
-  border-color: rgba(100, 108, 255, 0.5);
-  transform: translateY(-2px);
+.time-header {
+  background-color: #333;
+  color: #b0b0b0;
+  white-space: nowrap;
 }
 
-@media (max-width: 600px) {
-  .title {
-    font-size: 2rem;
-  }
-  
-  .description {
-    font-size: 1rem;
-  }
-  
-  .hint-link {
-    padding: 0.5rem 1rem;
-  }
+.schedule-cell {
+  background: #2c2c2c;
+  border: 1px solid #333;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b0b0b0;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  cursor: text;
+}
+
+.schedule-cell:hover {
+  background-color: #3c3c3c;
+}
+
+.schedule-cell:focus {
+  outline: 2px solid #0d8044;
+  background-color: #3a3a3a;
 }
 </style>
