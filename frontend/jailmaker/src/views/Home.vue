@@ -19,8 +19,30 @@
             class="class-block"
             :class="{ 'highlight': classe.subject }"
           >
-            {{ classe.subject }}
-            <span class="class-details">{{ classe.teacher }} - {{ classe.class }}</span>
+            <div class="class-content">
+              {{ classe.subject }}
+              <span class="class-details">{{ classe.teacher }} - {{ classe.class }}</span>
+            </div>
+            <button 
+              v-if="classe.subject"
+              @click="rerollCourse(classe)"
+              class="reroll-button"
+              title="Trocar disciplina"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.3"/>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
@@ -65,7 +87,7 @@ export default {
       const schedule = []
       const occupiedSlots = new Set()
 
-      const courseCount =  Math.floor(Math.random() * (10 - 6 + 1) + 6)
+      const courseCount = Math.floor(Math.random() * (10 - 6 + 1) + 6)
 
       while (occupiedSlots.size < courseCount) {
         const randomIndex = Math.floor(Math.random() * availableCourses.length)
@@ -96,6 +118,46 @@ export default {
       return classesInSlot.length > 0 
         ? classesInSlot 
         : [{ subject: '', teacher: '', class: '' }]
+    },
+    rerollCourse(course) {
+      this.generatedSchedule = this.generatedSchedule.filter(
+        c => !(c.subject === course.subject && c.day === course.day && c.timeSlot === course.timeSlot)
+      )
+
+      const availableCourses = this.matriz.filter(availableCourse => {
+        const notCompleted = !this.completedCourses.some(
+          completed => completed.nome.toUpperCase() === availableCourse.subject.toUpperCase()
+        )
+
+        const notInSchedule = !this.generatedSchedule.some(
+          scheduled => scheduled.subject === availableCourse.subject
+        )
+
+        const hasCompatibleSlot = availableCourse.schedule.some((timeSlot, index) => 
+          timeSlot === course.timeSlot && availableCourse.day[index] === course.day
+        )
+        
+        return notCompleted && notInSchedule && hasCompatibleSlot
+      })
+
+      if (availableCourses.length === 0) {
+        return
+      }
+
+      const randomIndex = Math.floor(Math.random() * availableCourses.length)
+      const newCourse = availableCourses[randomIndex]
+
+      const slotIndex = newCourse.schedule.findIndex((timeSlot, index) => 
+        timeSlot === course.timeSlot && newCourse.day[index] === course.day
+      )
+
+      this.generatedSchedule.push({
+        subject: newCourse.subject,
+        teacher: newCourse.teacher,
+        class: newCourse.class,
+        day: course.day,
+        timeSlot: course.timeSlot
+      })
     }
   }
 }
@@ -172,10 +234,20 @@ export default {
   text-align: center;
   box-sizing: border-box;
   overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .class-block.highlight {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.class-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .class-details {
@@ -183,6 +255,30 @@ export default {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.7);
   margin-top: 2px;
+}
+
+.reroll-button {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.class-block:hover .reroll-button {
+  opacity: 1;
+}
+
+.reroll-button:hover {
+  color: white;
 }
 
 .controls {
@@ -197,28 +293,6 @@ export default {
   border-radius: 8px;
   width: fit-content;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.controls label {
-  color: #ddd;
-  font-size: 16px;
-}
-
-.controls input {
-  background-color: #222;
-  border: 1px solid #555;
-  color: #fff;
-  font-size: 16px;
-  padding: 5px 8px;
-  border-radius: 4px;
-  width: 60px;
-  text-align: center;
-  outline: none;
-  transition: border 0.2s;
-}
-
-.controls input:focus {
-  border-color: #888;
 }
 
 .controls button {
