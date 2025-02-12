@@ -6,7 +6,7 @@
 
     <div v-else class="schedule-grid">
       <div class="grid-header">
-        <div class="time-slot">Horário</div>
+        <div class="time-slot">HORÁRIO</div>
         <div v-for="day in days" :key="day" class="day-header">{{ day }}</div>
       </div>
 
@@ -158,7 +158,6 @@ export default {
         : [{ subject: '', teacher: '', class: '' }]
     },
     rerollCourse(course) {
-      // Remove all instances of the selected course from the schedule
       const oldScheduleEntries = this.generatedSchedule.filter(
         c => c.subject === course.subject
       )
@@ -166,7 +165,6 @@ export default {
         c => c.subject !== course.subject
       )
 
-      // Find available courses that could fit in these slots
       const availableCourses = this.matriz.filter(availableCourse => {
         const notCompleted = !this.completedCourses.some(
           completed => completed.nome.toUpperCase() === availableCourse.subject.toUpperCase()
@@ -176,18 +174,18 @@ export default {
           scheduled => scheduled.subject === availableCourse.subject
         )
 
-        // Check if the course can fit in all the required slots
         const hasCompatibleSlots = oldScheduleEntries.every(oldEntry => {
           return availableCourse.schedule.some((timeSlot, index) => 
             timeSlot === oldEntry.timeSlot && availableCourse.day[index] === oldEntry.day
           )
         })
-        
-        return notCompleted && notInSchedule && hasCompatibleSlots
+
+        const isNotSameCourse = availableCourse.subject !== course.subject
+
+        return notCompleted && notInSchedule && hasCompatibleSlots && isNotSameCourse
       })
 
       if (availableCourses.length > 0) {
-        // Add new course
         const randomIndex = Math.floor(Math.random() * availableCourses.length)
         const newCourse = availableCourses[randomIndex]
 
@@ -204,11 +202,10 @@ export default {
               day: oldEntry.day,
               timeSlot: oldEntry.timeSlot
             })
-            console.log(this.generatedSchedule)
           }
         })
       }
-    }
+}
   }
 }
 </script>
