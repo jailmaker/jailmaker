@@ -49,17 +49,28 @@
     </div>
 
     <div class="controls">
-      <button @click="generateSchedule">Gerar grade</button>
+      <button @click="generateOptimalSchedule" :disabled="isLoading">
+        Gerar Grade Ideal
+      </button>
+      <button @click="generateRandomSchedule" :disabled="isLoading">
+        Gerar Grade Aleatória
+      </button>
+    </div>
+
+    <div v-if="error" class="error-message">
+      {{ error }}
     </div>
   </div>
 </template>
 
 <script>
+import api from '../api'
+
 export default {
   name: 'Home',
   data() {
     return {
-      days: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta'],
+      days: ['SEGUNDA', 'TERÇA', 'QUARTA', 'QUINTA', 'SEXTA'],
       timeSlots: [
         '08h00 - 10h00', 
         '10h00 - 12h00', 
@@ -70,14 +81,41 @@ export default {
       ],
       generatedSchedule: [],
       matriz: JSON.parse(localStorage.getItem('matriz') || '[]'),
-      completedCourses: JSON.parse(localStorage.getItem('disciplinas') || '[]')
+      completedCourses: JSON.parse(localStorage.getItem('disciplinas') || '[]'),
+      isLoading: false,
+      error: null
     }
   },
   created() {
-    this.generateSchedule()
+    this.generateRandomSchedule()
   },
   methods: {
-    generateSchedule() {
+    async generateOptimalSchedule() {
+      this.isLoading = true
+      this.error = null
+      
+      try {
+        const response = await api.post('/api/generate_optimal_schedule', {
+          matriz: this.matriz, 
+          historico: this.completedCourses
+        })
+
+        this.generatedSchedule = response.data.flatMap(course => {
+          return course.day.map((day, index) => ({
+            subject: course.subject,
+            teacher: course.teacher,
+            class: course.class,
+            day: day,
+            timeSlot: course.schedule[index]
+          }))
+        })
+      } catch (err) {
+        this.error = 'Erro ao gerar grade ideal: ' + err.message
+      } finally {
+        this.isLoading = false
+      }
+    },
+    generateRandomSchedule() {
       const availableCourses = this.matriz.filter(
         course => !this.completedCourses.some(
           c => c.nome.toUpperCase() === course.subject.toUpperCase()
@@ -120,6 +158,7 @@ export default {
         : [{ subject: '', teacher: '', class: '' }]
     },
     rerollCourse(course) {
+      // Remove all instances of the selected course from the schedule
       const oldScheduleEntries = this.generatedSchedule.filter(
         c => c.subject === course.subject
       )
@@ -127,6 +166,7 @@ export default {
         c => c.subject !== course.subject
       )
 
+      // Find available courses that could fit in these slots
       const availableCourses = this.matriz.filter(availableCourse => {
         const notCompleted = !this.completedCourses.some(
           completed => completed.nome.toUpperCase() === availableCourse.subject.toUpperCase()
@@ -136,6 +176,7 @@ export default {
           scheduled => scheduled.subject === availableCourse.subject
         )
 
+        // Check if the course can fit in all the required slots
         const hasCompatibleSlots = oldScheduleEntries.every(oldEntry => {
           return availableCourse.schedule.some((timeSlot, index) => 
             timeSlot === oldEntry.timeSlot && availableCourse.day[index] === oldEntry.day
@@ -146,6 +187,7 @@ export default {
       })
 
       if (availableCourses.length > 0) {
+        // Add new course
         const randomIndex = Math.floor(Math.random() * availableCourses.length)
         const newCourse = availableCourses[randomIndex]
 
@@ -162,6 +204,7 @@ export default {
               day: oldEntry.day,
               timeSlot: oldEntry.timeSlot
             })
+            console.log(this.generatedSchedule)
           }
         })
       }
@@ -185,12 +228,18 @@ export default {
   margin-bottom: 30px;
 }
 
-.warning-message {
+.warning-message, .error-message {
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #ff6b6b;
 }
 
 .schedule-grid {
@@ -313,9 +362,14 @@ export default {
   transition: background-color 0.2s, border 0.2s;
 }
 
-.controls button:hover {
+.controls button:not(:disabled):hover {
   background-color: #555;
   border-color: #666;
   color: #fff;
+}
+
+.controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 </style>
