@@ -120,8 +120,11 @@ export default {
         : [{ subject: '', teacher: '', class: '' }]
     },
     rerollCourse(course) {
+      const oldScheduleEntries = this.generatedSchedule.filter(
+        c => c.subject === course.subject
+      )
       this.generatedSchedule = this.generatedSchedule.filter(
-        c => !(c.subject === course.subject && c.day === course.day && c.timeSlot === course.timeSlot)
+        c => c.subject !== course.subject
       )
 
       const availableCourses = this.matriz.filter(availableCourse => {
@@ -133,31 +136,35 @@ export default {
           scheduled => scheduled.subject === availableCourse.subject
         )
 
-        const hasCompatibleSlot = availableCourse.schedule.some((timeSlot, index) => 
-          timeSlot === course.timeSlot && availableCourse.day[index] === course.day
-        )
+        const hasCompatibleSlots = oldScheduleEntries.every(oldEntry => {
+          return availableCourse.schedule.some((timeSlot, index) => 
+            timeSlot === oldEntry.timeSlot && availableCourse.day[index] === oldEntry.day
+          )
+        })
         
-        return notCompleted && notInSchedule && hasCompatibleSlot
+        return notCompleted && notInSchedule && hasCompatibleSlots
       })
 
-      if (availableCourses.length === 0) {
-        return
+      if (availableCourses.length > 0) {
+        const randomIndex = Math.floor(Math.random() * availableCourses.length)
+        const newCourse = availableCourses[randomIndex]
+
+        oldScheduleEntries.forEach(oldEntry => {
+          const slotIndex = newCourse.schedule.findIndex((timeSlot, index) => 
+            timeSlot === oldEntry.timeSlot && newCourse.day[index] === oldEntry.day
+          )
+
+          if (slotIndex !== -1) {
+            this.generatedSchedule.push({
+              subject: newCourse.subject,
+              teacher: newCourse.teacher,
+              class: newCourse.class,
+              day: oldEntry.day,
+              timeSlot: oldEntry.timeSlot
+            })
+          }
+        })
       }
-
-      const randomIndex = Math.floor(Math.random() * availableCourses.length)
-      const newCourse = availableCourses[randomIndex]
-
-      const slotIndex = newCourse.schedule.findIndex((timeSlot, index) => 
-        timeSlot === course.timeSlot && newCourse.day[index] === course.day
-      )
-
-      this.generatedSchedule.push({
-        subject: newCourse.subject,
-        teacher: newCourse.teacher,
-        class: newCourse.class,
-        day: course.day,
-        timeSlot: course.timeSlot
-      })
     }
   }
 }
