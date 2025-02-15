@@ -4,8 +4,8 @@ from pathlib import Path
 
 from ninja import NinjaAPI
 
-from jailmaker.service.grade_svc import monta_grade_ideal
-from jailmaker.service.history_svc import LeitorHistoricoAcademico
+from jailmaker.service.grade_ideal_svc import monta_grade_ideal
+from jailmaker.service.historico_academico_svc import LeitorHistoricoAcademico
 
 api = NinjaAPI(title="Jailmaker API", version="1.0")
 
