@@ -95,9 +95,9 @@ export default {
       this.error = null
       
       try {
-        const response = await api.post('/api/generate_optimal_schedule', {
-          matriz: this.matriz, 
-          historico: this.completedCourses
+        const response = await api.post('/api/grade-ideal', {
+          matriz_horaria: this.matriz, 
+          historico_academico: this.completedCourses
         })
 
         this.generatedSchedule = response.data.flatMap(course => {

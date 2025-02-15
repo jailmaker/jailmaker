@@ -136,9 +136,9 @@ export default {
       this.isLoading = true
       try {
         const formData = new FormData()
-        formData.append('file', file)
+        formData.append('historico_academico', file)
 
-        const response = await api.post('/api/get_academic_history', formData, {
+        const response = await api.post('/api/historico-academico', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }

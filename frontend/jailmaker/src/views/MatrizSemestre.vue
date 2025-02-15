@@ -42,7 +42,7 @@ export default {
   },
   async created() {
     try {
-      const response = await api.get('/api/get_available_classes')
+      const response = await api.get('/api/matriz-horaria')
       this.disciplinas = response.data
       if (!localStorage.getItem('matriz')) {
         localStorage.setItem('matriz', JSON.stringify(this.disciplinas))
