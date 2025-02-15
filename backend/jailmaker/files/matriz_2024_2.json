@@ -741,12 +741,12 @@
         "teacher": "LEDUÍNO",
         "class": "NB",
         "schedule": [
-            "19h00 - 21h00",
-            "19h00 - 21h00"
+            "21h00 - 23h00",
+            "21h00 - 23h00"
         ],
         "day": [
-            "SEGUNDA",
-            "QUARTA"
+            "TERÇA",
+            "QUINTA"
         ],
         "course": "BCT-N",
         "period": "4"
