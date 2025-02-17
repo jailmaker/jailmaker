@@ -3,25 +3,25 @@
     <div class="schedule-grid">
       <div class="grid-header">
         <div class="time-slot">HORÁRIO</div>
-        <div v-for="day in days" :key="day" class="day-header">{{ day }}</div>
+        <div v-for="dia in dias" :key="dia" class="day-header">{{ dia }}</div>
       </div>
 
-      <div v-for="timeSlot in timeSlots" :key="timeSlot" class="schedule-row">
-        <div class="time-slot">{{ timeSlot }}</div>
-        <div v-for="day in days" :key="day" class="day-slot">
+      <div v-for="horario in horarios" :key="horario" class="schedule-row">
+        <div class="time-slot">{{ horario }}</div>
+        <div v-for="dia in dias" :key="dia" class="day-slot">
           <div 
-            v-for="classe in getClassesForSlot(day, timeSlot)"
-            :key="classe.nome"
+            v-for="disciplina in getDisciplinasHorario(dia, horario)"
+            :key="disciplina.nome"
             class="class-block"
-            :class="{ 'highlight': classe.nome }"
+            :class="{ 'highlight': disciplina.nome }"
           >
             <div class="class-content">
-              {{ classe.nome }}
-              <span class="class-details">{{ classe.professor }} - {{ classe.turma }}</span>
+              {{ disciplina.nome }}
+              <span class="class-details">{{ disciplina.professor }} - {{ disciplina.turma }}</span>
             </div>
             <button 
-              v-if="classe.nome"
-              @click="rerollCourse(classe)"
+              v-if="disciplina.nome"
+              @click="trocarDisciplina(disciplina)"
               class="reroll-button"
               title="Trocar disciplina"
             >
@@ -45,16 +45,16 @@
     </div>
 
     <div class="controls">
-      <button @click="generateOptimalSchedule" :disabled="isLoading">
+      <button @click="gerarGradeIdeal" :disabled="isLoading">
         Gerar Grade Ideal
       </button>
-      <button @click="generateRandomSchedule" :disabled="isLoading">
+      <button @click="gerarGradeAleatoria" :disabled="isLoading">
         Gerar Grade Aleatória
       </button>
     </div>
 
-    <div v-if="error" class="error-message">
-      {{ error }}
+    <div v-if="erro" class="error-message">
+      {{ erro }}
     </div>
   </div>
 </template>
@@ -66,8 +66,8 @@ export default {
   name: 'Home',
   data() {
     return {
-      days: ['SEGUNDA', 'TERÇA', 'QUARTA', 'QUINTA', 'SEXTA'],
-      timeSlots: [
+      dias: ['SEGUNDA', 'TERÇA', 'QUARTA', 'QUINTA', 'SEXTA'],
+      horarios: [
         '08h00 - 10h00', 
         '10h00 - 12h00', 
         '13h30 - 15h30', 
@@ -75,107 +75,104 @@ export default {
         '19h00 - 21h00', 
         '21h00 - 23h00'
       ],
-      generatedSchedule: [],
+      gradeGerada: [],
       matriz_horaria: JSON.parse(localStorage.getItem('matriz_horaria') || '[]'),
-      completedCourses: JSON.parse(localStorage.getItem('disciplinas') || '[]'),
+      historico_academico: JSON.parse(localStorage.getItem('disciplinas') || '[]'),
       isLoading: false,
-      error: null
+      erro: null
     }
   },
-  created() {
-    this.generateRandomSchedule()
-  },
   methods: {
-    async generateOptimalSchedule() {
+    async gerarGradeIdeal() {
       this.isLoading = true
-      this.error = null
+      this.erro = null
       
       try {
         const response = await api.post('/api/grade-ideal', {
           matriz_horaria: this.matriz_horaria,
-          historico_academico: this.completedCourses
+          historico_academico: this.historico_academico
         })
 
-        this.generatedSchedule = response.data.flatMap(course => {
-          return course.dias.map((day, index) => ({
-            nome: course.nome,
-            professor: course.professor,
-            turma: course.turma,
-            dia: day,
-            horario: course.horarios[index]
+        this.gradeGerada = response.data.flatMap(disciplina => {
+          return disciplina.dias.map((dia, index) => ({
+            nome: disciplina.nome,
+            professor: disciplina.professor,
+            turma: disciplina.turma,
+            dia: dia,
+            horario: disciplina.horarios[index]
           }))
         })
       } catch (err) {
-        this.error = 'Erro ao gerar grade ideal: ' + err.message
+        this.erro = 'Erro ao gerar grade ideal: ' + err.message
       } finally {
         this.isLoading = false
       }
     },
-    generateRandomSchedule() {
-      const availableCourses = this.matriz_horaria.filter(
-        course => !this.completedCourses.some(
-          c => c.nome.toUpperCase() === course.nome.toUpperCase()
+    gerarGradeAleatoria() {
+      const disciplinasDisponiveis = this.matriz_horaria.filter(
+        disciplina => !this.historico_academico.some(
+          d => d.nome.toUpperCase() === disciplina.nome.toUpperCase()
         )
       )
 
-      const schedule = []
-      const occupiedSlots = new Set()
+      const gradeGerada = []
+      const horariosOcupados = new Set()
 
-      const courseCount = Math.floor(Math.random() * (10 - 6 + 1) + 6)
+      const numDisciplinas = Math.floor(Math.random() * (10 - 6 + 1) + 6)
 
-      while (occupiedSlots.size < courseCount) {
-        const randomIndex = Math.floor(Math.random() * availableCourses.length)
-        const course = availableCourses[randomIndex]
-        course.horarios.forEach((horario, index) => {
-          const day = course.dias[index]
+      while (horariosOcupados.size < numDisciplinas) {
+        const indiceAleatorio = Math.floor(Math.random() * disciplinasDisponiveis.length)
+        const disciplina = disciplinasDisponiveis[indiceAleatorio]
+        disciplina.horarios.forEach((horario, index) => {
+          const dia = disciplina.dias[index]
           const key = `${day}-${horario}`
-          if (!occupiedSlots.has(key)) {
-            schedule.push({
-              nome: course.nome,
-              professor: course.professor,
-              turma: course.turma,
-              dia: day,
+          if (!horariosOcupados.has(key)) {
+            gradeGerada.push({
+              nome: disciplina.nome,
+              professor: disciplina.professor,
+              turma: disciplina.turma,
+              dia: dia,
               horario: horario
             })
-            occupiedSlots.add(key)
+            horariosOcupados.add(key)
           }
         })
       }
 
-      this.generatedSchedule = schedule
+      this.gradeGerada = gradeGerada
     },
-    getClassesForSlot(day, horario) {
-      const classesInSlot = this.generatedSchedule.filter(
-        c => c.dia === day && c.horario === horario
+    getDisciplinasHorario(dia, horario) {
+      const disciplinasHorario = this.gradeGerada.filter(
+        d => d.dia === dia && d.horario === horario
       )
 
-      return classesInSlot.length > 0 
-        ? classesInSlot 
+      return disciplinasHorario.length > 0 
+        ? disciplinasHorario 
         : [{ nome: '', professor: '', turma: '' }]
     },
-    rerollCourse(course) {
-      this.generatedSchedule = this.generatedSchedule.filter(
-        c => c.nome !== course.nome
+    trocarDisciplina(disciplina) {
+      this.gradeGerada = this.gradeGerada.filter(
+        d => d.nome !== disciplina.nome
       )
 
-      const availableCourses = this.matriz.filter(availableCourse => {
+      const disciplinasDisponiveis = this.matriz.filter(disciplinaDisponivel => {
         return (
-          !this.completedCourses.some(c => c.nome.toUpperCase() === availableCourse.nome.toUpperCase()) &&
-          !this.generatedSchedule.some(scheduled => scheduled.nome === availableCourse.nome) &&
-          availableCourse.nome !== course.nome
+          !this.historico_academico.some(d => d.nome.toUpperCase() === disciplinaDisponivel.nome.toUpperCase()) &&
+          !this.gradeGerada.some(d => d.nome === disciplinaDisponivel.nome) &&
+          disciplinaDisponivel.nome !== disciplina.nome
         )
       })
 
-      if (availableCourses.length > 0) {
-        const randomIndex = Math.floor(Math.random() * availableCourses.length)
-        const newCourse = availableCourses[randomIndex]
+      if (disciplinasDisponiveis.length > 0) {
+        const indiceAleatorio = Math.floor(Math.random() * disciplinasDisponiveis.length)
+        const novaDisciplina = disciplinasDisponiveis[indiceAleatorio]
 
-        newCourse.horarios.forEach((horario, index) => {
-          this.generatedSchedule.push({
-            nome: newCourse.nome,
-            professor: newCourse.professor,
-            turma: newCourse.turma,
-            dia: newCourse.dias[index],
+        novaDisciplina.horarios.forEach((horario, index) => {
+          this.gradeGerada.push({
+            nome: novaDisciplina.nome,
+            professor: novaDisciplina.professor,
+            turma: novaDisciplina.turma,
+            dia: novaDisciplina.dias[index],
             horario: horario
           })
         })
