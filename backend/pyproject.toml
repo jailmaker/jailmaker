@@ -27,3 +27,6 @@ lint.select = [
     "UP",   # pyupgrade
     "W",    # pycodestyle warnings
 ]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 20

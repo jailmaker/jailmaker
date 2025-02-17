@@ -13,7 +13,7 @@ api = NinjaAPI(title="Jailmaker API", version="1.0")
 @api.get("/matriz-horaria")
 def listar_matriz_horaria(request):
     """
-    Carrega e retorna a matriz horária a partir de um arquivo JSON.
+    Carrega e retorna a matriz horária atual a partir do seu arquivo JSON.
     """
     try:
         path = Path(__file__).parent / "files" / "matriz_2024_2.json"
