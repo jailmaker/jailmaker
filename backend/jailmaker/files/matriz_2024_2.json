@@ -1,3372 +1,3372 @@
 [
     {
-        "subject": "ALGORITMOS E ESTRUTURAS DE DADOS I",
-        "teacher": "ARLINDO",
-        "class": "IA",
-        "schedule": [
+        "nome": "ALGORITMOS E ESTRUTURAS DE DADOS I",
+        "professor": "ARLINDO",
+        "turma": "IA",
+        "horarios": [
             "13h30 - 15h30",
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-I",
-        "period": "2"
+        "curso": "BCT-I",
+        "termo": "2"
     },
     {
-        "subject": "ALGORITMOS E ESTRUTURAS DE DADOS I",
-        "teacher": "ARLINDO",
-        "class": "NA",
-        "schedule": [
+        "nome": "ALGORITMOS E ESTRUTURAS DE DADOS I",
+        "professor": "ARLINDO",
+        "turma": "NA",
+        "horarios": [
             "19h00 - 21h00",
             "19h00 - 21h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-N",
-        "period": "2"
+        "curso": "BCT-N",
+        "termo": "2"
     },
     {
-        "subject": "ALGORITMOS E ESTRUTURAS DE DADOS I",
-        "teacher": "DIDIER",
-        "class": "IB",
-        "schedule": [
+        "nome": "ALGORITMOS E ESTRUTURAS DE DADOS I",
+        "professor": "DIDIER",
+        "turma": "IB",
+        "horarios": [
             "10h00 - 12h00",
             "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
             "QUARTA",
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "2"
+        "curso": "BCT-I",
+        "termo": "2"
     },
     {
-        "subject": "ALGORITMOS E ESTRUTURAS DE DADOS I",
-        "teacher": "LUIS",
-        "class": "NB",
-        "schedule": [
+        "nome": "ALGORITMOS E ESTRUTURAS DE DADOS I",
+        "professor": "LUIS",
+        "turma": "NB",
+        "horarios": [
             "21h00 - 23h00",
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "QUARTA"
         ],
-        "course": "BCT-N",
-        "period": "2"
+        "curso": "BCT-N",
+        "termo": "2"
     },
     {
-        "subject": "ALGORITMOS E ESTRUTURAS DE DADOS II",
-        "teacher": "BERTON",
-        "class": "I",
-        "schedule": [
+        "nome": "ALGORITMOS E ESTRUTURAS DE DADOS II",
+        "professor": "BERTON",
+        "turma": "I",
+        "horarios": [
             "13h30 - 15h30",
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "ALGORITMOS E ESTRUTURAS DE DADOS II",
-        "teacher": "REGINALDO",
-        "class": "N",
-        "schedule": [
+        "nome": "ALGORITMOS E ESTRUTURAS DE DADOS II",
+        "professor": "REGINALDO",
+        "turma": "N",
+        "horarios": [
             "21h00 - 23h00",
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "QUARTA"
         ],
-        "course": "BCT-N",
-        "period": "4"
+        "curso": "BCT-N",
+        "termo": "4"
     },
     {
-        "subject": "ANATOMIA",
-        "teacher": "REGIANE",
-        "class": "I",
-        "schedule": [
+        "nome": "ANATOMIA",
+        "professor": "REGIANE",
+        "turma": "I",
+        "horarios": [
             "15h30 - 17h30",
             "19h00 - 21h00"
         ],
-        "day": [
+        "dias": [
             "QUINTA",
             "QUINTA"
         ],
-        "course": "BCT-I",
-        "period": "2"
+        "curso": "BCT-I",
+        "termo": "2"
     },
     {
-        "subject": "ANÁLISE REAL II",
-        "teacher": "LEANDRO",
-        "class": "I",
-        "schedule": [
+        "nome": "ANÁLISE REAL II",
+        "professor": "LEANDRO",
+        "turma": "I",
+        "horarios": [
             "10h00 - 12h00",
             "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "APLICAÇÕES DE REDES NEURAIS DE APRENDIZADO PROFUNDO EM SINAIS E IMAGENS MÉDICAS",
-        "teacher": "MATHEUS",
-        "class": "N",
-        "schedule": [
+        "nome": "APLICAÇÕES DE REDES NEURAIS DE APRENDIZADO PROFUNDO EM SINAIS E IMAGENS MÉDICAS",
+        "professor": "MATHEUS",
+        "turma": "N",
+        "horarios": [
             "19h00 - 21h00",
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "SEXTA",
             "SEXTA"
         ],
-        "course": "EB-N",
-        "period": "8"
+        "curso": "EB-N",
+        "termo": "8"
     },
     {
-        "subject": "ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES",
-        "teacher": "CAPPABIANCO",
-        "class": "IA",
-        "schedule": [
+        "nome": "ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES",
+        "professor": "CAPPABIANCO",
+        "turma": "IA",
+        "horarios": [
             "08h00 - 10h00",
             "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
             "SEXTA",
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES",
-        "teacher": "DENISE",
-        "class": "N",
-        "schedule": [
+        "nome": "ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES",
+        "professor": "DENISE",
+        "turma": "N",
+        "horarios": [
             "19h00 - 21h00",
             "19h00 - 21h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-N",
-        "period": "4"
+        "curso": "BCT-N",
+        "termo": "4"
     },
     {
-        "subject": "ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES",
-        "teacher": "THAINA",
-        "class": "IB",
-        "schedule": [
+        "nome": "ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES",
+        "professor": "THAINA",
+        "turma": "IB",
+        "horarios": [
             "13h30 - 15h30",
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "AVANÇOS EM ENGENHARIA BIOMÉDICA",
-        "teacher": "AOKI",
-        "class": "NA",
-        "schedule": [
+        "nome": "AVANÇOS EM ENGENHARIA BIOMÉDICA",
+        "professor": "AOKI",
+        "turma": "NA",
+        "horarios": [
             "19h00 - 21h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA"
         ],
-        "course": "EB-N",
-        "period": "8"
+        "curso": "EB-N",
+        "termo": "8"
     },
     {
-        "subject": "AVANÇOS EM ENGENHARIA BIOMÉDICA",
-        "teacher": "AOKI",
-        "class": "NB",
-        "schedule": [
+        "nome": "AVANÇOS EM ENGENHARIA BIOMÉDICA",
+        "professor": "AOKI",
+        "turma": "NB",
+        "horarios": [
             "19h00 - 21h00"
         ],
-        "day": [
+        "dias": [
             "QUINTA"
         ],
-        "course": "EB-N",
-        "period": "8"
+        "curso": "EB-N",
+        "termo": "8"
     },
     {
-        "subject": "BANCO DE DADOS",
-        "teacher": "DANIELA MUSA",
-        "class": "I",
-        "schedule": [
+        "nome": "BANCO DE DADOS",
+        "professor": "DANIELA MUSA",
+        "turma": "I",
+        "horarios": [
             "15h30 - 17h30",
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "BANCO DE DADOS",
-        "teacher": "DANIELA MUSA",
-        "class": "N",
-        "schedule": [
+        "nome": "BANCO DE DADOS",
+        "professor": "DANIELA MUSA",
+        "turma": "N",
+        "horarios": [
             "19h00 - 21h00",
             "19h00 - 21h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-N",
-        "period": "6"
+        "curso": "BCT-N",
+        "termo": "6"
     },
     {
-        "subject": "BIOLOGIA ESTRUTURAL",
-        "teacher": "MARTIN",
-        "class": "I",
-        "schedule": [
+        "nome": "BIOLOGIA ESTRUTURAL",
+        "professor": "MARTIN",
+        "turma": "I",
+        "horarios": [
             "15h30 - 17h30",
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "SEGUNDA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "BIOLOGIA GERAL",
-        "teacher": "MICHAEL",
-        "class": "I",
-        "schedule": [
+        "nome": "BIOLOGIA GERAL",
+        "professor": "MICHAEL",
+        "turma": "I",
+        "horarios": [
             "15h30 - 17h30",
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "QUARTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "BIOLOGIA MOLECULAR DO GENE",
-        "teacher": "LUCIANE",
-        "class": "I",
-        "schedule": [
+        "nome": "BIOLOGIA MOLECULAR DO GENE",
+        "professor": "LUCIANE",
+        "turma": "I",
+        "horarios": [
             "08h00 - 10h00",
             "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
             "SEXTA",
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "2"
+        "curso": "BCT-I",
+        "termo": "2"
     },
     {
-        "subject": "BIOQUÍMICA I",
-        "teacher": "MARTIN",
-        "class": "I",
-        "schedule": [
+        "nome": "BIOQUÍMICA I",
+        "professor": "MARTIN",
+        "turma": "I",
+        "horarios": [
             "10h00 - 12h00",
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "2"
+        "curso": "BCT-I",
+        "termo": "2"
     },
     {
-        "subject": "BIOQUÍMICA II",
-        "teacher": "CONCEIÇÃO",
-        "class": "I",
-        "schedule": [
+        "nome": "BIOQUÍMICA II",
+        "professor": "CONCEIÇÃO",
+        "turma": "I",
+        "horarios": [
             "10h00 - 12h00",
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "BIOSSENSORES",
-        "teacher": "EDSON",
-        "class": "I",
-        "schedule": [
+        "nome": "BIOSSENSORES",
+        "professor": "EDSON",
+        "turma": "I",
+        "horarios": [
             "15h30 - 17h30",
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "EB-I",
-        "period": "8"
+        "curso": "EB-I",
+        "termo": "8"
     },
     {
-        "subject": "BIOTECNOLOGIA AMBIENTAL I",
-        "teacher": "DANIELLE",
-        "class": "I",
-        "schedule": [
+        "nome": "BIOTECNOLOGIA AMBIENTAL I",
+        "professor": "DANIELLE",
+        "turma": "I",
+        "horarios": [
             "13h30 - 15h30",
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "QUINTA",
             "QUINTA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "BIOTECNOLOGIA ANIMAL",
-        "teacher": "LOURES",
-        "class": "N",
-        "schedule": [
+        "nome": "BIOTECNOLOGIA ANIMAL",
+        "professor": "LOURES",
+        "turma": "N",
+        "horarios": [
             "19h00 - 21h00",
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "TERÇA"
         ],
-        "course": "BCT-N",
-        "period": "6"
+        "curso": "BCT-N",
+        "termo": "6"
     },
     {
-        "subject": "BIOTECNOLOGIA DE ENERGIAS RENOVAVEIS II",
-        "teacher": "DANIELLE",
-        "class": "I",
-        "schedule": [
+        "nome": "BIOTECNOLOGIA DE ENERGIAS RENOVAVEIS II",
+        "professor": "DANIELLE",
+        "turma": "I",
+        "horarios": [
             "08h00 - 10h00",
             "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
             "QUARTA",
             "QUARTA"
         ],
-        "course": "BBT-I",
-        "period": "8"
+        "curso": "BBT-I",
+        "termo": "8"
     },
     {
-        "subject": "BIOÉTICA E BIOSSEGURANCA",
-        "teacher": "LUCIANE",
-        "class": "N",
-        "schedule": [
+        "nome": "BIOÉTICA E BIOSSEGURANCA",
+        "professor": "LUCIANE",
+        "turma": "N",
+        "horarios": [
             "19h00 - 21h00"
         ],
-        "day": [
+        "dias": [
             "SEXTA"
         ],
-        "course": "BCT-N",
-        "period": "6"
+        "curso": "BCT-N",
+        "termo": "6"
     },
     {
-        "subject": "BOTANICA E FISIOLOGIA VEGETAL",
-        "teacher": "MICHAEL",
-        "class": "I",
-        "schedule": [
+        "nome": "BOTANICA E FISIOLOGIA VEGETAL",
+        "professor": "MICHAEL",
+        "turma": "I",
+        "horarios": [
             "10h00 - 12h00",
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "SEGUNDA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "CERÂMICAS REFRATÁRIAS",
-        "teacher": "ALBERS",
-        "class": "I",
-        "schedule": [
+        "nome": "CERÂMICAS REFRATÁRIAS",
+        "professor": "ALBERS",
+        "turma": "I",
+        "horarios": [
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA"
         ],
-        "course": "EM-I",
-        "period": "8"
+        "curso": "EM-I",
+        "termo": "8"
     },
     {
-        "subject": "CIRCUITOS DIGITAIS",
-        "teacher": "SÉRGIO",
-        "class": "N",
-        "schedule": [
+        "nome": "CIRCUITOS DIGITAIS",
+        "professor": "SÉRGIO",
+        "turma": "N",
+        "horarios": [
             "19h00 - 21h00",
             "19h00 - 21h00"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "QUARTA"
         ],
-        "course": "BCT-N",
-        "period": "4"
+        "curso": "BCT-N",
+        "termo": "4"
     },
     {
-        "subject": "CIRCUITOS ELÉTRICOS I",
-        "teacher": "EDSON",
-        "class": "IB",
-        "schedule": [
+        "nome": "CIRCUITOS ELÉTRICOS I",
+        "professor": "EDSON",
+        "turma": "IB",
+        "horarios": [
             "13h30 - 15h30",
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "CIRCUITOS ELÉTRICOS I",
-        "teacher": "HENRIQUE",
-        "class": "N",
-        "schedule": [
+        "nome": "CIRCUITOS ELÉTRICOS I",
+        "professor": "HENRIQUE",
+        "turma": "N",
+        "horarios": [
             "21h00 - 23h00",
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "QUARTA"
         ],
-        "course": "BCT-N",
-        "period": "4"
+        "curso": "BCT-N",
+        "termo": "4"
     },
     {
-        "subject": "CIRCUITOS ELÉTRICOS I",
-        "teacher": "SARAIVA",
-        "class": "IA",
-        "schedule": [
+        "nome": "CIRCUITOS ELÉTRICOS I",
+        "professor": "SARAIVA",
+        "turma": "IA",
+        "horarios": [
             "13h30 - 15h30",
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "QUARTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "CIÊNCIA E TECNOLOGIA DOS MATERIAIS",
-        "teacher": "GISELE",
-        "class": "I",
-        "schedule": [
+        "nome": "CIÊNCIA E TECNOLOGIA DOS MATERIAIS",
+        "professor": "GISELE",
+        "turma": "I",
+        "horarios": [
             "08h00 - 10h00",
             "08h00 - 10h00"
         ],
-        "day": [
+        "dias": [
             "QUARTA",
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "CIÊNCIA E TECNOLOGIA DOS MATERIAIS",
-        "teacher": "LEONARDO",
-        "class": "N",
-        "schedule": [
+        "nome": "CIÊNCIA E TECNOLOGIA DOS MATERIAIS",
+        "professor": "LEONARDO",
+        "turma": "N",
+        "horarios": [
             "19h00 - 21h00",
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "SEXTA",
             "SEXTA"
         ],
-        "course": "BCT-N",
-        "period": "4"
+        "curso": "BCT-N",
+        "termo": "4"
     },
     {
-        "subject": "CIÊNCIA, TECNOLOGIA SOCIEDADE E  AMBIENTE (CTSA)",
-        "teacher": "PEREIRA",
-        "class": "IB",
-        "schedule": [
+        "nome": "CIÊNCIA, TECNOLOGIA SOCIEDADE E  AMBIENTE (CTSA)",
+        "professor": "PEREIRA",
+        "turma": "IB",
+        "horarios": [
             "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "2"
+        "curso": "BCT-I",
+        "termo": "2"
     },
     {
-        "subject": "CIÊNCIA, TECNOLOGIA SOCIEDADE E (CTSA)",
-        "teacher": "WALTER",
-        "class": "NB",
-        "schedule": [
+        "nome": "CIÊNCIA, TECNOLOGIA SOCIEDADE E (CTSA)",
+        "professor": "WALTER",
+        "turma": "NB",
+        "horarios": [
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "QUARTA"
         ],
-        "course": "BCT-N",
-        "period": "2"
+        "curso": "BCT-N",
+        "termo": "2"
     },
     {
-        "subject": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
-        "teacher": "LUCIANA",
-        "class": "IE",
-        "schedule": [
+        "nome": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
+        "professor": "LUCIANA",
+        "turma": "IE",
+        "horarios": [
             "08h00 - 10h00"
         ],
-        "day": [
+        "dias": [
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "2"
+        "curso": "BCT-I",
+        "termo": "2"
     },
     {
-        "subject": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
-        "teacher": "LUCIANA",
-        "class": "IF",
-        "schedule": [
+        "nome": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
+        "professor": "LUCIANA",
+        "turma": "IF",
+        "horarios": [
             "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "2"
+        "curso": "BCT-I",
+        "termo": "2"
     },
     {
-        "subject": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
-        "teacher": "LUCIANA",
-        "class": "NC",
-        "schedule": [
+        "nome": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
+        "professor": "LUCIANA",
+        "turma": "NC",
+        "horarios": [
             "19h00 - 21h00"
         ],
-        "day": [
+        "dias": [
             "QUARTA"
         ],
-        "course": "BCT-N",
-        "period": "2"
+        "curso": "BCT-N",
+        "termo": "2"
     },
     {
-        "subject": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
-        "teacher": "LUCIANA",
-        "class": "ND",
-        "schedule": [
+        "nome": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
+        "professor": "LUCIANA",
+        "turma": "ND",
+        "horarios": [
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "QUARTA"
         ],
-        "course": "BCT-N",
-        "period": "2"
+        "curso": "BCT-N",
+        "termo": "2"
     },
     {
-        "subject": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
-        "teacher": "PEREIRA",
-        "class": "IA",
-        "schedule": [
+        "nome": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
+        "professor": "PEREIRA",
+        "turma": "IA",
+        "horarios": [
             "08h00 - 10h00"
         ],
-        "day": [
+        "dias": [
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "2"
+        "curso": "BCT-I",
+        "termo": "2"
     },
     {
-        "subject": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
-        "teacher": "PEREIRA",
-        "class": "IC",
-        "schedule": [
+        "nome": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
+        "professor": "PEREIRA",
+        "turma": "IC",
+        "horarios": [
             "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
             "QUARTA"
         ],
-        "course": "BCT-I",
-        "period": "2"
+        "curso": "BCT-I",
+        "termo": "2"
     },
     {
-        "subject": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
-        "teacher": "WALTER",
-        "class": "ID",
-        "schedule": [
+        "nome": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
+        "professor": "WALTER",
+        "turma": "ID",
+        "horarios": [
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "QUARTA"
         ],
-        "course": "BCT-I",
-        "period": "2"
+        "curso": "BCT-I",
+        "termo": "2"
     },
     {
-        "subject": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
-        "teacher": "WALTER",
-        "class": "NA",
-        "schedule": [
+        "nome": "CIÊNCIA, TECNOLOGIA SOCIEDADE E AMBIENTE (CTSA)",
+        "professor": "WALTER",
+        "turma": "NA",
+        "horarios": [
             "19h00 - 21h00"
         ],
-        "day": [
+        "dias": [
             "QUARTA"
         ],
-        "course": "BCT-N",
-        "period": "2"
+        "curso": "BCT-N",
+        "termo": "2"
     },
     {
-        "subject": "COMPILADORES",
-        "teacher": "GALVÃO",
-        "class": "I",
-        "schedule": [
+        "nome": "COMPILADORES",
+        "professor": "GALVÃO",
+        "turma": "I",
+        "horarios": [
             "13h30 - 15h30",
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "QUARTA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "COMPILADORES",
-        "teacher": "LUIS",
-        "class": "N",
-        "schedule": [
+        "nome": "COMPILADORES",
+        "professor": "LUIS",
+        "turma": "N",
+        "horarios": [
             "19h00 - 21h00",
             "19h00 - 21h00"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "QUARTA"
         ],
-        "course": "BCT-N",
-        "period": "6"
+        "curso": "BCT-N",
+        "termo": "6"
     },
     {
-        "subject": "COMPUTAÇÃO GRÁFICA",
-        "teacher": "ANA",
-        "class": "I",
-        "schedule": [
+        "nome": "COMPUTAÇÃO GRÁFICA",
+        "professor": "ANA",
+        "turma": "I",
+        "horarios": [
             "13h30 - 15h30",
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "COMPUTAÇÃO GRÁFICA",
-        "teacher": "ANA",
-        "class": "N",
-        "schedule": [
+        "nome": "COMPUTAÇÃO GRÁFICA",
+        "professor": "ANA",
+        "turma": "N",
+        "horarios": [
             "19h00 - 21h00",
             "19h00 - 21h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-N",
-        "period": "6"
+        "curso": "BCT-N",
+        "termo": "6"
     },
     {
-        "subject": "CONTROLE DE SISTEMAS DINÂMICOS",
-        "teacher": "PAIVA",
-        "class": "I",
-        "schedule": [
+        "nome": "CONTROLE DE SISTEMAS DINÂMICOS",
+        "professor": "PAIVA",
+        "turma": "I",
+        "horarios": [
             "10h00 - 12h00",
             "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "CONTROLE DE SISTEMAS DINÂMICOS",
-        "teacher": "SÉRGIO",
-        "class": "N",
-        "schedule": [
+        "nome": "CONTROLE DE SISTEMAS DINÂMICOS",
+        "professor": "SÉRGIO",
+        "turma": "N",
+        "horarios": [
             "21h00 - 23h00",
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "QUARTA"
         ],
-        "course": "BCT-N",
-        "period": "6"
+        "curso": "BCT-N",
+        "termo": "6"
     },
     {
-        "subject": "CÁLCULO NUMÉRICO",
-        "teacher": "ERWIN",
-        "class": "IC",
-        "schedule": [
+        "nome": "CÁLCULO NUMÉRICO",
+        "professor": "ERWIN",
+        "turma": "IC",
+        "horarios": [
             "13h30 - 15h30",
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "QUARTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "CÁLCULO NUMÉRICO",
-        "teacher": "LEDUÍNO",
-        "class": "NB",
-        "schedule": [
+        "nome": "CÁLCULO NUMÉRICO",
+        "professor": "LEDUÍNO",
+        "turma": "NB",
+        "horarios": [
             "21h00 - 23h00",
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-N",
-        "period": "4"
+        "curso": "BCT-N",
+        "termo": "4"
     },
     {
-        "subject": "CÁLCULO NUMÉRICO",
-        "teacher": "MACEDO",
-        "class": "NA",
-        "schedule": [
+        "nome": "CÁLCULO NUMÉRICO",
+        "professor": "MACEDO",
+        "turma": "NA",
+        "horarios": [
             "19h00 - 21h00",
             "19h00 - 21h00"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "QUARTA"
         ],
-        "course": "BCT-N",
-        "period": "4"
+        "curso": "BCT-N",
+        "termo": "4"
     },
     {
-        "subject": "CÁLCULO NUMÉRICO",
-        "teacher": "THADEU",
-        "class": "IA",
-        "schedule": [
+        "nome": "CÁLCULO NUMÉRICO",
+        "professor": "THADEU",
+        "turma": "IA",
+        "horarios": [
             "08h00 - 10h00",
             "08h00 - 10h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "CÁLCULO NUMÉRICO",
-        "teacher": "THADEU",
-        "class": "IB",
-        "schedule": [
+        "nome": "CÁLCULO NUMÉRICO",
+        "professor": "THADEU",
+        "turma": "IB",
+        "horarios": [
             "10h00 - 12h00",
             "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "CÁLCULO EM UMA VARIÁVEL (REOF )",
-        "teacher": "ALFREDO",
-        "class": "N",
-        "schedule": [
+        "nome": "CÁLCULO EM UMA VARIÁVEL (REOF )",
+        "professor": "ALFREDO",
+        "turma": "N",
+        "horarios": [
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "SEXTA"
         ],
-        "course": "BCT-N",
-        "period": "2"
+        "curso": "BCT-N",
+        "termo": "2"
     },
     {
-        "subject": "CÁLCULO EM UMA VARIÁVEL (REOF )",
-        "teacher": "N ALFREDO",
-        "class": "N",
-        "schedule": [
+        "nome": "CÁLCULO EM UMA VARIÁVEL (REOF )",
+        "professor": "N ALFREDO",
+        "turma": "N",
+        "horarios": [
             "21h00 - 23h00",
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-N",
-        "period": "2"
+        "curso": "BCT-N",
+        "termo": "2"
     },
     {
-        "subject": "DESENHO TÉCNICO BÁSICO",
-        "teacher": "SHIDA",
-        "class": "IA",
-        "schedule": [
+        "nome": "DESENHO TÉCNICO BÁSICO",
+        "professor": "SHIDA",
+        "turma": "IA",
+        "horarios": [
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "QUARTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "DESENHO TÉCNICO BÁSICO",
-        "teacher": "SHIDA",
-        "class": "IB",
-        "schedule": [
+        "nome": "DESENHO TÉCNICO BÁSICO",
+        "professor": "SHIDA",
+        "turma": "IB",
+        "horarios": [
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "DESENHO TÉCNICO BÁSICO",
-        "teacher": "SHIDA",
-        "class": "IC",
-        "schedule": [
+        "nome": "DESENHO TÉCNICO BÁSICO",
+        "professor": "SHIDA",
+        "turma": "IC",
+        "horarios": [
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "DESENHO TÉCNICO BÁSICO",
-        "teacher": "SHIDA",
-        "class": "N",
-        "schedule": [
+        "nome": "DESENHO TÉCNICO BÁSICO",
+        "professor": "SHIDA",
+        "turma": "N",
+        "horarios": [
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "SEXTA"
         ],
-        "course": "BCT-N",
-        "period": "4"
+        "curso": "BCT-N",
+        "termo": "4"
     },
     {
-        "subject": "DESENVOLVIMENTO DE GAMES",
-        "teacher": "PEREIRA / CAPPABIANCO",
-        "class": "I",
-        "schedule": [
+        "nome": "DESENVOLVIMENTO DE GAMES",
+        "professor": "PEREIRA / CAPPABIANCO",
+        "turma": "I",
+        "horarios": [
             "13h30 - 15h30",
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "SEXTA",
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "ECOS - EB",
-        "teacher": "URBAN",
-        "class": "I",
-        "schedule": [
+        "nome": "ECOS - EB",
+        "professor": "URBAN",
+        "turma": "I",
+        "horarios": [
             "13h30 - 15h30",
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "SÁBADO",
             "SÁBADO"
         ],
-        "course": "EB-I",
-        "period": "10"
+        "curso": "EB-I",
+        "termo": "10"
     },
     {
-        "subject": "ECOS-EM",
-        "teacher": "DILERMANDO",
-        "class": "I",
-        "schedule": [
+        "nome": "ECOS-EM",
+        "professor": "DILERMANDO",
+        "turma": "I",
+        "horarios": [
             "19h00 - 21h00",
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "SÁBADO",
             "SÁBADO"
         ],
-        "course": "EM-I",
-        "period": "10"
+        "curso": "EM-I",
+        "termo": "10"
     },
     {
-        "subject": "EFEITOS BIOLÓGICOS DAS RADIAÇÕES IONIZANTES",
-        "teacher": "FABIANO",
-        "class": "I",
-        "schedule": [
+        "nome": "EFEITOS BIOLÓGICOS DAS RADIAÇÕES IONIZANTES",
+        "professor": "FABIANO",
+        "turma": "I",
+        "horarios": [
             "15h30 - 17h30",
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "EB-I",
-        "period": "8"
+        "curso": "EB-I",
+        "termo": "8"
     },
     {
-        "subject": "ELETRÔNICA",
-        "teacher": "AOKI",
-        "class": "I",
-        "schedule": [
+        "nome": "ELETRÔNICA",
+        "professor": "AOKI",
+        "turma": "I",
+        "horarios": [
             "15h30 - 17h30",
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "ENGENHARIA BIOQUÍMICA II",
-        "teacher": "ELISABETH",
-        "class": "I",
-        "schedule": [
+        "nome": "ENGENHARIA BIOQUÍMICA II",
+        "professor": "ELISABETH",
+        "turma": "I",
+        "horarios": [
             "10h00 - 12h00",
             "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "ENGENHARIA CLÍNICA HOSPITALAR APLICADA",
-        "teacher": "MATHEUS",
-        "class": "I",
-        "schedule": [
+        "nome": "ENGENHARIA CLÍNICA HOSPITALAR APLICADA",
+        "professor": "MATHEUS",
+        "turma": "I",
+        "horarios": [
             "13h30 - 15h30",
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "SEXTA",
             "SEXTA"
         ],
-        "course": "EB-I",
-        "period": "8"
+        "curso": "EB-I",
+        "termo": "8"
     },
     {
-        "subject": "ENGENHARIA MÉDICA APLICADA",
-        "teacher": "ADENAUER",
-        "class": "N",
-        "schedule": [
+        "nome": "ENGENHARIA MÉDICA APLICADA",
+        "professor": "ADENAUER",
+        "turma": "N",
+        "horarios": [
             "21h00 - 23h00",
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "EB-N",
-        "period": "10"
+        "curso": "EB-N",
+        "termo": "10"
     },
     {
-        "subject": "ENGENHARIA DE MICROESTRUTURAS DE METAIS E LIGAS",
-        "teacher": "KÁTIA",
-        "class": "I",
-        "schedule": [
+        "nome": "ENGENHARIA DE MICROESTRUTURAS DE METAIS E LIGAS",
+        "professor": "KÁTIA",
+        "turma": "I",
+        "horarios": [
             "08h00 - 10h00",
             "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "TERÇA"
         ],
-        "course": "EM-I",
-        "period": "8"
+        "curso": "EM-I",
+        "termo": "8"
     },
     {
-        "subject": "ENGENHARIA DE SOFTWARE",
-        "teacher": "FABIO",
-        "class": "I",
-        "schedule": [
+        "nome": "ENGENHARIA DE SOFTWARE",
+        "professor": "FABIO",
+        "turma": "I",
+        "horarios": [
             "15h30 - 17h30",
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "QUARTA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "ENGENHARIA DE SOFTWARE",
-        "teacher": "FÁBIO",
-        "class": "N",
-        "schedule": [
+        "nome": "ENGENHARIA DE SOFTWARE",
+        "professor": "FÁBIO",
+        "turma": "N",
+        "horarios": [
             "21h00 - 23h00",
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "QUARTA"
         ],
-        "course": "BCT-N",
-        "period": "6"
+        "curso": "BCT-N",
+        "termo": "6"
     },
     {
-        "subject": "ENGENHARIA TECIDUAL E MEDICINA REGENERATIVA",
-        "teacher": "LUCIANE",
-        "class": "I",
-        "schedule": [
+        "nome": "ENGENHARIA TECIDUAL E MEDICINA REGENERATIVA",
+        "professor": "LUCIANE",
+        "turma": "I",
+        "horarios": [
             "13h30 - 15h30",
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "SEXTA",
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "ENSAIO DE MATERIAIS",
-        "teacher": "DILERMANDO",
-        "class": "I",
-        "schedule": [
+        "nome": "ENSAIO DE MATERIAIS",
+        "professor": "DILERMANDO",
+        "turma": "I",
+        "horarios": [
             "13h30 - 15h30",
             "15h30 - 17h30",
             "19h00 - 21h00",
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "TERÇA",
             "TERÇA",
             "TERÇA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "EQUAÇÕES DIFERENCIAIS ORDINÁRIAS",
-        "teacher": "CLAUDIA ALINE",
-        "class": "I",
-        "schedule": [
+        "nome": "EQUAÇÕES DIFERENCIAIS ORDINÁRIAS",
+        "professor": "CLAUDIA ALINE",
+        "turma": "I",
+        "horarios": [
             "13h30 - 15h30",
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "ESTRUTURA E PROPRIEDADES DE POLÍMEROS",
-        "teacher": "LILIA",
-        "class": "I",
-        "schedule": [
+        "nome": "ESTRUTURA E PROPRIEDADES DE POLÍMEROS",
+        "professor": "LILIA",
+        "turma": "I",
+        "horarios": [
             "08h00 - 10h00",
             "10h00 - 12h00"
         ],
-        "day": [
-            "SEGUNDA",
-            "SEGUNDA"
-        ],
-        "course": "EM-I",
-        "period": "8"
-    },
-    {
-        "subject": "ESTÁGIO",
-        "teacher": "ELISABETH",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SÁBADO",
-            "SÁBADO"
-        ],
-        "course": "BBT-I",
-        "period": "8"
-    },
-    {
-        "subject": "ESTÁGIO CURRICULAR OBRIGATÓRIO - ECOS",
-        "teacher": "THAINA",
-        "class": "I",
-        "schedule": [
-            "08h00 - 10h00",
-            "08h00 - 10h00",
-            "08h00 - 10h00",
-            "08h00 - 10h00",
-            "08h00 - 10h00"
-        ],
-        "day": [
-            "SEGUNDA",
-            "TERÇA",
-            "QUARTA",
-            "QUINTA",
-            "SEXTA"
-        ],
-        "course": "BCC/EC-N",
-        "period": "10"
-    },
-    {
-        "subject": "FENÔMENOS ELETROMAGNÉTICOS",
-        "teacher": "MANUEL",
-        "class": "N",
-        "schedule": [
-            "21h00 - 23h00",
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-N",
-        "period": "4"
-    },
-    {
-        "subject": "FENÔMENOS ELETROMAGNÉTICOS",
-        "teacher": "NIRTON",
-        "class": "IA",
-        "schedule": [
-            "10h00 - 12h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "FENÔMENOS ELETROMAGNÉTICOS",
-        "teacher": "NIRTON",
-        "class": "IB",
-        "schedule": [
-            "13h30 - 15h30",
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "FENÔMENOS MECÂNICOS",
-        "teacher": "ESPÍRITO",
-        "class": "IC",
-        "schedule": [
-            "08h00 - 10h00",
-            "08h00 - 10h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "FENÔMENOS MECÂNICOS",
-        "teacher": "ESPÍRITO",
-        "class": "ID",
-        "schedule": [
-            "10h00 - 12h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "FENÔMENOS MECÂNICOS",
-        "teacher": "ROSSANO",
-        "class": "NA",
-        "schedule": [
-            "21h00 - 23h00",
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-N",
-        "period": "2"
-    },
-    {
-        "subject": "FENÔMENOS MECÂNICOS",
-        "teacher": "ROSSANO",
-        "class": "NB",
-        "schedule": [
-            "19h00 - 21h00",
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-N",
-        "period": "2"
-    },
-    {
-        "subject": "FENÔMENOS MECÂNICOS",
-        "teacher": "THACIANA",
-        "class": "IA",
-        "schedule": [
-            "08h00 - 10h00",
-            "08h00 - 10h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "FENÔMENOS MECÂNICOS",
-        "teacher": "THACIANA",
-        "class": "IB",
-        "schedule": [
-            "10h00 - 12h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "FENÔMENOS DO CONTINUO EXPERIMENTAL",
-        "teacher": "ANTONELLI",
-        "class": "I",
-        "schedule": [
-            "19h00 - 21h00",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SEXTA",
-            "SEXTA"
-        ],
-        "course": "BCT-N",
-        "period": "4"
-    },
-    {
-        "subject": "FISIOLOGIA HUMANA II",
-        "teacher": "TATIANA",
-        "class": "IA",
-        "schedule": [
-            "10h00 - 12h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "FISIOLOGIA HUMANA II",
-        "teacher": "TATIANA",
-        "class": "IB",
-        "schedule": [
-            "13h30 - 15h30",
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "FUNDAMENTOS DE ELETRÔNICA APLICADA",
-        "teacher": "FERNANDA",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-N",
-        "period": "6"
-    },
-    {
-        "subject": "FUNDAMENTOS DE ELETRÔNICA APLICADA",
-        "teacher": "LAURO",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "SEXTA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "FUNDAMENTOS DE ENGENHARIA BIOQUÍMICA",
-        "teacher": "ELISABETH",
-        "class": "I",
-        "schedule": [
-            "08h00 - 10h00",
-            "08h00 - 10h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "FUNÇÕES ANALÍTICAS",
-        "teacher": "THIAGO CASTILHO (CASTILHO)",
-        "class": "I",
-        "schedule": [
-            "10h00 - 12h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "GEOMETRIA ANALÍTICA",
-        "teacher": "ANA MOREIRA",
-        "class": "NA",
-        "schedule": [
-            "19h00 - 21h00",
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-N",
-        "period": "2"
-    },
-    {
-        "subject": "GEOMETRIA ANALÍTICA",
-        "teacher": "ANA MOREIRA",
-        "class": "NB",
-        "schedule": [
-            "21h00 - 23h00",
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-N",
-        "period": "2"
-    },
-    {
-        "subject": "GEOMETRIA ANALÍTICA",
-        "teacher": "ANGELO",
-        "class": "IA",
-        "schedule": [
-            "13h30 - 15h30",
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "GEOMETRIA ANALÍTICA",
-        "teacher": "ANGELO",
-        "class": "IB",
-        "schedule": [
-            "15h30 - 17h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "GEOMETRIA ANALÍTICA",
-        "teacher": "CASTILHO",
-        "class": "IE",
-        "schedule": [
-            "08h00 - 10h00",
-            "08h00 - 10h00"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "GEOMETRIA ANALÍTICA",
-        "teacher": "GAMA",
-        "class": "IC",
-        "schedule": [
-            "13h30 - 15h30",
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "GEOMETRIA ANALÍTICA",
-        "teacher": "GAMA",
-        "class": "ID",
-        "schedule": [
-            "15h30 - 17h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "IMUNOLOGIA APLICADA",
-        "teacher": "LOURES",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "QUARTA",
-            "QUARTA"
-        ],
-        "course": "BBT-I",
-        "period": "8"
-    },
-    {
-        "subject": "INFERÊNCIA E ANÁLISE DE REGRESSÃO",
-        "teacher": "LUZIA",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "INSTRUMENTOS BIOMÉDICOS",
-        "teacher": "SARAIVA",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SEGUNDA"
-        ],
-        "course": "EB-I",
-        "period": "8"
-    },
-    {
-        "subject": "INTERAÇÃO HUMANO-COMPUTADOR E EXPERIÊNCIA DO USUÁRIO (UX)",
-        "teacher": "TIAGO SILVA",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "QUARTA",
-            "SEXTA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "INTERNET DAS COISAS",
-        "teacher": "MARCORIN",
-        "class": "I",
-        "schedule": [
-            "19h00 - 21h00",
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-N",
-        "period": "6"
-    },
-    {
-        "subject": "INTRODUCAO A BIOLOGIA DE SISTEMAS",
-        "teacher": "CLAUDIA/MARTIN",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "TERÇA",
-            "TERÇA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "INTRODUCAO A NANOTECNOLOGIA",
-        "teacher": "ELIAS",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "INTRODUCAO A NANOTECNOLOGIA",
-        "teacher": "ELIAS",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-N",
-        "period": "6"
-    },
-    {
-        "subject": "INTRODUÇÃO A ENGENHARIA DE MATERIAIS",
-        "teacher": "ALBERS",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "SEGUNDA"
-        ],
-        "course": "BCT-N",
-        "period": "2"
-    },
-    {
-        "subject": "INTRODUÇÃO A ENGENHARIA DE MATERIAIS",
-        "teacher": "PASSADOR",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "TERÇA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "INTRODUÇÃO AOS PEPICT II",
-        "teacher": "DENISE",
-        "class": "I",
-        "schedule": [
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "SEXTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "INTRODUÇÃO AS REDES NEURAIS ARTIFICIAIS",
-        "teacher": "QUILES",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCC/EC-I",
-        "period": "8"
-    },
-    {
-        "subject": "INTRODUÇÃO À BIOTECNOLOGIA",
-        "teacher": "CONCEIÇÃO",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "TERÇA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "INTRODUÇÃO À BIOTECNOLOGIA",
-        "teacher": "DANIELLE MAASS",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-N",
-        "period": "2"
-    },
-    {
-        "subject": "INTRODUÇÃO À ECONOMIA",
-        "teacher": "SATO",
-        "class": "IA",
-        "schedule": [
-            "08h00 - 10h00"
-        ],
-        "day": [
-            "SEGUNDA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "INTRODUÇÃO À ECONOMIA",
-        "teacher": "SCRIPTORE",
-        "class": "IB",
-        "schedule": [
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SEXTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "INTRODUÇÃO À ECONOMIA",
-        "teacher": "SCRIPTORE",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "SEXTA"
-        ],
-        "course": "BCT-N",
-        "period": "4"
-    },
-    {
-        "subject": "INTRODUÇÃO À ELETROTÉCNICA",
-        "teacher": "FABIANO",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "INTRODUÇÃO À ELETROTÉCNICA",
-        "teacher": "FABIANO",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "QUINTA"
-        ],
-        "course": "BCT-N",
-        "period": "6"
-    },
-    {
-        "subject": "INTRODUÇÃO À PESQUISA OPERACIONAL",
-        "teacher": "CHAVES",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCC/EC-I",
-        "period": "8"
-    },
-    {
-        "subject": "LAB. DE CIRCUITOS ELÉTRICOS",
-        "teacher": "FERNANDA",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "SEXTA"
-        ],
-        "course": "BCC/EC-I",
-        "period": "8"
-    },
-    {
-        "subject": "LAB. DE CIRCUITOS ELÉTRICOS",
-        "teacher": "FERNANDA",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "SEXTA"
-        ],
-        "course": "BCC/EC-N",
-        "period": "8"
-    },
-    {
-        "subject": "LABORATORIO DE BIOLOGIA MOLECULAR E CELULAR",
-        "teacher": "CLAUDIA",
-        "class": "I",
-        "schedule": [
-            "10h00 - 12h00",
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "QUINTA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "LABORATORIO DE BIOQUIMICA ANALÍTICA",
-        "teacher": "CONCEIÇÃO",
-        "class": "I",
-        "schedule": [
-            "08h00 - 10h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "SEXTA",
-            "SEXTA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "LABORATÓRIO DE ELETRÔNICA DIGITAL",
-        "teacher": "KARINA",
-        "class": "IA",
-        "schedule": [
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "LABORATÓRIO DE ELETRÔNICA DIGITAL",
-        "teacher": "KARINA",
-        "class": "IB",
-        "schedule": [
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "LABORATÓRIO DE ELETRÔNICA DIGITAL",
-        "teacher": "KARINA",
-        "class": "NA",
-        "schedule": [
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-N",
-        "period": "6"
-    },
-    {
-        "subject": "LABORATÓRIO DE ELETRÔNICA DIGITAL",
-        "teacher": "KARINA",
-        "class": "NB",
-        "schedule": [
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-N",
-        "period": "6"
-    },
-    {
-        "subject": "LABORATÓRIO DE ENGENHARIA BIOQUÍMICA",
-        "teacher": "ELISABETH",
-        "class": "I",
-        "schedule": [
-            "08h00 - 10h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "SEGUNDA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "EM-I",
+        "termo": "8"
     },
     {
-        "subject": "LABORATÓRIO DE MICROBIOLOGIA",
-        "teacher": "ELISA",
-        "class": "I",
-        "schedule": [
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: CIRCUITOS DIGITAIS",
-        "teacher": "FERNANDA",
-        "class": "IC",
-        "schedule": [
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: CIRCUITOS DIGITAIS",
-        "teacher": "LAURO",
-        "class": "IA",
-        "schedule": [
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: CIRCUITOS DIGITAIS",
-        "teacher": "LAURO",
-        "class": "IB",
-        "schedule": [
+        "nome": "ESTÁGIO",
+        "professor": "ELISABETH",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
             "15h30 - 17h30"
         ],
-        "day": [
-            "SEXTA"
+        "dias": [
+            "SÁBADO",
+            "SÁBADO"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BBT-I",
+        "termo": "8"
     },
     {
-        "subject": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: CIRCUITOS DIGITAIS",
-        "teacher": "LAURO",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00"
+        "nome": "ESTÁGIO CURRICULAR OBRIGATÓRIO - ECOS",
+        "professor": "THAINA",
+        "turma": "I",
+        "horarios": [
+            "08h00 - 10h00",
+            "08h00 - 10h00",
+            "08h00 - 10h00",
+            "08h00 - 10h00",
+            "08h00 - 10h00"
         ],
-        "day": [
+        "dias": [
+            "SEGUNDA",
+            "TERÇA",
+            "QUARTA",
+            "QUINTA",
             "SEXTA"
         ],
-        "course": "BCT-N",
-        "period": "4"
+        "curso": "BCC/EC-N",
+        "termo": "10"
     },
     {
-        "subject": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: ENGENHARIA DE SISTEMA",
-        "teacher": "SILVA",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30"
+        "nome": "FENÔMENOS ELETROMAGNÉTICOS",
+        "professor": "MANUEL",
+        "turma": "N",
+        "horarios": [
+            "21h00 - 23h00",
+            "21h00 - 23h00"
         ],
-        "day": [
-            "SEXTA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: ENGENHARIA DE SISTEMA",
-        "teacher": "SILVA",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "SEXTA"
-        ],
-        "course": "BCT-N",
-        "period": "6"
-    },
-    {
-        "subject": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: SISTEMAS OPERACIONAIS",
-        "teacher": "TIAGO",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCC/EC-I",
-        "period": "8"
+        "curso": "BCT-N",
+        "termo": "4"
     },
     {
-        "subject": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: SISTEMAS OPERACIONAIS",
-        "teacher": "TIAGO",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00",
-            "19h00 - 21h00"
+        "nome": "FENÔMENOS ELETROMAGNÉTICOS",
+        "professor": "NIRTON",
+        "turma": "IA",
+        "horarios": [
+            "10h00 - 12h00",
+            "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCC/EC-N",
-        "period": "8"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "LÓGICA DE PROGRAMAÇÃO",
-        "teacher": "DIDIER",
-        "class": "I",
-        "schedule": [
+        "nome": "FENÔMENOS ELETROMAGNÉTICOS",
+        "professor": "NIRTON",
+        "turma": "IB",
+        "horarios": [
             "13h30 - 15h30",
             "13h30 - 15h30"
         ],
-        "day": [
-            "QUARTA",
-            "SEXTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "LÓGICA DE PROGRAMAÇÃO",
-        "teacher": "EZEQUIEL",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00",
-            "19h00 - 21h00"
-        ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-N",
-        "period": "2"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "MACROECONOMIA",
-        "teacher": "SATO",
-        "class": "I",
-        "schedule": [
+        "nome": "FENÔMENOS MECÂNICOS",
+        "professor": "ESPÍRITO",
+        "turma": "IC",
+        "horarios": [
+            "08h00 - 10h00",
+            "08h00 - 10h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "FENÔMENOS MECÂNICOS",
+        "professor": "ESPÍRITO",
+        "turma": "ID",
+        "horarios": [
+            "10h00 - 12h00",
             "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "FENÔMENOS MECÂNICOS",
+        "professor": "ROSSANO",
+        "turma": "NA",
+        "horarios": [
+            "21h00 - 23h00",
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "2"
+    },
+    {
+        "nome": "FENÔMENOS MECÂNICOS",
+        "professor": "ROSSANO",
+        "turma": "NB",
+        "horarios": [
+            "19h00 - 21h00",
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "2"
+    },
+    {
+        "nome": "FENÔMENOS MECÂNICOS",
+        "professor": "THACIANA",
+        "turma": "IA",
+        "horarios": [
+            "08h00 - 10h00",
+            "08h00 - 10h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "FENÔMENOS MECÂNICOS",
+        "professor": "THACIANA",
+        "turma": "IB",
+        "horarios": [
+            "10h00 - 12h00",
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "FENÔMENOS DO CONTINUO EXPERIMENTAL",
+        "professor": "ANTONELLI",
+        "turma": "I",
+        "horarios": [
+            "19h00 - 21h00",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SEXTA",
+            "SEXTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "4"
+    },
+    {
+        "nome": "FISIOLOGIA HUMANA II",
+        "professor": "TATIANA",
+        "turma": "IA",
+        "horarios": [
+            "10h00 - 12h00",
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "FISIOLOGIA HUMANA II",
+        "professor": "TATIANA",
+        "turma": "IB",
+        "horarios": [
+            "13h30 - 15h30",
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "FUNDAMENTOS DE ELETRÔNICA APLICADA",
+        "professor": "FERNANDA",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "6"
+    },
+    {
+        "nome": "FUNDAMENTOS DE ELETRÔNICA APLICADA",
+        "professor": "LAURO",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "SEXTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "6"
+    },
+    {
+        "nome": "FUNDAMENTOS DE ENGENHARIA BIOQUÍMICA",
+        "professor": "ELISABETH",
+        "turma": "I",
+        "horarios": [
+            "08h00 - 10h00",
+            "08h00 - 10h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "FUNÇÕES ANALÍTICAS",
+        "professor": "THIAGO CASTILHO (CASTILHO)",
+        "turma": "I",
+        "horarios": [
+            "10h00 - 12h00",
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "GEOMETRIA ANALÍTICA",
+        "professor": "ANA MOREIRA",
+        "turma": "NA",
+        "horarios": [
+            "19h00 - 21h00",
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "2"
+    },
+    {
+        "nome": "GEOMETRIA ANALÍTICA",
+        "professor": "ANA MOREIRA",
+        "turma": "NB",
+        "horarios": [
+            "21h00 - 23h00",
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "2"
+    },
+    {
+        "nome": "GEOMETRIA ANALÍTICA",
+        "professor": "ANGELO",
+        "turma": "IA",
+        "horarios": [
+            "13h30 - 15h30",
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "GEOMETRIA ANALÍTICA",
+        "professor": "ANGELO",
+        "turma": "IB",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "GEOMETRIA ANALÍTICA",
+        "professor": "CASTILHO",
+        "turma": "IE",
+        "horarios": [
+            "08h00 - 10h00",
+            "08h00 - 10h00"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "GEOMETRIA ANALÍTICA",
+        "professor": "GAMA",
+        "turma": "IC",
+        "horarios": [
+            "13h30 - 15h30",
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "GEOMETRIA ANALÍTICA",
+        "professor": "GAMA",
+        "turma": "ID",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "IMUNOLOGIA APLICADA",
+        "professor": "LOURES",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "QUARTA",
+            "QUARTA"
+        ],
+        "curso": "BBT-I",
+        "termo": "8"
+    },
+    {
+        "nome": "INFERÊNCIA E ANÁLISE DE REGRESSÃO",
+        "professor": "LUZIA",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "6"
+    },
+    {
+        "nome": "INSTRUMENTOS BIOMÉDICOS",
+        "professor": "SARAIVA",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30"
+        ],
+        "dias": [
             "SEGUNDA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "EB-I",
+        "termo": "8"
     },
     {
-        "subject": "MATEMÁTICA DISCRETA",
-        "teacher": "ERWIN",
-        "class": "IE",
-        "schedule": [
-            "10h00 - 12h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "MATEMÁTICA DISCRETA",
-        "teacher": "GRASIELE",
-        "class": "IC",
-        "schedule": [
-            "15h30 - 17h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "MATEMÁTICA DISCRETA",
-        "teacher": "PEDRO",
-        "class": "ID",
-        "schedule": [
-            "15h30 - 17h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "MATEMÁTICA DISCRETA",
-        "teacher": "PEDRO",
-        "class": "NA",
-        "schedule": [
-            "19h00 - 21h00",
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-N",
-        "period": "2"
-    },
-    {
-        "subject": "MATEMÁTICA DISCRETA",
-        "teacher": "RENATO",
-        "class": "IA",
-        "schedule": [
-            "10h00 - 12h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "MATEMÁTICA DISCRETA",
-        "teacher": "RENATO",
-        "class": "IB",
-        "schedule": [
+        "nome": "INTERAÇÃO HUMANO-COMPUTADOR E EXPERIÊNCIA DO USUÁRIO (UX)",
+        "professor": "TIAGO SILVA",
+        "turma": "I",
+        "horarios": [
             "13h30 - 15h30",
             "13h30 - 15h30"
         ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "MATEMÁTICA DISCRETA",
-        "teacher": "ROBSON",
-        "class": "NB",
-        "schedule": [
-            "21h00 - 23h00",
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-N",
-        "period": "2"
-    },
-    {
-        "subject": "MATEMÁTICA GERAL",
-        "teacher": "SAMIA",
-        "class": "I",
-        "schedule": [
-            "08h00 - 10h00",
-            "08h00 - 10h00"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "MATERIAIS COMPÓSITOS",
-        "teacher": "LILIA",
-        "class": "I",
-        "schedule": [
-            "08h00 - 10h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
+        "dias": [
             "QUARTA",
-            "QUARTA"
+            "SEXTA"
         ],
-        "course": "EM-I",
-        "period": "8"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "MECANICA GERAL",
-        "teacher": "EUDES",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "MECANICA GERAL",
-        "teacher": "EUDES",
-        "class": "N",
-        "schedule": [
+        "nome": "INTERNET DAS COISAS",
+        "professor": "MARCORIN",
+        "turma": "I",
+        "horarios": [
             "19h00 - 21h00",
             "19h00 - 21h00"
         ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
         ],
-        "course": "BCT-N",
-        "period": "4"
+        "curso": "BCT-N",
+        "termo": "6"
     },
     {
-        "subject": "METALURGIA MECÂNICA",
-        "teacher": "DANIELI",
-        "class": "I",
-        "schedule": [
-            "08h00 - 10h00",
+        "nome": "INTRODUCAO A BIOLOGIA DE SISTEMAS",
+        "professor": "CLAUDIA/MARTIN",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "TERÇA",
+            "TERÇA"
+        ],
+        "curso": "BCT-I",
+        "termo": "6"
+    },
+    {
+        "nome": "INTRODUCAO A NANOTECNOLOGIA",
+        "professor": "ELIAS",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "6"
+    },
+    {
+        "nome": "INTRODUCAO A NANOTECNOLOGIA",
+        "professor": "ELIAS",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "6"
+    },
+    {
+        "nome": "INTRODUÇÃO A ENGENHARIA DE MATERIAIS",
+        "professor": "ALBERS",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "SEGUNDA"
+        ],
+        "curso": "BCT-N",
+        "termo": "2"
+    },
+    {
+        "nome": "INTRODUÇÃO A ENGENHARIA DE MATERIAIS",
+        "professor": "PASSADOR",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "TERÇA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "INTRODUÇÃO AOS PEPICT II",
+        "professor": "DENISE",
+        "turma": "I",
+        "horarios": [
             "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
+            "SEXTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "INTRODUÇÃO AS REDES NEURAIS ARTIFICIAIS",
+        "professor": "QUILES",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCC/EC-I",
+        "termo": "8"
+    },
+    {
+        "nome": "INTRODUÇÃO À BIOTECNOLOGIA",
+        "professor": "CONCEIÇÃO",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "TERÇA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "INTRODUÇÃO À BIOTECNOLOGIA",
+        "professor": "DANIELLE MAASS",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "2"
+    },
+    {
+        "nome": "INTRODUÇÃO À ECONOMIA",
+        "professor": "SATO",
+        "turma": "IA",
+        "horarios": [
+            "08h00 - 10h00"
+        ],
+        "dias": [
+            "SEGUNDA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "INTRODUÇÃO À ECONOMIA",
+        "professor": "SCRIPTORE",
+        "turma": "IB",
+        "horarios": [
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SEXTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "INTRODUÇÃO À ECONOMIA",
+        "professor": "SCRIPTORE",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "SEXTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "4"
+    },
+    {
+        "nome": "INTRODUÇÃO À ELETROTÉCNICA",
+        "professor": "FABIANO",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "6"
+    },
+    {
+        "nome": "INTRODUÇÃO À ELETROTÉCNICA",
+        "professor": "FABIANO",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "QUINTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "6"
+    },
+    {
+        "nome": "INTRODUÇÃO À PESQUISA OPERACIONAL",
+        "professor": "CHAVES",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCC/EC-I",
+        "termo": "8"
+    },
+    {
+        "nome": "LAB. DE CIRCUITOS ELÉTRICOS",
+        "professor": "FERNANDA",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "SEXTA"
+        ],
+        "curso": "BCC/EC-I",
+        "termo": "8"
+    },
+    {
+        "nome": "LAB. DE CIRCUITOS ELÉTRICOS",
+        "professor": "FERNANDA",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "SEXTA"
+        ],
+        "curso": "BCC/EC-N",
+        "termo": "8"
+    },
+    {
+        "nome": "LABORATORIO DE BIOLOGIA MOLECULAR E CELULAR",
+        "professor": "CLAUDIA",
+        "turma": "I",
+        "horarios": [
+            "10h00 - 12h00",
+            "13h30 - 15h30"
+        ],
+        "dias": [
             "QUINTA",
             "QUINTA"
         ],
-        "course": "EM-I",
-        "period": "8"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "METODOLOGIA DE PESQUISA E COMUNICAÇÃO CIENTÍFICA",
-        "teacher": "PRESLEY",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "METODOLOGIA DE PESQUISA E COMUNICAÇÃO CIENTÍFICA",
-        "teacher": "PRESLEY",
-        "class": "N",
-        "schedule": [
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-N",
-        "period": "4"
-    },
-    {
-        "subject": "MICROBIOLOGIA GERAL",
-        "teacher": "ELISA",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30",
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "MÉTODOS ESTATÍSTICOS MULTIVARIADOS",
-        "teacher": "SAMIA",
-        "class": "I",
-        "schedule": [
-            "10h00 - 12h00",
+        "nome": "LABORATORIO DE BIOQUIMICA ANALÍTICA",
+        "professor": "CONCEIÇÃO",
+        "turma": "I",
+        "horarios": [
+            "08h00 - 10h00",
             "10h00 - 12h00"
         ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BMC-I",
-        "period": "8"
-    },
-    {
-        "subject": "MÉTODOS MATEMÁTICOS PARA A ENGENHARIA",
-        "teacher": "PAIVA",
-        "class": "I",
-        "schedule": [
-            "08h00 - 10h00",
-            "08h00 - 10h00"
-        ],
-        "day": [
-            "SEGUNDA",
+        "dias": [
+            "SEXTA",
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "MÉTODOS NUMÉRICOS PARA EQUAÇÕES DIFERENCIAIS",
-        "teacher": "SANDERSON",
-        "class": "I",
-        "schedule": [
+        "nome": "LABORATÓRIO DE ELETRÔNICA DIGITAL",
+        "professor": "KARINA",
+        "turma": "IA",
+        "horarios": [
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "6"
+    },
+    {
+        "nome": "LABORATÓRIO DE ELETRÔNICA DIGITAL",
+        "professor": "KARINA",
+        "turma": "IB",
+        "horarios": [
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "6"
+    },
+    {
+        "nome": "LABORATÓRIO DE ELETRÔNICA DIGITAL",
+        "professor": "KARINA",
+        "turma": "NA",
+        "horarios": [
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "6"
+    },
+    {
+        "nome": "LABORATÓRIO DE ELETRÔNICA DIGITAL",
+        "professor": "KARINA",
+        "turma": "NB",
+        "horarios": [
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "6"
+    },
+    {
+        "nome": "LABORATÓRIO DE ENGENHARIA BIOQUÍMICA",
+        "professor": "ELISABETH",
+        "turma": "I",
+        "horarios": [
             "08h00 - 10h00",
             "10h00 - 12h00"
         ],
-        "day": [
-            "QUARTA",
-            "QUARTA"
-        ],
-        "course": "BMC-I",
-        "period": "8"
-    },
-    {
-        "subject": "PRINCÍPIOS E TÉCNICAS DE ELETROENCEFALOGRAFIA EM NEUROCIÊNCIA",
-        "teacher": "ADENAUER",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00",
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "EB-N",
-        "period": "8"
-    },
-    {
-        "subject": "PROBABILIDADE",
-        "teacher": "LUZIA",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "PROBABILIDADE E ESTATÍSTICA (REOF)",
-        "teacher": "ALFREDO",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00",
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-N",
-        "period": "4"
-    },
-    {
-        "subject": "PROBABILIDADE E ESTATÍSTICA (REOF)",
-        "teacher": "FLÁVIA",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "PROCESSAMENTO DE IMAGENS",
-        "teacher": "REGINA",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCC/EC-I",
-        "period": "8"
-    },
-    {
-        "subject": "PROCESSAMENTO DE MATERIAIS CERÂMICOS",
-        "teacher": "LEONARDO",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "QUARTA",
-            "QUARTA"
-        ],
-        "course": "EM-I",
-        "period": "8"
-    },
-    {
-        "subject": "PROCESSAMENTO DE SINAIS",
-        "teacher": "MARTINI",
-        "class": "IA",
-        "schedule": [
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "PROCESSAMENTO DE SINAIS",
-        "teacher": "MARTINI",
-        "class": "IB",
-        "schedule": [
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "PROCESSAMENTO DE SINAIS",
-        "teacher": "MARTINI",
-        "class": "NA",
-        "schedule": [
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-N",
-        "period": "6"
-    },
-    {
-        "subject": "PROCESSAMENTO DE SINAIS",
-        "teacher": "MARTINI",
-        "class": "NB",
-        "schedule": [
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-N",
-        "period": "6"
-    },
-    {
-        "subject": "PROCESSAMENTO DE TERMOPLÁSTICOS (REOF)",
-        "teacher": "PASSADOR",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "SEGUNDA"
         ],
-        "course": "EM-I",
-        "period": "10"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "PROCESSAMENTO DE TERMORRIGIDOS E ELASTÔMEROS",
-        "teacher": "PASSADOR",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30"
+        "nome": "LABORATÓRIO DE MICROBIOLOGIA",
+        "professor": "ELISA",
+        "turma": "I",
+        "horarios": [
+            "10h00 - 12h00"
         ],
-        "day": [
-            "TERÇA"
+        "dias": [
+            "QUARTA"
         ],
-        "course": "EM-I",
-        "period": "8"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "PROGRAMAÇÃO CONCORRENTE E DISTRIBUIDA",
-        "teacher": "ALVARO",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
+        "nome": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: CIRCUITOS DIGITAIS",
+        "professor": "FERNANDA",
+        "turma": "IC",
+        "horarios": [
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: CIRCUITOS DIGITAIS",
+        "professor": "LAURO",
+        "turma": "IA",
+        "horarios": [
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: CIRCUITOS DIGITAIS",
+        "professor": "LAURO",
+        "turma": "IB",
+        "horarios": [
             "15h30 - 17h30"
         ],
-        "day": [
-            "SEXTA",
+        "dias": [
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "PROGRAMAÇÃO CONCORRENTE E DISTRIBUIDA",
-        "teacher": "DENISE",
-        "class": "N",
-        "schedule": [
-            "21h00 - 23h00",
-            "21h00 - 23h00"
+        "nome": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: CIRCUITOS DIGITAIS",
+        "professor": "LAURO",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00"
         ],
-        "day": [
+        "dias": [
+            "SEXTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "4"
+    },
+    {
+        "nome": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: ENGENHARIA DE SISTEMA",
+        "professor": "SILVA",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SEXTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "6"
+    },
+    {
+        "nome": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: ENGENHARIA DE SISTEMA",
+        "professor": "SILVA",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "SEXTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "6"
+    },
+    {
+        "nome": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: SISTEMAS OPERACIONAIS",
+        "professor": "TIAGO",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCC/EC-N",
-        "period": "8"
+        "curso": "BCC/EC-I",
+        "termo": "8"
     },
     {
-        "subject": "PROGRAMAÇÃO ORIENTADA A OBJETOS",
-        "teacher": "OTAVIO",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30",
-            "15h30 - 17h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SEGUNDA",
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "PROGRAMAÇÃO ORIENTADA A OBJETOS",
-        "teacher": "OTAVIO",
-        "class": "N",
-        "schedule": [
-            "21h00 - 23h00",
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "BCT-N",
-        "period": "4"
-    },
-    {
-        "subject": "PROJETO E ANÁLISE DE ALGORITMOS",
-        "teacher": "REGINALDO",
-        "class": "N",
-        "schedule": [
+        "nome": "LABORATÓRIO DE SISTEMAS COMPUTACIONAIS: SISTEMAS OPERACIONAIS",
+        "professor": "TIAGO",
+        "turma": "N",
+        "horarios": [
             "19h00 - 21h00",
             "19h00 - 21h00"
         ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
+        "dias": [
+            "TERÇA",
+            "QUINTA"
         ],
-        "course": "BCT-N",
-        "period": "4"
+        "curso": "BCC/EC-N",
+        "termo": "8"
     },
     {
-        "subject": "PROJETO E ANÁLISE DE ALGORITMOS",
-        "teacher": "SANDERSON",
-        "class": "I",
-        "schedule": [
+        "nome": "LÓGICA DE PROGRAMAÇÃO",
+        "professor": "DIDIER",
+        "turma": "I",
+        "horarios": [
             "13h30 - 15h30",
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "QUARTA",
             "SEXTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "2"
     },
     {
-        "subject": "PROJETOS EXTENSIONISTAS DA EM",
-        "teacher": "ALBERS",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "TERÇA",
-            "TERÇA"
-        ],
-        "course": "EM-I",
-        "period": "10"
-    },
-    {
-        "subject": "PROJETOS SUSTENTÁVEIS EM POLÍMEROS",
-        "teacher": "LEMES",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "QUARTA",
-            "QUARTA"
-        ],
-        "course": "EM-I",
-        "period": "8"
-    },
-    {
-        "subject": "PROJETOS EM ENGENHARIA BIOMÉDICA",
-        "teacher": "URBAN",
-        "class": "N",
-        "schedule": [
+        "nome": "LÓGICA DE PROGRAMAÇÃO",
+        "professor": "EZEQUIEL",
+        "turma": "N",
+        "horarios": [
             "19h00 - 21h00",
             "19h00 - 21h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "EB-N",
-        "period": "10"
+        "curso": "BCT-N",
+        "termo": "2"
     },
     {
-        "subject": "PRÁTICA EM PROJETOS EXTENSIONISTAS II",
-        "teacher": "MARLI/ MARAISA",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "QUINTA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "QUIMICA GERAL (REOF)",
-        "teacher": "ELIAS",
-        "class": "I",
-        "schedule": [
-            "08h00 - 10h00",
+        "nome": "MACROECONOMIA",
+        "professor": "SATO",
+        "turma": "I",
+        "horarios": [
             "10h00 - 12h00"
         ],
-        "day": [
-            "SEXTA",
-            "SEXTA"
+        "dias": [
+            "SEGUNDA"
         ],
-        "course": "BCT-I",
-        "period": "2"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "QUIMICA GERAL (REOF)",
-        "teacher": "HUGO",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00",
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "TERÇA",
-            "TERÇA"
-        ],
-        "course": "BCT-N",
-        "period": "2"
-    },
-    {
-        "subject": "QUIMICA ORGANICA EXPERIMENTAL",
-        "teacher": "JOÃO",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00",
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "QUINTA",
-            "QUINTA"
-        ],
-        "course": "BCT-N",
-        "period": "6"
-    },
-    {
-        "subject": "QUÍMICA GERAL EXPERIMENTAL",
-        "teacher": "DAYANE",
-        "class": "IB",
-        "schedule": [
-            "13h30 - 15h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SEXTA",
-            "SEXTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "QUÍMICA GERAL EXPERIMENTAL",
-        "teacher": "HUGO",
-        "class": "NB",
-        "schedule": [
-            "19h00 - 21h00",
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "QUINTA",
-            "QUINTA"
-        ],
-        "course": "BCT-N",
-        "period": "2"
-    },
-    {
-        "subject": "QUÍMICA GERAL EXPERIMENTAL",
-        "teacher": "JOÃO",
-        "class": "IA",
-        "schedule": [
-            "08h00 - 10h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "QUARTA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "QUÍMICA GERAL EXPERIMENTAL",
-        "teacher": "MARAISA",
-        "class": "NA",
-        "schedule": [
-            "19h00 - 21h00",
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "SEXTA",
-            "SEXTA"
-        ],
-        "course": "BCT-N",
-        "period": "2"
-    },
-    {
-        "subject": "QUÍMICA GERAL EXPERIMENTAL",
-        "teacher": "RAQUEL",
-        "class": "IC",
-        "schedule": [
-            "08h00 - 10h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "QUARTA",
-            "QUARTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "REDES DE COMPUTADORES",
-        "teacher": "BRUNO",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "REDES DE COMPUTADORES",
-        "teacher": "JOAHANNES",
-        "class": "N",
-        "schedule": [
-            "21h00 - 23h00",
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-N",
-        "period": "6"
-    },
-    {
-        "subject": "RESOLUÇÃO DE PROBLEMAS VIA MODELAGEM MATEMÁTICA II",
-        "teacher": "LEDUÍNO",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00",
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-N",
-        "period": "6"
-    },
-    {
-        "subject": "SEGURANÇA DA INFORMAÇÃO",
-        "teacher": "CAPPABIANCO",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SEXTA"
-        ],
-        "course": "BCC/EC-I",
-        "period": "8"
-    },
-    {
-        "subject": "SELEÇÃO DE MATERIAIS",
-        "teacher": "QUINTEIRO",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "QUINTA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "SISTEMAS EMBARCADOS",
-        "teacher": "MARCORIN",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
-        ],
-        "course": "EB-I",
-        "period": "8"
-    },
-    {
-        "subject": "SISTEMAS EMBARCADOS",
-        "teacher": "URBAN",
-        "class": "N",
-        "schedule": [
-            "21h00 - 23h00",
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "EB-N",
-        "period": "8"
-    },
-    {
-        "subject": "SISTEMAS MECÂNICOS",
-        "teacher": "KUNKEL",
-        "class": "I",
-        "schedule": [
-            "08h00 - 10h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "QUINTA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "SISTEMAS OPERACIONAIS",
-        "teacher": "JOAHANNES",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "4"
-    },
-    {
-        "subject": "SOLDAGEM",
-        "teacher": "CAPELLA",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00",
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "QUINTA",
-            "QUINTA"
-        ],
-        "course": "EM-I",
-        "period": "10"
-    },
-    {
-        "subject": "SÉRIES E EQUAÇÕES DIFERENCIAIS ORDINÁRIAS",
-        "teacher": "CLAUDIA ALINE",
-        "class": "IA",
-        "schedule": [
+        "nome": "MATEMÁTICA DISCRETA",
+        "professor": "ERWIN",
+        "turma": "IE",
+        "horarios": [
             "10h00 - 12h00",
             "10h00 - 12h00"
         ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
         ],
-        "course": "BCT-I",
-        "period": "2"
+        "curso": "BCT-I",
+        "termo": "2"
     },
     {
-        "subject": "SÉRIES E EQUAÇÕES DIFERENCIAIS ORDINÁRIAS",
-        "teacher": "DANIELA",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00",
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-N",
-        "period": "2"
-    },
-    {
-        "subject": "SÉRIES E EQUAÇÕES DIFERENCIAIS ORDINÁRIAS",
-        "teacher": "DANIELA OLIVEIRA",
-        "class": "ID",
-        "schedule": [
-            "13h30 - 15h30",
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "SÉRIES E EQUAÇÕES DIFERENCIAIS ORDINÁRIAS",
-        "teacher": "KAREN",
-        "class": "IB",
-        "schedule": [
-            "13h30 - 15h30",
-            "13h30 - 15h30"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-I",
-        "period": "2"
-    },
-    {
-        "subject": "SÉRIES E EQUAÇÕES DIFERENCIAIS ORDINÁRIAS",
-        "teacher": "KAREN",
-        "class": "IC",
-        "schedule": [
+        "nome": "MATEMÁTICA DISCRETA",
+        "professor": "GRASIELE",
+        "turma": "IC",
+        "horarios": [
             "15h30 - 17h30",
             "15h30 - 17h30"
         ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
         ],
-        "course": "BCT-I",
-        "period": "2"
+        "curso": "BCT-I",
+        "termo": "2"
     },
     {
-        "subject": "TCC - I",
-        "teacher": "MATHEUS",
-        "class": "I",
-        "schedule": [
+        "nome": "MATEMÁTICA DISCRETA",
+        "professor": "PEDRO",
+        "turma": "ID",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "MATEMÁTICA DISCRETA",
+        "professor": "PEDRO",
+        "turma": "NA",
+        "horarios": [
+            "19h00 - 21h00",
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "2"
+    },
+    {
+        "nome": "MATEMÁTICA DISCRETA",
+        "professor": "RENATO",
+        "turma": "IA",
+        "horarios": [
+            "10h00 - 12h00",
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "MATEMÁTICA DISCRETA",
+        "professor": "RENATO",
+        "turma": "IB",
+        "horarios": [
+            "13h30 - 15h30",
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "MATEMÁTICA DISCRETA",
+        "professor": "ROBSON",
+        "turma": "NB",
+        "horarios": [
+            "21h00 - 23h00",
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "2"
+    },
+    {
+        "nome": "MATEMÁTICA GERAL",
+        "professor": "SAMIA",
+        "turma": "I",
+        "horarios": [
+            "08h00 - 10h00",
             "08h00 - 10h00"
         ],
-        "day": [
-            "SÁBADO"
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
         ],
-        "course": "EB-I",
-        "period": "10"
+        "curso": "BCT-I",
+        "termo": "2"
     },
     {
-        "subject": "TCC - II",
-        "teacher": "MATHEUS",
-        "class": "I",
-        "schedule": [
+        "nome": "MATERIAIS COMPÓSITOS",
+        "professor": "LILIA",
+        "turma": "I",
+        "horarios": [
+            "08h00 - 10h00",
             "10h00 - 12h00"
         ],
-        "day": [
-            "SÁBADO"
+        "dias": [
+            "QUARTA",
+            "QUARTA"
         ],
-        "course": "EB-I",
-        "period": "10"
+        "curso": "EM-I",
+        "termo": "8"
     },
     {
-        "subject": "TCC I",
-        "teacher": "ELISA",
-        "class": "I",
-        "schedule": [
+        "nome": "MECANICA GERAL",
+        "professor": "EUDES",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "MECANICA GERAL",
+        "professor": "EUDES",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00",
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "4"
+    },
+    {
+        "nome": "METALURGIA MECÂNICA",
+        "professor": "DANIELI",
+        "turma": "I",
+        "horarios": [
+            "08h00 - 10h00",
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "QUINTA",
+            "QUINTA"
+        ],
+        "curso": "EM-I",
+        "termo": "8"
+    },
+    {
+        "nome": "METODOLOGIA DE PESQUISA E COMUNICAÇÃO CIENTÍFICA",
+        "professor": "PRESLEY",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "METODOLOGIA DE PESQUISA E COMUNICAÇÃO CIENTÍFICA",
+        "professor": "PRESLEY",
+        "turma": "N",
+        "horarios": [
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "4"
+    },
+    {
+        "nome": "MICROBIOLOGIA GERAL",
+        "professor": "ELISA",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30",
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "MÉTODOS ESTATÍSTICOS MULTIVARIADOS",
+        "professor": "SAMIA",
+        "turma": "I",
+        "horarios": [
+            "10h00 - 12h00",
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BMC-I",
+        "termo": "8"
+    },
+    {
+        "nome": "MÉTODOS MATEMÁTICOS PARA A ENGENHARIA",
+        "professor": "PAIVA",
+        "turma": "I",
+        "horarios": [
+            "08h00 - 10h00",
             "08h00 - 10h00"
         ],
-        "day": [
-            "SÁBADO"
-        ],
-        "course": "BBT-I",
-        "period": "8"
-    },
-    {
-        "subject": "TCC I",
-        "teacher": "MÁRCIO",
-        "class": "I",
-        "schedule": [
-            "08h00 - 10h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "SÁBADO",
-            "SÁBADO"
-        ],
-        "course": "BCC/EC-I",
-        "period": "8"
-    },
-    {
-        "subject": "TCC I - EC",
-        "teacher": "PRESLEY",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30"
-        ],
-        "day": [
+        "dias": [
+            "SEGUNDA",
             "SEXTA"
         ],
-        "course": "BCC/EC-N",
-        "period": "10"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "TCC I - EC",
-        "teacher": "PRESLEY",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "SEXTA"
-        ],
-        "course": "BCC/EC-N",
-        "period": "10"
-    },
-    {
-        "subject": "TCC II",
-        "teacher": "ELISA",
-        "class": "I",
-        "schedule": [
+        "nome": "MÉTODOS NUMÉRICOS PARA EQUAÇÕES DIFERENCIAIS",
+        "professor": "SANDERSON",
+        "turma": "I",
+        "horarios": [
             "08h00 - 10h00",
             "10h00 - 12h00"
         ],
-        "day": [
-            "SÁBADO",
-            "SÁBADO"
-        ],
-        "course": "BBT-I",
-        "period": "8"
-    },
-    {
-        "subject": "TCC II",
-        "teacher": "MÁRCIO",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SÁBADO",
-            "SÁBADO"
-        ],
-        "course": "BCC/EC-I",
-        "period": "8"
-    },
-    {
-        "subject": "TCC II - EC",
-        "teacher": "CAPPABIANCO",
-        "class": "I",
-        "schedule": [
-            "08h00 - 10h00",
-            "10h00 - 12h00",
-            "13h30 - 15h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SÁBADO",
-            "SÁBADO",
-            "SÁBADO",
-            "SÁBADO"
-        ],
-        "course": "BCC/EC-N",
-        "period": "10"
-    },
-    {
-        "subject": "TCC-I",
-        "teacher": "GISELE",
-        "class": "I",
-        "schedule": [
-            "08h00 - 10h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "SÁBADO",
-            "SÁBADO"
-        ],
-        "course": "EM-I",
-        "period": "8"
-    },
-    {
-        "subject": "TCC-II",
-        "teacher": "GISELE",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SÁBADO",
-            "SÁBADO"
-        ],
-        "course": "EM-I",
-        "period": "10"
-    },
-    {
-        "subject": "TECNOLOGIA DE TINTAS E VERNIZES",
-        "teacher": "MAURÍCIO",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00",
-            "21h00 - 23h00"
-        ],
-        "day": [
-            "TERÇA",
-            "TERÇA"
-        ],
-        "course": "EM-N",
-        "period": "8"
-    },
-    {
-        "subject": "TECNOLOGIA E MEIO AMBIENTE (REOF)",
-        "teacher": "MARAISA",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
+        "dias": [
             "QUARTA",
             "QUARTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BMC-I",
+        "termo": "8"
     },
     {
-        "subject": "TECNOLOGIA E MEIO AMBIENTE (REOF)",
-        "teacher": "MARAISA",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "QUARTA"
-        ],
-        "course": "BCT-N",
-        "period": "4"
-    },
-    {
-        "subject": "TELEMEDICINA",
-        "teacher": "HENRIQUE",
-        "class": "N",
-        "schedule": [
+        "nome": "PRINCÍPIOS E TÉCNICAS DE ELETROENCEFALOGRAFIA EM NEUROCIÊNCIA",
+        "professor": "ADENAUER",
+        "turma": "N",
+        "horarios": [
             "19h00 - 21h00",
             "19h00 - 21h00"
         ],
-        "day": [
-            "SEGUNDA",
-            "QUARTA"
+        "dias": [
+            "TERÇA",
+            "QUINTA"
         ],
-        "course": "BCT-N",
-        "period": "6"
+        "curso": "EB-N",
+        "termo": "8"
     },
     {
-        "subject": "TEORIA DOS GRAFOS",
-        "teacher": "ELBERT",
-        "class": "N",
-        "schedule": [
+        "nome": "PROBABILIDADE",
+        "professor": "LUZIA",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "PROBABILIDADE E ESTATÍSTICA (REOF)",
+        "professor": "ALFREDO",
+        "turma": "N",
+        "horarios": [
             "19h00 - 21h00",
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "4"
+    },
+    {
+        "nome": "PROBABILIDADE E ESTATÍSTICA (REOF)",
+        "professor": "FLÁVIA",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "PROCESSAMENTO DE IMAGENS",
+        "professor": "REGINA",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCC/EC-I",
+        "termo": "8"
+    },
+    {
+        "nome": "PROCESSAMENTO DE MATERIAIS CERÂMICOS",
+        "professor": "LEONARDO",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "QUARTA",
+            "QUARTA"
+        ],
+        "curso": "EM-I",
+        "termo": "8"
+    },
+    {
+        "nome": "PROCESSAMENTO DE SINAIS",
+        "professor": "MARTINI",
+        "turma": "IA",
+        "horarios": [
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "6"
+    },
+    {
+        "nome": "PROCESSAMENTO DE SINAIS",
+        "professor": "MARTINI",
+        "turma": "IB",
+        "horarios": [
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "6"
+    },
+    {
+        "nome": "PROCESSAMENTO DE SINAIS",
+        "professor": "MARTINI",
+        "turma": "NA",
+        "horarios": [
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "6"
+    },
+    {
+        "nome": "PROCESSAMENTO DE SINAIS",
+        "professor": "MARTINI",
+        "turma": "NB",
+        "horarios": [
             "21h00 - 23h00"
         ],
-        "day": [
-            "TERÇA",
-            "TERÇA"
-        ],
-        "course": "BCT-N",
-        "period": "6"
-    },
-    {
-        "subject": "TEORIA DOS NUMEROS E CRIPTOGRAFIA",
-        "teacher": "ROBSON",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30",
-            "15h30 - 17h30"
-        ],
-        "day": [
-            "SEGUNDA",
+        "dias": [
             "QUARTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-N",
+        "termo": "6"
     },
     {
-        "subject": "TERMODINAMICA QUIMICA",
-        "teacher": "SILVIA",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30",
+        "nome": "PROCESSAMENTO DE TERMOPLÁSTICOS (REOF)",
+        "professor": "PASSADOR",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
             "15h30 - 17h30"
         ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
+        "dias": [
+            "SEGUNDA",
+            "SEGUNDA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "EM-I",
+        "termo": "10"
     },
     {
-        "subject": "TERMODINAMICA QUIMICA",
-        "teacher": "SILVIA",
-        "class": "N",
-        "schedule": [
-            "19h00 - 21h00",
-            "19h00 - 21h00"
-        ],
-        "day": [
-            "TERÇA",
-            "QUINTA"
-        ],
-        "course": "BCT-N",
-        "period": "4"
-    },
-    {
-        "subject": "TERMODINÂMICA DOS SÓLIDOS",
-        "teacher": "GISELE",
-        "class": "I",
-        "schedule": [
-            "10h00 - 12h00",
-            "10h00 - 12h00"
-        ],
-        "day": [
-            "QUARTA",
-            "SEXTA"
-        ],
-        "course": "BCT-I",
-        "period": "6"
-    },
-    {
-        "subject": "TRATAMENTOS TÉRMICOS",
-        "teacher": "CAPELLA",
-        "class": "I",
-        "schedule": [
-            "15h30 - 17h30",
+        "nome": "PROCESSAMENTO DE TERMORRIGIDOS E ELASTÔMEROS",
+        "professor": "PASSADOR",
+        "turma": "I",
+        "horarios": [
             "15h30 - 17h30"
         ],
-        "day": [
-            "QUINTA",
-            "SEXTA"
+        "dias": [
+            "TERÇA"
         ],
-        "course": "EM-I",
-        "period": "8"
+        "curso": "EM-I",
+        "termo": "8"
     },
     {
-        "subject": "TÓPICOS EM TECNOLOGIA DA COMPUTAÇÃO II",
-        "teacher": "EZEQUIEL",
-        "class": "N",
-        "schedule": [
+        "nome": "PROGRAMAÇÃO CONCORRENTE E DISTRIBUIDA",
+        "professor": "ALVARO",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SEXTA",
+            "SEXTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "6"
+    },
+    {
+        "nome": "PROGRAMAÇÃO CONCORRENTE E DISTRIBUIDA",
+        "professor": "DENISE",
+        "turma": "N",
+        "horarios": [
             "21h00 - 23h00",
             "21h00 - 23h00"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCC/EC-N",
-        "period": "8"
+        "curso": "BCC/EC-N",
+        "termo": "8"
     },
     {
-        "subject": "TÓPICOS ESPECIAIS EM ECONOMIA E NEGÓCIOS I",
-        "teacher": "SCRIPTORE",
-        "class": "I",
-        "schedule": [
-            "13h30 - 15h30"
+        "nome": "PROGRAMAÇÃO ORIENTADA A OBJETOS",
+        "professor": "OTAVIO",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30",
+            "15h30 - 17h30"
         ],
-        "day": [
-            "SEXTA"
+        "dias": [
+            "SEGUNDA",
+            "SEGUNDA",
+            "QUARTA"
         ],
-        "course": "BCT-I",
-        "period": "4"
+        "curso": "BCT-I",
+        "termo": "4"
     },
     {
-        "subject": "TÓPICOS ESPECIAIS EM ECONOMIA E NEGÓCIOS I",
-        "teacher": "SCRIPTORE",
-        "class": "N",
-        "schedule": [
+        "nome": "PROGRAMAÇÃO ORIENTADA A OBJETOS",
+        "professor": "OTAVIO",
+        "turma": "N",
+        "horarios": [
+            "21h00 - 23h00",
             "21h00 - 23h00"
         ],
-        "day": [
-            "SEXTA"
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
         ],
-        "course": "BCT-N",
-        "period": "4"
+        "curso": "BCT-N",
+        "termo": "4"
     },
     {
-        "subject": "VIDROS, VITROCERÂMICOS E VIDRADOS",
-        "teacher": "ELIANDRA",
-        "class": "I",
-        "schedule": [
+        "nome": "PROJETO E ANÁLISE DE ALGORITMOS",
+        "professor": "REGINALDO",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00",
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "4"
+    },
+    {
+        "nome": "PROJETO E ANÁLISE DE ALGORITMOS",
+        "professor": "SANDERSON",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "QUARTA",
+            "SEXTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "PROJETOS EXTENSIONISTAS DA EM",
+        "professor": "ALBERS",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "TERÇA",
+            "TERÇA"
+        ],
+        "curso": "EM-I",
+        "termo": "10"
+    },
+    {
+        "nome": "PROJETOS SUSTENTÁVEIS EM POLÍMEROS",
+        "professor": "LEMES",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "QUARTA",
+            "QUARTA"
+        ],
+        "curso": "EM-I",
+        "termo": "8"
+    },
+    {
+        "nome": "PROJETOS EM ENGENHARIA BIOMÉDICA",
+        "professor": "URBAN",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00",
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "EB-N",
+        "termo": "10"
+    },
+    {
+        "nome": "PRÁTICA EM PROJETOS EXTENSIONISTAS II",
+        "professor": "MARLI/ MARAISA",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "QUINTA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "QUIMICA GERAL (REOF)",
+        "professor": "ELIAS",
+        "turma": "I",
+        "horarios": [
+            "08h00 - 10h00",
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "SEXTA",
+            "SEXTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "QUIMICA GERAL (REOF)",
+        "professor": "HUGO",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00",
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "TERÇA"
+        ],
+        "curso": "BCT-N",
+        "termo": "2"
+    },
+    {
+        "nome": "QUIMICA ORGANICA EXPERIMENTAL",
+        "professor": "JOÃO",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00",
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "QUINTA",
+            "QUINTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "6"
+    },
+    {
+        "nome": "QUÍMICA GERAL EXPERIMENTAL",
+        "professor": "DAYANE",
+        "turma": "IB",
+        "horarios": [
+            "13h30 - 15h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SEXTA",
+            "SEXTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "QUÍMICA GERAL EXPERIMENTAL",
+        "professor": "HUGO",
+        "turma": "NB",
+        "horarios": [
+            "19h00 - 21h00",
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "QUINTA",
+            "QUINTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "2"
+    },
+    {
+        "nome": "QUÍMICA GERAL EXPERIMENTAL",
+        "professor": "JOÃO",
+        "turma": "IA",
+        "horarios": [
+            "08h00 - 10h00",
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "QUARTA",
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "QUÍMICA GERAL EXPERIMENTAL",
+        "professor": "MARAISA",
+        "turma": "NA",
+        "horarios": [
+            "19h00 - 21h00",
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "SEXTA",
+            "SEXTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "2"
+    },
+    {
+        "nome": "QUÍMICA GERAL EXPERIMENTAL",
+        "professor": "RAQUEL",
+        "turma": "IC",
+        "horarios": [
+            "08h00 - 10h00",
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "QUARTA",
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "REDES DE COMPUTADORES",
+        "professor": "BRUNO",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "6"
+    },
+    {
+        "nome": "REDES DE COMPUTADORES",
+        "professor": "JOAHANNES",
+        "turma": "N",
+        "horarios": [
+            "21h00 - 23h00",
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "6"
+    },
+    {
+        "nome": "RESOLUÇÃO DE PROBLEMAS VIA MODELAGEM MATEMÁTICA II",
+        "professor": "LEDUÍNO",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00",
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "6"
+    },
+    {
+        "nome": "SEGURANÇA DA INFORMAÇÃO",
+        "professor": "CAPPABIANCO",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SEXTA"
+        ],
+        "curso": "BCC/EC-I",
+        "termo": "8"
+    },
+    {
+        "nome": "SELEÇÃO DE MATERIAIS",
+        "professor": "QUINTEIRO",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "QUINTA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "6"
+    },
+    {
+        "nome": "SISTEMAS EMBARCADOS",
+        "professor": "MARCORIN",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "EB-I",
+        "termo": "8"
+    },
+    {
+        "nome": "SISTEMAS EMBARCADOS",
+        "professor": "URBAN",
+        "turma": "N",
+        "horarios": [
+            "21h00 - 23h00",
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "EB-N",
+        "termo": "8"
+    },
+    {
+        "nome": "SISTEMAS MECÂNICOS",
+        "professor": "KUNKEL",
+        "turma": "I",
+        "horarios": [
+            "08h00 - 10h00",
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "QUINTA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "6"
+    },
+    {
+        "nome": "SISTEMAS OPERACIONAIS",
+        "professor": "JOAHANNES",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "SOLDAGEM",
+        "professor": "CAPELLA",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00",
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "QUINTA",
+            "QUINTA"
+        ],
+        "curso": "EM-I",
+        "termo": "10"
+    },
+    {
+        "nome": "SÉRIES E EQUAÇÕES DIFERENCIAIS ORDINÁRIAS",
+        "professor": "CLAUDIA ALINE",
+        "turma": "IA",
+        "horarios": [
+            "10h00 - 12h00",
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "SÉRIES E EQUAÇÕES DIFERENCIAIS ORDINÁRIAS",
+        "professor": "DANIELA",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00",
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "2"
+    },
+    {
+        "nome": "SÉRIES E EQUAÇÕES DIFERENCIAIS ORDINÁRIAS",
+        "professor": "DANIELA OLIVEIRA",
+        "turma": "ID",
+        "horarios": [
+            "13h30 - 15h30",
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "SÉRIES E EQUAÇÕES DIFERENCIAIS ORDINÁRIAS",
+        "professor": "KAREN",
+        "turma": "IB",
+        "horarios": [
+            "13h30 - 15h30",
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "SÉRIES E EQUAÇÕES DIFERENCIAIS ORDINÁRIAS",
+        "professor": "KAREN",
+        "turma": "IC",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "2"
+    },
+    {
+        "nome": "TCC - I",
+        "professor": "MATHEUS",
+        "turma": "I",
+        "horarios": [
+            "08h00 - 10h00"
+        ],
+        "dias": [
+            "SÁBADO"
+        ],
+        "curso": "EB-I",
+        "termo": "10"
+    },
+    {
+        "nome": "TCC - II",
+        "professor": "MATHEUS",
+        "turma": "I",
+        "horarios": [
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "SÁBADO"
+        ],
+        "curso": "EB-I",
+        "termo": "10"
+    },
+    {
+        "nome": "TCC I",
+        "professor": "ELISA",
+        "turma": "I",
+        "horarios": [
+            "08h00 - 10h00"
+        ],
+        "dias": [
+            "SÁBADO"
+        ],
+        "curso": "BBT-I",
+        "termo": "8"
+    },
+    {
+        "nome": "TCC I",
+        "professor": "MÁRCIO",
+        "turma": "I",
+        "horarios": [
+            "08h00 - 10h00",
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "SÁBADO",
+            "SÁBADO"
+        ],
+        "curso": "BCC/EC-I",
+        "termo": "8"
+    },
+    {
+        "nome": "TCC I - EC",
+        "professor": "PRESLEY",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SEXTA"
+        ],
+        "curso": "BCC/EC-N",
+        "termo": "10"
+    },
+    {
+        "nome": "TCC I - EC",
+        "professor": "PRESLEY",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "SEXTA"
+        ],
+        "curso": "BCC/EC-N",
+        "termo": "10"
+    },
+    {
+        "nome": "TCC II",
+        "professor": "ELISA",
+        "turma": "I",
+        "horarios": [
+            "08h00 - 10h00",
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "SÁBADO",
+            "SÁBADO"
+        ],
+        "curso": "BBT-I",
+        "termo": "8"
+    },
+    {
+        "nome": "TCC II",
+        "professor": "MÁRCIO",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SÁBADO",
+            "SÁBADO"
+        ],
+        "curso": "BCC/EC-I",
+        "termo": "8"
+    },
+    {
+        "nome": "TCC II - EC",
+        "professor": "CAPPABIANCO",
+        "turma": "I",
+        "horarios": [
+            "08h00 - 10h00",
+            "10h00 - 12h00",
+            "13h30 - 15h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SÁBADO",
+            "SÁBADO",
+            "SÁBADO",
+            "SÁBADO"
+        ],
+        "curso": "BCC/EC-N",
+        "termo": "10"
+    },
+    {
+        "nome": "TCC-I",
+        "professor": "GISELE",
+        "turma": "I",
+        "horarios": [
+            "08h00 - 10h00",
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "SÁBADO",
+            "SÁBADO"
+        ],
+        "curso": "EM-I",
+        "termo": "8"
+    },
+    {
+        "nome": "TCC-II",
+        "professor": "GISELE",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SÁBADO",
+            "SÁBADO"
+        ],
+        "curso": "EM-I",
+        "termo": "10"
+    },
+    {
+        "nome": "TECNOLOGIA DE TINTAS E VERNIZES",
+        "professor": "MAURÍCIO",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00",
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "TERÇA"
+        ],
+        "curso": "EM-N",
+        "termo": "8"
+    },
+    {
+        "nome": "TECNOLOGIA E MEIO AMBIENTE (REOF)",
+        "professor": "MARAISA",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "QUARTA",
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "TECNOLOGIA E MEIO AMBIENTE (REOF)",
+        "professor": "MARAISA",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "QUARTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "4"
+    },
+    {
+        "nome": "TELEMEDICINA",
+        "professor": "HENRIQUE",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00",
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "6"
+    },
+    {
+        "nome": "TEORIA DOS GRAFOS",
+        "professor": "ELBERT",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00",
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "TERÇA"
+        ],
+        "curso": "BCT-N",
+        "termo": "6"
+    },
+    {
+        "nome": "TEORIA DOS NUMEROS E CRIPTOGRAFIA",
+        "professor": "ROBSON",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "SEGUNDA",
+            "QUARTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "TERMODINAMICA QUIMICA",
+        "professor": "SILVIA",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "TERMODINAMICA QUIMICA",
+        "professor": "SILVIA",
+        "turma": "N",
+        "horarios": [
+            "19h00 - 21h00",
+            "19h00 - 21h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "4"
+    },
+    {
+        "nome": "TERMODINÂMICA DOS SÓLIDOS",
+        "professor": "GISELE",
+        "turma": "I",
+        "horarios": [
+            "10h00 - 12h00",
+            "10h00 - 12h00"
+        ],
+        "dias": [
+            "QUARTA",
+            "SEXTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "6"
+    },
+    {
+        "nome": "TRATAMENTOS TÉRMICOS",
+        "professor": "CAPELLA",
+        "turma": "I",
+        "horarios": [
+            "15h30 - 17h30",
+            "15h30 - 17h30"
+        ],
+        "dias": [
+            "QUINTA",
+            "SEXTA"
+        ],
+        "curso": "EM-I",
+        "termo": "8"
+    },
+    {
+        "nome": "TÓPICOS EM TECNOLOGIA DA COMPUTAÇÃO II",
+        "professor": "EZEQUIEL",
+        "turma": "N",
+        "horarios": [
+            "21h00 - 23h00",
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "TERÇA",
+            "QUINTA"
+        ],
+        "curso": "BCC/EC-N",
+        "termo": "8"
+    },
+    {
+        "nome": "TÓPICOS ESPECIAIS EM ECONOMIA E NEGÓCIOS I",
+        "professor": "SCRIPTORE",
+        "turma": "I",
+        "horarios": [
+            "13h30 - 15h30"
+        ],
+        "dias": [
+            "SEXTA"
+        ],
+        "curso": "BCT-I",
+        "termo": "4"
+    },
+    {
+        "nome": "TÓPICOS ESPECIAIS EM ECONOMIA E NEGÓCIOS I",
+        "professor": "SCRIPTORE",
+        "turma": "N",
+        "horarios": [
+            "21h00 - 23h00"
+        ],
+        "dias": [
+            "SEXTA"
+        ],
+        "curso": "BCT-N",
+        "termo": "4"
+    },
+    {
+        "nome": "VIDROS, VITROCERÂMICOS E VIDRADOS",
+        "professor": "ELIANDRA",
+        "turma": "I",
+        "horarios": [
             "15h30 - 17h30",
             "08h00 - 10h00",
             "10h00 - 12h00"
         ],
-        "day": [
+        "dias": [
             "QUARTA",
             "SEXTA",
             "SEXTA"
         ],
-        "course": "EB-I",
-        "period": "8"
+        "curso": "EB-I",
+        "termo": "8"
     },
     {
-        "subject": "ÁLGEBRA LINEAR COMPUTACIONAL",
-        "teacher": "VANESSA",
-        "class": "I",
-        "schedule": [
+        "nome": "ÁLGEBRA LINEAR COMPUTACIONAL",
+        "professor": "VANESSA",
+        "turma": "I",
+        "horarios": [
             "15h30 - 17h30",
             "15h30 - 17h30"
         ],
-        "day": [
+        "dias": [
             "TERÇA",
             "QUINTA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     },
     {
-        "subject": "ÁLGEBRA LINEAR II",
-        "teacher": "MACEDO",
-        "class": "I",
-        "schedule": [
+        "nome": "ÁLGEBRA LINEAR II",
+        "professor": "MACEDO",
+        "turma": "I",
+        "horarios": [
             "13h30 - 15h30",
             "13h30 - 15h30"
         ],
-        "day": [
+        "dias": [
             "SEGUNDA",
             "QUARTA"
         ],
-        "course": "BCT-I",
-        "period": "6"
+        "curso": "BCT-I",
+        "termo": "6"
     }
 ]

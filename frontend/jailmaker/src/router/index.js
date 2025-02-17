@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import MatrizSemestre from '../views/MatrizSemestre.vue'
+import MatrizHoraria from '../views/MatrizHoraria.vue'
 import Home from '../views/Home.vue'
 import LeitorHistoricoAcademico from '../views/LeitorHistoricoAcademico.vue'
 
@@ -12,7 +12,7 @@ const routes = [
   {
     path: '/matriz',
     name: 'Matriz',
-    component: MatrizSemestre
+    component: MatrizHoraria
   },
   {
     path: '/historico',

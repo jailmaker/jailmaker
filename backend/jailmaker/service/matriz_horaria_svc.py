@@ -3,114 +3,114 @@ import re
 import pandas as pd
 
 
-class MatrixReader:
-    def __init__(self, file_path: str) -> None:
-        self.file_path = file_path
+class LeitorMatrizHoraria:
+    def __init__(self, path: str) -> None:
+        self.path = path
 
-    def read_matrix(self) -> pd.DataFrame:
-        df = pd.read_excel(self.file_path)
+    def ler(self) -> pd.DataFrame:
+        df = pd.read_excel(self.path)
         df["Unnamed: 0"] = df["Unnamed: 0"].ffill()
         df = df.T
         df[0] = df[0].ffill()
-        df = self._generate_subjects(df)
-        df = self._clean_data(df)
-        df = self._rename_columns(df)
-        df = self._combine_schedules(df)
+        df = self._gerar_disciplinas(df)
+        df = self._limpar_dados(df)
+        df = self._renomear_colunas(df)
+        df = self._combinar_horarios(df)
         return df
 
-    def _generate_subjects(self, df: pd.DataFrame) -> pd.DataFrame:
-        lines = []
+    def _gerar_disciplinas(self, df: pd.DataFrame) -> pd.DataFrame:
+        linhas = []
         if df.shape[0] < 3 or df.shape[1] < 3:
-            return pd.DataFrame(lines)
+            return pd.DataFrame(linhas)
 
         for i in range(2, df.shape[0]):
-            weekday = df.iloc[i, 0]
+            dia_semana = df.iloc[i, 0]
             for col in range(1, df.shape[1], 2):
                 if pd.isna(df.iloc[1, col]):
                     continue
                 if col + 1 >= df.shape[1]:
                     break
 
-                schedule = df.iloc[1, col]
-                subject_name = df.iloc[i, col]
-                class_teacher = df.iloc[i, col + 1]
-                course_term = df.iloc[0, col]
+                horario = df.iloc[1, col]
+                nome_disciplina = df.iloc[i, col]
+                turma_professor = df.iloc[i, col + 1]
+                curso_periodo = df.iloc[0, col]
 
-                if pd.notna(subject_name) and pd.notna(class_teacher):
-                    line = {
-                        "Dia da Semana": weekday,
-                        "Horário": schedule,
-                        "Nome da UC": subject_name,
-                        "Turma - Professor": class_teacher,
-                        "Curso - Termo": course_term,
+                if pd.notna(nome_disciplina) and pd.notna(turma_professor):
+                    linha = {
+                        "Dia da Semana": dia_semana,
+                        "Horário": horario,
+                        "Nome da Disciplina": nome_disciplina,
+                        "Turma - Professor": turma_professor,
+                        "Curso - Período": curso_periodo,
                     }
-                    lines.append(line)
+                    linhas.append(linha)
 
-        return pd.DataFrame(lines)
+        return pd.DataFrame(linhas)
 
-    def _clean_data(self, df: pd.DataFrame) -> pd.DataFrame:
-        df[["Curso", "Termo"]] = (
-            df["Curso - Termo"].str.replace("\n\n\n\n", "").apply(self._split_course_term).apply(pd.Series)
+    def _limpar_dados(self, df: pd.DataFrame) -> pd.DataFrame:
+        df[["Curso", "Período"]] = (
+            df["Curso - Período"].str.replace("\n\n\n\n", "").apply(self._separar_curso_periodo).apply(pd.Series)
         )
-        df[["Turma", "Professor"]] = df["Turma - Professor"].apply(self._split_class_teacher).apply(pd.Series)
-        df["Horário"] = df["Horário"].apply(self._normalize_schedule)
+        df[["Turma", "Professor"]] = df["Turma - Professor"].apply(self._separar_turma_professor).apply(pd.Series)
+        df["Horário"] = df["Horário"].apply(self._normalizar_horario)
         df.update(df.loc[:, df.columns != "ID"].apply(lambda x: x.str.strip() if x.dtype == "object" else x))
         return df
 
-    def _rename_columns(self, df: pd.DataFrame) -> pd.DataFrame:
+    def _renomear_colunas(self, df: pd.DataFrame) -> pd.DataFrame:
         df["ID"] = df.index
-        df = df[["ID", "Nome da UC", "Professor", "Turma", "Horário", "Dia da Semana", "Curso", "Termo"]]
-        df.columns = ["id", "subject", "teacher", "class", "schedule", "day", "course", "period"]
+        df = df[["ID", "Nome da Disciplina", "Professor", "Turma", "Horário", "Dia da Semana", "Curso", "Período"]]
+        df.columns = ["id", "disciplina", "professor", "turma", "horario", "dia", "curso", "periodo"]
         return df
 
-    def _combine_schedules(self, df: pd.DataFrame) -> pd.DataFrame:
+    def _combinar_horarios(self, df: pd.DataFrame) -> pd.DataFrame:
         return (
-            df.groupby(["subject", "teacher", "class"])
+            df.groupby(["disciplina", "professor", "turma"])
             .agg(
                 {
-                    "schedule": list,
-                    "day": list,
-                    "course": "first",
-                    "period": "first",
+                    "horario": list,
+                    "dia": list,
+                    "curso": "first",
+                    "periodo": "first",
                 }
             )
             .reset_index()
         )
 
     @staticmethod
-    def _split_course_term(text: str) -> tuple[str, str | None]:
-        parts = re.split(r" \n|\n", text)
-        course = parts[0]
-        term = re.search(r"Termo (\d+)", parts[1]).group(1) if len(parts) > 1 else None
-        return course, term
+    def _separar_curso_periodo(texto: str) -> tuple[str, str | None]:
+        partes = re.split(r" \n|\n", texto)
+        curso = partes[0]
+        periodo = re.search(r"Período (\d+)", partes[1]).group(1) if len(partes) > 1 else None
+        return curso, periodo
 
     @staticmethod
-    def _split_class_teacher(text: str) -> tuple[str, str]:
-        match = re.match(r"([A-Z]+[A-Z0-9]*)\s*-\s*(.+)", text)
-        if match:
-            class_code = match.group(1).strip()
-            teacher = match.group(2).strip()
+    def _separar_turma_professor(texto: str) -> tuple[str, str]:
+        correspondencia = re.match(r"([A-Z]+[A-Z0-9]*)\s*-\s*(.+)", texto)
+        if correspondencia:
+            codigo_turma = correspondencia.group(1).strip()
+            professor = correspondencia.group(2).strip()
         else:
-            class_code = MatrixReader._determine_class_code(text)
-            teacher = text.strip()
-        return class_code, teacher
+            codigo_turma = LeitorMatrizHoraria._determinar_codigo_turma(texto)
+            professor = texto.strip()
+        return codigo_turma, professor
 
     @staticmethod
-    def _determine_class_code(text: str) -> str:
-        if text.strip().isalpha():
+    def _determinar_codigo_turma(texto: str) -> str:
+        if texto.strip().isalpha():
             return "I"
 
-        uppercase_match = re.search(r"[A-Z]+$", text)
-        if uppercase_match:
-            return uppercase_match.group(0)
+        correspondencia_maiuscula = re.search(r"[A-Z]+$", texto)
+        if correspondencia_maiuscula:
+            return correspondencia_maiuscula.group(0)
 
         return "N"
 
     @staticmethod
-    def _normalize_schedule(schedule: str) -> str:
-        pattern = re.compile(r"(\d{1,2})[hH](\d{2})\s*-\s*(\d{1,2})[hH](\d{2})")
-        match = pattern.match(schedule)
-        if match:
-            start_hour, start_minute, end_hour, end_minute = match.groups()
-            return f"{int(start_hour):02d}h{start_minute} - {int(end_hour):02d}h{end_minute}"
-        return schedule
+    def _normalizar_horario(horario: str) -> str:
+        padrao = re.compile(r"(\d{1,2})[hH](\d{2})\s*-\s*(\d{1,2})[hH](\d{2})")
+        correspondencia = padrao.match(horario)
+        if correspondencia:
+            hora_inicio, minuto_inicio, hora_fim, minuto_fim = correspondencia.groups()
+            return f"{int(hora_inicio):02d}h{minuto_inicio} - {int(hora_fim):02d}h{minuto_fim}"
+        return horario

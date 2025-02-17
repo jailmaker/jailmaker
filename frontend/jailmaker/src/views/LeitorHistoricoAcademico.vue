@@ -90,7 +90,7 @@
 import api from '../api'
 
 export default {
-  name: 'AcademicHistory',
+  name: 'LeitorHistoricoAcademico',
   data() {
     return {
       alunoInfo: null,
