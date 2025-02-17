@@ -1,10 +1,6 @@
 <template>
   <div class="schedule-generator">
-    <div v-if="generatedSchedule.length === 0" class="warning-message">
-      <p>Não foi possível gerar a sua grade, cheque suas informações e tente novamente :(</p>
-    </div>
-
-    <div v-else class="schedule-grid">
+    <div class="schedule-grid">
       <div class="grid-header">
         <div class="time-slot">HORÁRIO</div>
         <div v-for="day in days" :key="day" class="day-header">{{ day }}</div>
@@ -15,16 +11,16 @@
         <div v-for="day in days" :key="day" class="day-slot">
           <div 
             v-for="classe in getClassesForSlot(day, timeSlot)"
-            :key="classe.subject"
+            :key="classe.nome"
             class="class-block"
-            :class="{ 'highlight': classe.subject }"
+            :class="{ 'highlight': classe.nome }"
           >
             <div class="class-content">
-              {{ classe.subject }}
-              <span class="class-details">{{ classe.teacher }} - {{ classe.class }}</span>
+              {{ classe.nome }}
+              <span class="class-details">{{ classe.professor }} - {{ classe.turma }}</span>
             </div>
             <button 
-              v-if="classe.subject"
+              v-if="classe.nome"
               @click="rerollCourse(classe)"
               class="reroll-button"
               title="Trocar disciplina"
@@ -80,7 +76,7 @@ export default {
         '21h00 - 23h00'
       ],
       generatedSchedule: [],
-      matriz: JSON.parse(localStorage.getItem('matriz') || '[]'),
+      matriz_horaria: JSON.parse(localStorage.getItem('matriz_horaria') || '[]'),
       completedCourses: JSON.parse(localStorage.getItem('disciplinas') || '[]'),
       isLoading: false,
       error: null
@@ -96,17 +92,17 @@ export default {
       
       try {
         const response = await api.post('/api/grade-ideal', {
-          matriz_horaria: this.matriz, 
+          matriz_horaria: this.matriz_horaria,
           historico_academico: this.completedCourses
         })
 
         this.generatedSchedule = response.data.flatMap(course => {
-          return course.day.map((day, index) => ({
-            subject: course.subject,
-            teacher: course.teacher,
-            class: course.class,
-            day: day,
-            timeSlot: course.schedule[index]
+          return course.dias.map((day, index) => ({
+            nome: course.nome,
+            professor: course.professor,
+            turma: course.turma,
+            dia: day,
+            horario: course.horarios[index]
           }))
         })
       } catch (err) {
@@ -116,9 +112,9 @@ export default {
       }
     },
     generateRandomSchedule() {
-      const availableCourses = this.matriz.filter(
+      const availableCourses = this.matriz_horaria.filter(
         course => !this.completedCourses.some(
-          c => c.nome.toUpperCase() === course.subject.toUpperCase()
+          c => c.nome.toUpperCase() === course.nome.toUpperCase()
         )
       )
 
@@ -130,16 +126,16 @@ export default {
       while (occupiedSlots.size < courseCount) {
         const randomIndex = Math.floor(Math.random() * availableCourses.length)
         const course = availableCourses[randomIndex]
-        course.schedule.forEach((timeSlot, index) => {
-          const day = course.day[index]
-          const key = `${day}-${timeSlot}`
+        course.horarios.forEach((horario, index) => {
+          const day = course.dias[index]
+          const key = `${day}-${horario}`
           if (!occupiedSlots.has(key)) {
             schedule.push({
-              subject: course.subject,
-              teacher: course.teacher,
-              class: course.class,
-              day: day,
-              timeSlot: timeSlot
+              nome: course.nome,
+              professor: course.professor,
+              turma: course.turma,
+              dia: day,
+              horario: horario
             })
             occupiedSlots.add(key)
           }
@@ -148,64 +144,43 @@ export default {
 
       this.generatedSchedule = schedule
     },
-    getClassesForSlot(day, timeSlot) {
+    getClassesForSlot(day, horario) {
       const classesInSlot = this.generatedSchedule.filter(
-        c => c.day === day && c.timeSlot === timeSlot
+        c => c.dia === day && c.horario === horario
       )
 
       return classesInSlot.length > 0 
         ? classesInSlot 
-        : [{ subject: '', teacher: '', class: '' }]
+        : [{ nome: '', professor: '', turma: '' }]
     },
     rerollCourse(course) {
-      const oldScheduleEntries = this.generatedSchedule.filter(
-        c => c.subject === course.subject
-      )
       this.generatedSchedule = this.generatedSchedule.filter(
-        c => c.subject !== course.subject
+        c => c.nome !== course.nome
       )
 
       const availableCourses = this.matriz.filter(availableCourse => {
-        const notCompleted = !this.completedCourses.some(
-          completed => completed.nome.toUpperCase() === availableCourse.subject.toUpperCase()
+        return (
+          !this.completedCourses.some(c => c.nome.toUpperCase() === availableCourse.nome.toUpperCase()) &&
+          !this.generatedSchedule.some(scheduled => scheduled.nome === availableCourse.nome) &&
+          availableCourse.nome !== course.nome
         )
-
-        const notInSchedule = !this.generatedSchedule.some(
-          scheduled => scheduled.subject === availableCourse.subject
-        )
-
-        const hasCompatibleSlots = oldScheduleEntries.every(oldEntry => {
-          return availableCourse.schedule.some((timeSlot, index) => 
-            timeSlot === oldEntry.timeSlot && availableCourse.day[index] === oldEntry.day
-          )
-        })
-
-        const isNotSameCourse = availableCourse.subject !== course.subject
-
-        return notCompleted && notInSchedule && hasCompatibleSlots && isNotSameCourse
       })
 
       if (availableCourses.length > 0) {
         const randomIndex = Math.floor(Math.random() * availableCourses.length)
         const newCourse = availableCourses[randomIndex]
 
-        oldScheduleEntries.forEach(oldEntry => {
-          const slotIndex = newCourse.schedule.findIndex((timeSlot, index) => 
-            timeSlot === oldEntry.timeSlot && newCourse.day[index] === oldEntry.day
-          )
-
-          if (slotIndex !== -1) {
-            this.generatedSchedule.push({
-              subject: newCourse.subject,
-              teacher: newCourse.teacher,
-              class: newCourse.class,
-              day: oldEntry.day,
-              timeSlot: oldEntry.timeSlot
-            })
-          }
+        newCourse.horarios.forEach((horario, index) => {
+          this.generatedSchedule.push({
+            nome: newCourse.nome,
+            professor: newCourse.professor,
+            turma: newCourse.turma,
+            dia: newCourse.dias[index],
+            horario: horario
+          })
         })
       }
-}
+    }
   }
 }
 </script>
