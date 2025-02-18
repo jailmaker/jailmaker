@@ -76,28 +76,28 @@ export default {
         '21h00 - 23h00'
       ],
       gradeGerada: [],
-      matriz_horaria: JSON.parse(localStorage.getItem('matrizHoraria') || '[]'),
+      matrizHoraria: JSON.parse(localStorage.getItem('matrizHoraria') || '[]'),
       historico_academico: JSON.parse(localStorage.getItem('historicoAcademico') || '[]'),
       isLoading: false,
       erro: null
     }
   },
   async created() {
-    this.matriz_horaria = JSON.parse(localStorage.getItem('matrizHoraria') || '[]')
-    this.historico_academico = JSON.parse(localStorage.getItem('historicoAcademico') || '[]')
+    this.matrizHoraria = JSON.parse(localStorage.getItem('matrizHoraria') || '[]')
+    this.historicoAcademico = JSON.parse(localStorage.getItem('historicoAcademico') || '[]')
   
-    if (this.matriz_horaria.length === 0) {
+    if (this.matrizHoraria.length === 0) {
       try {
         const response = await api.get('/api/matriz-horaria')
-        this.matriz_horaria = response.data
-        localStorage.setItem('matrizHoraria', JSON.stringify(this.matriz_horaria))
+        this.matrizHoraria = response.data
+        localStorage.setItem('matrizHoraria', JSON.stringify(this.matrizHoraria))
       } catch (erro) {
         this.erro = 'Erro ao carregar a matriz horária atual :('
         return
       }
     }
 
-    if (this.historico_academico.length > 0) {
+    if (this.historicoAcademico.length > 0) {
       this.gerarGradeIdeal()
     } else {
       this.gerarGradeAleatoria()
@@ -110,8 +110,8 @@ export default {
       
       try {
         const response = await api.post('/api/grade-ideal', {
-          matriz_horaria: this.matriz_horaria,
-          historico_academico: this.historico_academico
+          matriz_horaria: this.matrizHoraria,
+          historico_academico: this.historicoAcademico
         })
 
         this.gradeGerada = response.data.flatMap(disciplina => {
@@ -130,8 +130,8 @@ export default {
       }
     },
     gerarGradeAleatoria() {
-      const disciplinasDisponiveis = this.matriz_horaria.filter(
-        disciplina => !this.historico_academico.some(
+      const disciplinasDisponiveis = this.matrizHoraria.filter(
+        disciplina => !this.historicoAcademico.some(
           d => d.nome.toUpperCase() === disciplina.nome.toUpperCase()
         )
       )
@@ -172,30 +172,51 @@ export default {
         : [{ nome: '', professor: '', turma: '' }]
     },
     trocarDisciplina(disciplina) {
+      const gradeAnterior = this.gradeGerada.filter(
+        d => d.nome === disciplina.nome
+      )
       this.gradeGerada = this.gradeGerada.filter(
         d => d.nome !== disciplina.nome
       )
 
-      const disciplinasDisponiveis = this.matriz_horaria.filter(disciplinaDisponivel => {
-        return (
-          !this.historico_academico.some(d => d.nome.toUpperCase() === disciplinaDisponivel.nome.toUpperCase()) &&
-          !this.gradeGerada.some(d => d.nome === disciplinaDisponivel.nome) &&
-          disciplinaDisponivel.nome !== disciplina.nome
+      const disciplinasDisponiveis = this.matrizHoraria.filter(disciplinaDisponivel => {
+        const naoFeita = !this.historicoAcademico.some(
+          d => d.nome.toUpperCase() === disciplinaDisponivel.nome.toUpperCase()
         )
+
+        const naoSelecionada = !this.gradeGerada.some(
+          d => d.nome === disciplinaDisponivel.nome
+        )
+
+        const temHorarioCompativel = gradeAnterior.every(d => {
+          return disciplinaDisponivel.horarios.some((horario, index) => 
+            horario === d.horario && disciplinaDisponivel.dias[index] === d.dia
+          )
+        })
+
+        const outraDisciplina = disciplinaDisponivel.nome !== disciplina.nome
+
+        return naoFeita && naoSelecionada && temHorarioCompativel && outraDisciplina
       })
 
       if (disciplinasDisponiveis.length > 0) {
         const indiceAleatorio = Math.floor(Math.random() * disciplinasDisponiveis.length)
         const novaDisciplina = disciplinasDisponiveis[indiceAleatorio]
 
-        novaDisciplina.horarios.forEach((horario, index) => {
-          this.gradeGerada.push({
-            nome: novaDisciplina.nome,
-            professor: novaDisciplina.professor,
-            turma: novaDisciplina.turma,
-            dia: novaDisciplina.dias[index],
-            horario: horario
-          })
+        gradeAnterior.forEach(d => {
+          const indiceHorario = novaDisciplina.horarios.findIndex((horario, index) => 
+            horario === d.horario && novaDisciplina.dias[index] === d.dia
+          )
+
+          if (indiceHorario !== -1) {
+            this.gradeGerada.push({
+              nome: novaDisciplina.nome,
+              professor: novaDisciplina.professor,
+              turma: novaDisciplina.turma,
+              dia: d.dia,
+              horario: d.horario
+            })
+          }
         })
       }
     }
