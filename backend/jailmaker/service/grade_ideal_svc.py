@@ -1,3 +1,5 @@
+import re
+
 from ortools.sat.python import cp_model
 
 from jailmaker.constants import CURRICULO_CCOMP, PREREQUISITOS_MAP
@@ -6,7 +8,7 @@ from jailmaker.constants import CURRICULO_CCOMP, PREREQUISITOS_MAP
 class GeradorGradeIdeal:
     """
     Classe responsável por montar grades horárias ideais para estudantes
-    baseadas em seus históricos e na matriz horária disponível.
+    com base no histórico acadêmico e na matriz horária disponível.
     """
 
     def __init__(self, matriz_horaria: list[dict], historico_academico: list[dict]):
@@ -14,8 +16,8 @@ class GeradorGradeIdeal:
         Inicializa o GeradorGradeIdeal com a matriz horária disponível e o histórico do estudante.
 
         Args:
-            matriz_horaria: Lista de dicionários contendo as disciplinas disponíveis
-            historico_academico: Lista de dicionários contendo as disciplinas já cursadas pelo estudante
+            matriz_horaria: Lista de dicionários contendo as disciplinas disponíveis.
+            historico_academico: Lista de dicionários contendo as disciplinas já cursadas pelo estudante.
         """
         self.matriz_horaria = matriz_horaria
         self.historico_academico = historico_academico
@@ -28,7 +30,7 @@ class GeradorGradeIdeal:
         Monta a grade ideal baseada no histórico do estudante e na matriz horária atual.
 
         Returns:
-            Lista de disciplinas que compõem a grade ideal
+            Lista de disciplinas que compõem a grade ideal.
         """
         self._filtrar_disciplinas_disponiveis()
 
@@ -45,14 +47,29 @@ class GeradorGradeIdeal:
         self._aplicar_restricao_conflitos(model, disciplina_vars)
         self._aplicar_restricao_mesma_disciplina(model, disciplina_vars)
 
-        # Objetivo: maximizar a quantidade de disciplinas
-        model.Maximize(sum(disciplina_vars.values()))
+        # Calcula quantas vezes cada disciplina é pré-requisito de outras disciplinas.
+        frequencia_prereq = {}
+        for prereqs in PREREQUISITOS_MAP.values():
+            for prereq in prereqs:
+                nome_normalizadoalizado = self._normalizar_nome(prereq)
+                frequencia_prereq[nome_normalizadoalizado] = frequencia_prereq.get(nome_normalizadoalizado, 0) + 1
 
-        # Roda a otimização do modelo
+        # Cada disciplina recebe um peso = 1 (valor base) + quantidade de vezes que ela aparece como pré-requisito.
+        objetivo = []
+        for disciplina in self._disciplinas_disponiveis:
+            chave = f"{disciplina['nome']}_{disciplina['professor']}"
+            nome_normalizadoalizado = self._normalizar_nome(disciplina["nome"])
+            peso = 1 + frequencia_prereq.get(nome_normalizadoalizado, 0)
+            objetivo.append(peso * disciplina_vars[chave])
+
+        # Objetivo: maximizar a soma ponderada das disciplinas selecionadas.
+        model.Maximize(sum(objetivo))
+
+        # Executa a otimização do modelo.
         solver = cp_model.CpSolver()
         status = solver.Solve(model)
 
-        # Processa resultados
+        # Processa os resultados.
         if status in (cp_model.OPTIMAL, cp_model.FEASIBLE):
             return [
                 disciplina
@@ -62,29 +79,38 @@ class GeradorGradeIdeal:
         return []
 
     def _filtrar_disciplinas_disponiveis(self) -> None:
-        """Filtra as disciplinas disponíveis conforme o currículo de Ciência da Computação."""
+        """
+        Filtra as disciplinas disponíveis conforme o currículo de Ciência da Computação.
+        Utiliza o nome normalizado para comparar com o currículo.
+        """
         self._disciplinas_disponiveis = [
-            disciplina for disciplina in self.matriz_horaria if disciplina["nome"] in CURRICULO_CCOMP
+            disciplina
+            for disciplina in self.matriz_horaria
+            if self._normalizar_nome(disciplina["nome"]) in CURRICULO_CCOMP
         ]
 
     def _processar_historico(self) -> None:
-        """Processa o histórico do estudante para identificar disciplinas feitas e em andamento."""
+        """
+        Processa o histórico do estudante para identificar disciplinas já concluídas
+        ou em andamento, utilizando o nome normalizado para garantir a comparação correta.
+        """
         for disciplina in self.historico_academico:
+            nome_normalizadoalizado = self._normalizar_nome(disciplina["nome"])
             if disciplina["situacao"] == "APROVADO":
-                self._disciplinas_feitas.add(disciplina["nome"])
-                self._disciplinas_indisponiveis.add(disciplina["nome"])
+                self._disciplinas_feitas.add(nome_normalizadoalizado)
+                self._disciplinas_indisponiveis.add(nome_normalizadoalizado)
             elif disciplina["situacao"] == "EM CURSO":
-                self._disciplinas_indisponiveis.add(disciplina["nome"])
+                self._disciplinas_indisponiveis.add(nome_normalizadoalizado)
 
     def _criar_variaveis_disciplinas(self, model: cp_model.CpModel) -> dict[str, cp_model.IntVar]:
         """
-        Cria variáveis booleanas para cada disciplina no modelo.
+        Cria variáveis booleanas para cada disciplina disponível.
 
         Args:
-            model: O modelo de programação por restrições
+            model: O modelo de programação por restrições.
 
         Returns:
-            Dicionário mapeando chaves de disciplinas para variáveis do modelo
+            Dicionário que mapeia uma chave única para cada disciplina à sua variável booleana.
         """
         disciplina_vars = {}
         for disciplina in self._disciplinas_disponiveis:
@@ -96,31 +122,33 @@ class GeradorGradeIdeal:
         self, model: cp_model.CpModel, disciplina_vars: dict[str, cp_model.IntVar]
     ) -> None:
         """
-        Aplica restrição para não escolher disciplinas já concluídas ou em progresso.
+        Impõe a restrição de que disciplinas já concluídas ou em andamento não podem ser escolhidas.
 
         Args:
-            model: O modelo de programação por restrições
-            disciplina_vars: Dicionário com as variáveis de decisão
+            model: O modelo de programação por restrições.
+            disciplina_vars: Dicionário com as variáveis de decisão.
         """
         for disciplina in self._disciplinas_disponiveis:
             chave = f"{disciplina['nome']}_{disciplina['professor']}"
-            if disciplina["nome"] in self._disciplinas_indisponiveis:
+            if self._normalizar_nome(disciplina["nome"]) in self._disciplinas_indisponiveis:
                 model.Add(disciplina_vars[chave] == 0)
 
     def _aplicar_restricao_pre_requisitos(
         self, model: cp_model.CpModel, disciplina_vars: dict[str, cp_model.IntVar]
     ) -> None:
         """
-        Aplica restrição para garantir que os pré-requisitos foram cumpridos.
+        Impõe a restrição para garantir que os pré-requisitos das disciplinas foram cumpridos.
+        Utiliza o nome normalizado para realizar a verificação com o PREREQUISITOS_MAP.
 
         Args:
-            model: O modelo de programação por restrições
-            disciplina_vars: Dicionário com as variáveis de decisão
+            model: O modelo de programação por restrições.
+            disciplina_vars: Dicionário com as variáveis de decisão.
         """
         for disciplina in self._disciplinas_disponiveis:
             chave = f"{disciplina['nome']}_{disciplina['professor']}"
-            if disciplina["nome"] in PREREQUISITOS_MAP:
-                prereqs = PREREQUISITOS_MAP[disciplina["nome"]]
+            nome_normalizado = self._normalizar_nome(disciplina["nome"])
+            if nome_normalizado in PREREQUISITOS_MAP:
+                prereqs = PREREQUISITOS_MAP[nome_normalizado]
                 if not all(prereq in self._disciplinas_feitas for prereq in prereqs):
                     model.Add(disciplina_vars[chave] == 0)
 
@@ -128,11 +156,11 @@ class GeradorGradeIdeal:
         self, model: cp_model.CpModel, disciplina_vars: dict[str, cp_model.IntVar]
     ) -> None:
         """
-        Aplica restrição para evitar conflitos de dia ou horário entre disciplinas.
+        Impõe restrição para evitar conflitos de dias ou horários entre as disciplinas.
 
         Args:
-            model: O modelo de programação por restrições
-            disciplina_vars: Dicionário com as variáveis de decisão
+            model: O modelo de programação por restrições.
+            disciplina_vars: Dicionário com as variáveis de decisão.
         """
         for i, disciplina1 in enumerate(self._disciplinas_disponiveis):
             for j, disciplina2 in enumerate(self._disciplinas_disponiveis):
@@ -145,17 +173,18 @@ class GeradorGradeIdeal:
         self, model: cp_model.CpModel, disciplina_vars: dict[str, cp_model.IntVar]
     ) -> None:
         """
-        Aplica restrição para não escolher a mesma disciplina com professores diferentes.
+        Impõe restrição para não escolher a mesma disciplina ministrada por professores diferentes.
 
         Args:
-            model: O modelo de programação por restrições
-            disciplina_vars: Dicionário com as variáveis de decisão
+            model: O modelo de programação por restrições.
+            disciplina_vars: Dicionário com as variáveis de decisão.
         """
         nome_para_disciplinas: dict[str, list[dict]] = {}
         for disciplina in self._disciplinas_disponiveis:
-            if disciplina["nome"] not in nome_para_disciplinas:
-                nome_para_disciplinas[disciplina["nome"]] = []
-            nome_para_disciplinas[disciplina["nome"]].append(disciplina)
+            nome_normalizado = self._normalizar_nome(disciplina["nome"])
+            if nome_normalizado not in nome_para_disciplinas:
+                nome_para_disciplinas[nome_normalizado] = []
+            nome_para_disciplinas[nome_normalizado].append(disciplina)
 
         for _nome, disciplinas in nome_para_disciplinas.items():
             if len(disciplinas) > 1:
@@ -172,11 +201,11 @@ class GeradorGradeIdeal:
         Verifica se duas disciplinas possuem conflito de dia ou horário.
 
         Args:
-            disciplina1: Primeira disciplina para verificação
-            disciplina2: Segunda disciplina para verificação
+            disciplina1: Primeira disciplina para verificação.
+            disciplina2: Segunda disciplina para verificação.
 
         Returns:
-            True se houver conflito, False caso contrário
+            True se houver conflito, False caso contrário.
         """
         dias_em_comum = set(disciplina1["dias"]).intersection(set(disciplina2["dias"]))
         if not dias_em_comum:
@@ -205,10 +234,25 @@ class GeradorGradeIdeal:
         Converte uma string de horário no formato "HHhMM" para minutos.
 
         Args:
-            horario_str: String no formato "HHhMM" (ex: "14h30")
+            horario_str: String no formato "HHhMM" (ex: "14h30").
 
         Returns:
-            Quantidade total de minutos
+            Quantidade total de minutos.
         """
         hora, minuto = map(int, horario_str.split("h"))
         return hora * 60 + minuto
+
+    @staticmethod
+    def _normalizar_nome(nome: str) -> str:
+        """
+        Remove sufixos indesejados, como as variações de "(REOF)", do nome da disciplina.
+
+        Args:
+            nome: Nome original da disciplina.
+
+        Returns:
+            Nome normalizado.
+        """
+        # Remove qualquer ocorrência de "(REOF)" com possíveis espaços antes ou depois.
+        nome = re.sub(r"\s*\(\s*REOF\s*\)", "", nome, flags=re.IGNORECASE)
+        return nome.strip()
