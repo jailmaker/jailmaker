@@ -15,6 +15,31 @@
             class="class-block"
             :class="{ 'highlight': disciplina.nome }"
           >
+          <button 
+              v-if="disciplina.nome"
+              @click="removerDisciplina(disciplina)"
+              class="remove-button"
+              title="Remover disciplina"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="3 6 5 6 21 6"/>
+                <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+                <path d="M10 11v6"/>
+                <path d="M14 11v6"/>
+                <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+              </svg>
+            </button>
+
             <div class="class-content">
               {{ disciplina.nome }}
               <span class="class-details">{{ disciplina.professor }} - {{ disciplina.turma }}</span>
@@ -27,8 +52,8 @@
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="14"
+                height="14"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -36,7 +61,10 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.3"/>
+                <path d="M21.5 2v6h-6"/>
+                <path d="M2.5 22v-6h6"/>
+                <path d="M2 11.5a10 10 0 0 1 18.8-4.3"/>
+                <path d="M22 12.5a10 10 0 0 1-18.8 4.3"/>
               </svg>
             </button>
           </div>
@@ -77,7 +105,7 @@ export default {
       ],
       gradeGerada: [],
       matrizHoraria: JSON.parse(localStorage.getItem('matrizHoraria') || '[]'),
-      historico_academico: JSON.parse(localStorage.getItem('historicoAcademico') || '[]'),
+      historicoAcademico: JSON.parse(localStorage.getItem('historicoAcademico') || '[]'),
       isLoading: false,
       erro: null
     }
@@ -219,6 +247,9 @@ export default {
           }
         })
       }
+    },
+    removerDisciplina(disciplina) {
+      this.gradeGerada = this.gradeGerada.filter(d => d.nome !== disciplina.nome)
     }
   }
 }
@@ -345,6 +376,30 @@ export default {
 }
 
 .reroll-button:hover {
+  color: white;
+}
+
+.remove-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.class-block:hover .remove-button {
+  opacity: 1;
+}
+
+.remove-button:hover {
   color: white;
 }
 
