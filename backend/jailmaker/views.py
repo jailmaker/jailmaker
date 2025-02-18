@@ -4,7 +4,7 @@ from pathlib import Path
 
 from ninja import NinjaAPI
 
-from jailmaker.service.grade_ideal_svc import monta_grade_ideal
+from jailmaker.service.grade_ideal_svc import GeradorGradeIdeal
 from jailmaker.service.historico_academico_svc import LeitorHistoricoAcademico
 
 api = NinjaAPI(title="Jailmaker API", version="1.0")
@@ -44,7 +44,7 @@ def gerar_grade_ideal(request):
     """
     try:
         data = json.loads(request.body)
-        grade_ideal = monta_grade_ideal(data["matriz_horaria"], data["historico_academico"])
+        grade_ideal = GeradorGradeIdeal(data["matriz_horaria"], data["historico_academico"]).gerar()
         return grade_ideal
     except Exception as exc:
         return api.create_response(request, {"erro": str(exc)}, status=HTTPStatus.BAD_REQUEST)
