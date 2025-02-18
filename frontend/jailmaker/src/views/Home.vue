@@ -176,7 +176,7 @@ export default {
         d => d.nome !== disciplina.nome
       )
 
-      const disciplinasDisponiveis = this.matriz.filter(disciplinaDisponivel => {
+      const disciplinasDisponiveis = this.matriz_horaria.filter(disciplinaDisponivel => {
         return (
           !this.historico_academico.some(d => d.nome.toUpperCase() === disciplinaDisponivel.nome.toUpperCase()) &&
           !this.gradeGerada.some(d => d.nome === disciplinaDisponivel.nome) &&
