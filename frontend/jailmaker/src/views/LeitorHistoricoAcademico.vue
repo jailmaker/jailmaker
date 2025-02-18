@@ -101,11 +101,11 @@ export default {
   },
   created() {
     const savedAlunoInfo = localStorage.getItem('alunoInfo')
-    const savedDisciplinas = localStorage.getItem('disciplinas')
+    const savedHistoricoAcademico = localStorage.getItem('historicoAcademico')
     
-    if (savedAlunoInfo && savedDisciplinas) {
+    if (savedAlunoInfo && savedHistoricoAcademico) {
       this.alunoInfo = JSON.parse(savedAlunoInfo)
-      this.disciplinas = JSON.parse(savedDisciplinas)
+      this.disciplinas = JSON.parse(savedHistoricoAcademico)
     }
   },
   computed: {
@@ -148,7 +148,7 @@ export default {
         this.disciplinas = response.data.disciplinas
 
         localStorage.setItem('alunoInfo', JSON.stringify(this.alunoInfo))
-        localStorage.setItem('disciplinas', JSON.stringify(this.disciplinas))
+        localStorage.setItem('historicoAcademico', JSON.stringify(this.disciplinas))
       } catch (error) {
         console.error('Erro ao fazer upload do histórico acadêmico:', error)
       } finally {

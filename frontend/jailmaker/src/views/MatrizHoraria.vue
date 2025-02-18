@@ -41,14 +41,18 @@ export default {
     }
   },
   async created() {
-    try {
-      const response = await api.get('/api/matriz-horaria')
-      this.disciplinas = response.data
-      if (!localStorage.getItem('matriz_horaria')) {
-        localStorage.setItem('matriz_horaria', JSON.stringify(this.disciplinas))
+    const savedMatrizHoraria = localStorage.getItem('matrizHoraria')
+    
+    if (savedMatrizHoraria) {
+      this.disciplinas = JSON.parse(savedMatrizHoraria)
+    } else {
+      try {
+        const response = await api.get('/api/matriz-horaria')
+        this.disciplinas = response.data
+        localStorage.setItem('matrizHoraria', JSON.stringify(this.disciplinas))
+      } catch (erro) {
+        console.error('Erro ao carregar a matriz horária atual:', erro)
       }
-    } catch (erro) {
-      console.error('Erro ao carregar a matriz horária atual:', erro)
     }
   }
 }

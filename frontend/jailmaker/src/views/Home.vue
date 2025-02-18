@@ -76,10 +76,31 @@ export default {
         '21h00 - 23h00'
       ],
       gradeGerada: [],
-      matriz_horaria: JSON.parse(localStorage.getItem('matriz_horaria') || '[]'),
-      historico_academico: JSON.parse(localStorage.getItem('disciplinas') || '[]'),
+      matriz_horaria: JSON.parse(localStorage.getItem('matrizHoraria') || '[]'),
+      historico_academico: JSON.parse(localStorage.getItem('historicoAcademico') || '[]'),
       isLoading: false,
       erro: null
+    }
+  },
+  async created() {
+    this.matriz_horaria = JSON.parse(localStorage.getItem('matrizHoraria') || '[]')
+    this.historico_academico = JSON.parse(localStorage.getItem('historicoAcademico') || '[]')
+  
+    if (this.matriz_horaria.length === 0) {
+      try {
+        const response = await api.get('/api/matriz-horaria')
+        this.matriz_horaria = response.data
+        localStorage.setItem('matrizHoraria', JSON.stringify(this.matriz_horaria))
+      } catch (erro) {
+        this.erro = 'Erro ao carregar a matriz horária atual :('
+        return
+      }
+    }
+
+    if (this.historico_academico.length > 0) {
+      this.gerarGradeIdeal()
+    } else {
+      this.gerarGradeAleatoria()
     }
   },
   methods: {
@@ -125,7 +146,7 @@ export default {
         const disciplina = disciplinasDisponiveis[indiceAleatorio]
         disciplina.horarios.forEach((horario, index) => {
           const dia = disciplina.dias[index]
-          const key = `${day}-${horario}`
+          const key = `${dia}-${horario}`
           if (!horariosOcupados.has(key)) {
             gradeGerada.push({
               nome: disciplina.nome,
