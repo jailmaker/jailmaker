@@ -51,15 +51,15 @@ class GeradorGradeIdeal:
         frequencia_prereq = {}
         for prereqs in PREREQUISITOS_MAP.values():
             for prereq in prereqs:
-                nome_normalizadoalizado = self._normalizar_nome(prereq)
-                frequencia_prereq[nome_normalizadoalizado] = frequencia_prereq.get(nome_normalizadoalizado, 0) + 1
+                nome_normalizado = self._normalizar_nome(prereq)
+                frequencia_prereq[nome_normalizado] = frequencia_prereq.get(nome_normalizado, 0) + 1
 
         # Cada disciplina recebe um peso = 1 (valor base) + quantidade de vezes que ela aparece como pré-requisito.
         objetivo = []
         for disciplina in self._disciplinas_disponiveis:
             chave = f"{disciplina['nome']}_{disciplina['professor']}"
-            nome_normalizadoalizado = self._normalizar_nome(disciplina["nome"])
-            peso = 1 + frequencia_prereq.get(nome_normalizadoalizado, 0)
+            nome_normalizado = self._normalizar_nome(disciplina["nome"])
+            peso = 1 + frequencia_prereq.get(nome_normalizado, 0)
             objetivo.append(peso * disciplina_vars[chave])
 
         # Objetivo: maximizar a soma ponderada das disciplinas selecionadas.
@@ -95,12 +95,12 @@ class GeradorGradeIdeal:
         ou em andamento, utilizando o nome normalizado para garantir a comparação correta.
         """
         for disciplina in self.historico_academico:
-            nome_normalizadoalizado = self._normalizar_nome(disciplina["nome"])
+            nome_normalizado = self._normalizar_nome(disciplina["nome"])
             if disciplina["situacao"] == "APROVADO":
-                self._disciplinas_feitas.add(nome_normalizadoalizado)
-                self._disciplinas_indisponiveis.add(nome_normalizadoalizado)
+                self._disciplinas_feitas.add(nome_normalizado)
+                self._disciplinas_indisponiveis.add(nome_normalizado)
             elif disciplina["situacao"] == "EM CURSO":
-                self._disciplinas_indisponiveis.add(nome_normalizadoalizado)
+                self._disciplinas_indisponiveis.add(nome_normalizado)
 
     def _criar_variaveis_disciplinas(self, model: cp_model.CpModel) -> dict[str, cp_model.IntVar]:
         """
