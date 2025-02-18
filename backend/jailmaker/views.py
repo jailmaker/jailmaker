@@ -31,7 +31,7 @@ def ler_historico_academico(request):
     """
     try:
         historico_academico_pdf = request.FILES["historico_academico"]
-        historico_academico_json = LeitorHistoricoAcademico.pdf_to_json(historico_academico_pdf)
+        historico_academico_json = LeitorHistoricoAcademico.from_pdf(historico_academico_pdf)
         return historico_academico_json
     except Exception as exc:
         return api.create_response(request, {"erro": str(exc)}, status=HTTPStatus.BAD_REQUEST)

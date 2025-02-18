@@ -10,9 +10,9 @@ class LeitorHistoricoAcademico:
     """
 
     @staticmethod
-    def _extract_student_info(text: str) -> dict[str, str | float]:
+    def _extrair_informacoes_aluno(texto: str) -> dict[str, str | float]:
         """Extrai informações básicas do aluno usando expressões regulares."""
-        patterns = {
+        padroes = {
             "matricula": r"Matrícula: (\d+)",
             "nome": r"Nome: ([^\n]+)",
             "curso": r"Curso: ([^\n]+)",
@@ -20,75 +20,77 @@ class LeitorHistoricoAcademico:
         }
 
         info = {}
-        for key, pattern in patterns.items():
-            match = re.search(pattern, text)
-            if match:
-                info[key] = match.group(1).strip() if key != "coeficiente_rendimento" else float(match.group(1))
+        for chave, padrao in padroes.items():
+            resultado = re.search(padrao, texto)
+            if resultado:
+                info[chave] = (
+                    resultado.group(1).strip() if chave != "coeficiente_rendimento" else float(resultado.group(1))
+                )
 
         return info
 
     @staticmethod
-    def _merge_broken_lines(lines: list[str]) -> list[str]:
+    def _mesclar_linhas_quebradas(linhas: list[str]) -> list[str]:
         """Combina linhas quebradas em linhas completas de disciplinas."""
-        merged_lines = []
-        current_line = ""
+        linhas_mescladas = []
+        linha_atual = ""
 
-        for line in lines:
-            if re.match(r"^\d{4}\s", line):
-                if current_line:
-                    merged_lines.append(current_line.strip())
-                current_line = line
-            elif line.strip() and not re.match(r"^\d", line) and current_line:
-                current_line = f"{current_line.strip()} {line.strip()}"
-            elif not line.strip() or "Ano" in line or "HISTÓRICO" in line:
-                if current_line:
-                    merged_lines.append(current_line.strip())
-                current_line = ""
+        for linha in linhas:
+            if re.match(r"^\d{4}\s", linha):
+                if linha_atual:
+                    linhas_mescladas.append(linha_atual.strip())
+                linha_atual = linha
+            elif linha.strip() and not re.match(r"^\d", linha) and linha_atual:
+                linha_atual = f"{linha_atual.strip()} {linha.strip()}"
+            elif not linha.strip() or "Ano" in linha or "HISTÓRICO" in linha:
+                if linha_atual:
+                    linhas_mescladas.append(linha_atual.strip())
+                linha_atual = ""
 
-        if current_line:
-            merged_lines.append(current_line.strip())
+        if linha_atual:
+            linhas_mescladas.append(linha_atual.strip())
 
-        return merged_lines
+        return linhas_mescladas
 
     @staticmethod
-    def _parse_disciplina(line: str) -> dict[str, str] | None:
+    def _analisar_disciplina(linha: str) -> dict[str, str] | None:
         """Converte uma linha de disciplina em um dicionário estruturado."""
-        inicio_pattern = r"(\d{4})\s+(\d+)\s+(\d+)\s+([A-Z])\s+([A-Z][A-Z]?)\s+(\d+)\s+"
-        inicio_match = re.match(inicio_pattern, line)
+        padrao_inicio = r"(\d{4})\s+(\d+)\s+(\d+)\s+([A-Z])\s+([A-Z][A-Z]?)\s+(\d+)\s+"
+        resultado_inicio = re.match(padrao_inicio, linha)
 
-        if not inicio_match:
+        if not resultado_inicio:
             return None
 
         # Extrai campos iniciais
-        fields = ["ano", "semestre", "termo", "turno", "turma", "codigo"]
-        initial_info = dict(zip(fields, inicio_match.groups(), strict=False))
+        campos = ["ano", "semestre", "termo", "turno", "turma", "codigo"]
+        info_inicial = dict(zip(campos, resultado_inicio.groups(), strict=False))
 
-        resto_linha = line[inicio_match.end() :].strip()
+        resto_linha = linha[resultado_inicio.end() :].strip()
         partes = resto_linha.split("UNIDADE CURRICULAR")
 
         if len(partes) < 2:
             return None
 
-        initial_info["nome"] = partes[0].strip()
+        info_inicial["nome"] = partes[0].strip()
         info_restante = "UNIDADE CURRICULAR " + partes[1].strip()
         campos = info_restante.split()
 
         # Encontra o índice final
-        final_markers = ["CURSO", "APROVADO", "REPROV./FREQ", "CUMPRIDO", "REPROVADO"]
-        final = next((campos.index(marker) for marker in final_markers if marker in campos), len(campos))
+        marcadores_final = ["CURSO", "APROVADO", "REPROV./FREQ", "CUMPRIDO", "REPROVADO"]
+        final = next((campos.index(marcador) for marcador in marcadores_final if marcador in campos), len(campos))
         campos = campos[: final + 1]
 
         # Processa grupo e campos específicos
-        grupo_markers = ["INTERDISCIPLINAR"] if "INTERDISCIPLINAR" in campos else []
-        grupo_length = 4 if grupo_markers else 3
-        initial_info["grupo"] = " ".join(campos[:grupo_length])
-        campos = campos[grupo_length:]
+        marcadores_grupo = ["INTERDISCIPLINAR"] if "INTERDISCIPLINAR" in campos else []
+        tamanho_grupo = 4 if marcadores_grupo else 3
+        info_inicial["grupo"] = " ".join(campos[:tamanho_grupo])
+        campos = campos[tamanho_grupo:]
 
         # Normalização de alguns campos específicos
-        special_cases = {("NÃO", "CUMPRIDO"): "NÃO CUMPRIDO", ("EM", "CURSO"): "EM CURSO"}
-        for case, replacement in special_cases.items():
-            if campos[-2:] == list(case):
-                campos[-2:] = [replacement]
+        casos_especiais = {("NÃO", "CUMPRIDO"): "NÃO CUMPRIDO", ("EM", "CURSO"): "EM CURSO"}
+        for caso, substituicao in casos_especiais.items():
+            if campos[-2:] == list(caso):
+                campos[-2:] = [substituicao]
 
         # Ajustes para garantir a estrutura correta
         if campos[-2] in ("36", "72", "108"):
@@ -97,30 +99,30 @@ class LeitorHistoricoAcademico:
             campos.insert(2, "-")
 
         # Mapeamento de situações
-        situacao_mapping = {"REPROV./FREQ": "REPROVADO", "CUMPRIDO": "APROVADO", "NÃO CUMPRIDO": "REPROVADO"}
-        campos[6] = situacao_mapping.get(campos[6], campos[6])
+        mapeamento_situacao = {"REPROV./FREQ": "REPROVADO", "CUMPRIDO": "APROVADO", "NÃO CUMPRIDO": "REPROVADO"}
+        campos[6] = mapeamento_situacao.get(campos[6], campos[6])
 
         # Campos finais
-        final_fields = ["categoria", "faltas", "frequencia", "creditos", "carga_horaria", "conceito", "situacao"]
-        initial_info.update(zip(final_fields, campos, strict=False))
+        campos_finais = ["categoria", "faltas", "frequencia", "creditos", "carga_horaria", "conceito", "situacao"]
+        info_inicial.update(zip(campos_finais, campos, strict=False))
 
-        return initial_info
+        return info_inicial
 
     @classmethod
-    def pdf_to_json(cls, pdf_path: str) -> dict[str, dict | list[dict]]:
+    def from_pdf(cls, path: str) -> dict[str, dict | list[dict]]:
         """Converte um PDF de histórico acadêmico para um dicionário JSON."""
-        reader = PdfReader(pdf_path)
-        full_text = "\n".join(page.extract_text() for page in reader.pages)
+        leitor = PdfReader(path)
+        texto_completo = "\n".join(pagina.extract_text() for pagina in leitor.pages)
 
-        student_info = cls._extract_student_info(full_text)
-        lines = full_text.split("\n")
-        merged_lines = cls._merge_broken_lines(lines)
+        info_aluno = cls._extrair_informacoes_aluno(texto_completo)
+        linhas = texto_completo.split("\n")
+        linhas_mescladas = cls._mesclar_linhas_quebradas(linhas)
 
         disciplinas = [
             disciplina
-            for line in merged_lines
-            if re.match(r"^\d{4}\s+\d+\s+\d+", line)
-            if (disciplina := cls._parse_disciplina(line))
+            for linha in linhas_mescladas
+            if re.match(r"^\d{4}\s+\d+\s+\d+", linha)
+            if (disciplina := cls._analisar_disciplina(linha))
         ]
 
-        return {"informacoes_aluno": student_info, "disciplinas": disciplinas}
+        return {"informacoes_aluno": info_aluno, "disciplinas": disciplinas}
